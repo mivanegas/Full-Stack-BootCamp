@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Forms</title>
+</head>
+<body>
+    <form action="">
+        <h1>Application Form</h1>
+        Name:<input type="text" name="name" placeholder="First & Last Name" required><br><br>
+        Age:<input type="number" name="age" placeholder="Enter your age" required><br><br>
+        Email:<input type="email" name="email" placeholder="email@test.com" required><br><br>
+        Password:<input type="password" name="password" placeholder="Password" required><br><br>
+        Date of graduation:<input type="date" name="date-of-graduation"><br><br>
+        Resume:<input type="file" name="resume"><br><br>
+        Favorite Color:
+        <select name="favorite-color" id="">
+            <option value="yellow">Yellow</option>
+            <option value="blue">Blue</option>
+            <option value="red">Red</option>
+        </select>
+        <br><br>
+        Gender:
+        <input type="radio" name="gender" value="female">Female
+        <input type="radio" name="gender" value="male">Male
+        <input type="radio" name="gender" value="nonbinary">Nonbinary
+        <br><br>
+         Hobbies:
+        <input type="checkbox" name="hobbies" value="painting">Painting
+        <input type="checkbox" name="hobbies" value="reading">Reading
+        <input type="checkbox" name="hobbie" value="working-out">Working Out
+        <br><br>
+        Describe Your Experience <br>
+        <textarea name="experience" rows="10" cols="50" maxlength="100"></textarea>
+        <br><br>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+        <button type="button">Random</button>
+    </form>
+</body>
+</html>
+
+<!-- 
+    # Forms:
+        - Used to collect data from the user
+        - Tags:
+            - <form></form>: wrapper tag for HTML forms
+            - input: input field for user data
+                - "type" attribute
+                   - text: text input 
+                   - number: number input
+                   - email: email input
+                   - password: for password input with hidden characters
+                   - date: ask user for a date
+                   - file: used for uploading a file to the form
+                   - radio: single selection
+                    - checked: radio box will be selected by default
+                   - chechbox: multiple selection
+                    - checkboxs will be selected by default
+                - "name" attribute: provides name to the input field
+                - "value" attribute: default value for the input field
+                - "placeholder" attribute = provides a hint for input
+                - "required" attribute = makes any field required
+            - button: buttons input. Use button tag not input tag.
+                - "type" attribute
+                - submit: use to submit a form
+                - ex: submit, reset
+            - select : dropdown (used for single select, alternate for radio)
+                - option tag: indivual options
+
+    # Additional notes:
+        - input type= "hidden" when you don't want to show the field, but want to process the values with other details of the form
+-->
