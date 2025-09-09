@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSS Basics</title>
+    <!-- This is where you link externallly to your CSS -->
+    <link rel="stylesheet" href="style1.css">
+    <style>
+        /* This is where you can add CSS internally in HTML */
+    </style>
+</head>
+<body>
+    <h1>CSS Basics</h1>
+
+        <h2>Featuring Kiki's Delivery Service</h2>
+
+    <p>In this anime feature, 13-year-old Kiki moves to a seaside town with her talking cat, Jiji, to spend a year alone, in accordance with her village's tradition for witches in training. After learning to control her broomstick, Kiki sets up a flying courier service and soon becomes a fixture in the community. But when the insecure young witch begins questioning herself and loses her magic abilities, she must overcome her self-doubt to get her powers back.</p>
+
+    <!-- Images -->
+     <div id="image-container">
+        <img src="https://i.pinimg.com/1200x/12/08/2d/12082d516103bd912249a2b2e049a379.jpg" id="first-img" alt="Kiki drinking tea">
+
+        <img src="https://i.pinimg.com/1200x/98/af/2c/98af2cc9fc381161d12a78ffe640b609.jpg" id="second-img" alt="Kiki flying on her broomstick">
+
+        <img src="https://i.pinimg.com/736x/ff/5a/46/ff5a463aad8d1952b19b143e56d7c469.jpg" id="third-img" alt="Kiki and her cat looking out the window">
+    </div>
+
+    <!-- Quote -->
+        <blockquote>
+            "You'd think they'd never seen a girl and a cat on a broom before."
+            <br>
+            - Jiji
+        </blockquote>
+
+    <!-- Links -->
+    <ul>
+        <li>
+            <a href="https://www.youtube.com/watch?v=4bG17OYs-GA" target="_blank">Movie Trailer</a>
+        </li>
+        <li>
+            <a href="https://www.goodreads.com/book/show/53029302-kiki-s-delivery-service" target="_blank">Book Reference</a>
+        </li>
+        <li>
+            <a href="https://ghibli.fandom.com/wiki/Kiki%27s_Delivery_Service" target="_blank">Fandom Wiki</a>
+        </li>
+         
+    </ul>
+
+
+    <footer>
+        <p id="footer-p">This 1989 Japanese animated fantasy film was written, produced, and directed by Hayao Miyazaki</p>
+    </footer>
+
+</body>
+</html>
+<!-- 
+    # CSS
+        - Cascading Style Sheets
+        - Add styles to webpage initially created using HTML
+        - 3 Types of Styling
+         - Inline styling
+            - style = "property:value;"
+            - style = "property1: value1; proeperty 2: value2;"
+            - Syntax
+                <h1 style="property: value">Test</h1>
+                - property: name of the style
+                - value: value for that style
+         - Internal styling
+            - "style" tag (inside head tag)
+            - Syntax:
+                <style>
+                    h1{
+                        property: value;
+                    }
+                </style>
+         - External styling
+            - Create a seprate .css file
+            - Link this external CSS file to HTML file
+            - Syntax:
+                <link rel="stylesheet" href=>
+                - rel: relation
+                - href: relative path 
+     - Properties:
+        - color: add color to the text an element 
+        - background-color: color of background text
+        - font-size: size of text
+        - font-weight: bold/light (100-900)
+        - border:border of an element
+            - border: [width] [height] [color]
+                -Sub properties
+                    - border-width: width of the border
+                    - border-style: solid, dashed, dotted, etc.
+                    - border-color: color of the border
+        - border-radius: rounded borders
+        - width: width of the element
+        - height: height of the element
+        - padding: spacing around the content inside the border
+        - margin: spacing around the content outside the border
+        - padding, margin
+            - syntax: 4 unites [top][right][left][bottom]
+            - sub properites
+                - padding/margin-top: adding to the top
+                - padding/margin-bottom: padding to them bottom
+                - padding-left: adding to the left
+                - padding/margin-right: adding to the right
+            - More syntax:
+                - 1 unit: All sides
+                - 2 unit: [top, bottom] [right,left]
+                - 3 unit: [top] [right, left] [bottom]
+
+    # Selectors ***
+      - Elements selector (h1, p, img, etc.)
+      - Class selector (.)
+      - ID selector (#)
+      - Universal selector (*)
+
+      - side note:
+       - These selectors can be grouped together as well
+       - Eg.: p, h1, .test-class, #test-id{}
+
+    # Specificity rules:
+      - In > Internal, External 
+      - Latest style rule is applied
+
+    # Color codes
+        - RGB (red, green, blue) - a combo of those three color can create an color
+        - Syntax: rgb (r,g,b)
+            - they can all have values from 0-255
+        - Ex:
+            - rgb (0,0, 255): blue
+            - rgb (255,0,0): red
+            - rgb (0,255, 0):  green
+            - rgb (0,0,0): black
+            - rgb (255,255,255): white
+        - RGB (A - Alpha/Opacity/Transparency)
+            - A: 0-1 (0 is invisible, 1 is visible)
+
+        - HEX (0-F)
+         - Syntax: #RRGGBB
+            - RR, GG, BB can have values from 00-FF
+        - Ex:
+            - #0000FF: Blue
+            - #FF0000: Red
+            - #00FF00: Green
+            - #000000: Black
+            - #FFFFFF: White
+        - Aplha
+         - 2 more digits added at the end
+
+    # Additional Notes
+      /* This is a comment in CSS */
+    - Class vs ID
+     - Multiple elemtns can have the same class
+     - No 2 elements can ahve the same ID
+-->
