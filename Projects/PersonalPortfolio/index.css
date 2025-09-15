@@ -1,22 +1,30 @@
 /* Global */
 body {
-    background-color: #e9e9e9;
-    color: #1C4B8F;
+  background-color: #fda403;
+    color: #8a1253;
+    margin-top: 0;
 }
 
 /* Navbar */
 #navbar {
     color: #e9e9e9;
-    background-color: #1C4B8F;
+    background-color: #c51350;
     padding: 5px 10px;
-    padding-left: 0;
+    margin-top: 0;
     list-style: none;
     text-align: center;
+    padding-left: 0;
 }
 
 #navbar li {
     display: inline-block;
-    margin: 0 40 px;
+    margin: 0 40px;
+}
+
+#navbar li a {
+    color: #e9e9e9;
+    text-decoration: none;
+    font-size: 24px;
 }
 
 /* Header Section */
@@ -41,13 +49,12 @@ body {
 }
 
 #header ul li {
-    display: inline-block;]
+    display: inline-block;
     margin: 0 20px;
-    padding: 20px;
 }
 
-#header a {
-    color: #1C4B8F;
+#header ul li a {
+    color:  #8a1253;
     text-decoration: none;
 }
 
@@ -56,7 +63,7 @@ body {
 #about {
     margin-top: 30px;
     color: #e9e9e9;
-    background-color: #1C4B8F;
+    background-color: #c51350;
     padding: 5px 10px;
     border-radius: 10px;
 }
@@ -64,10 +71,10 @@ body {
 /* Experience Section */
 
 #experience {
-    margin-top: 10px;
+    margin-top: 30px;
     padding: 5px 10px;
     border-radius: 10px;
-    border: 2px solid #1C4B8F;
+    border: 2px solid #c51350;
     background-color: white;
 }
 
@@ -83,9 +90,9 @@ body {
 #experience .single-exp>li {
     font-size: 18px;
     font-weight: 600;
-    background-color: #1C4B8F;
+    background-color: #c51350;
     color: white;
-    padding: 2px 5px;
+    padding: 2px 10px;
     border-radius: 20px;
     margin-bottom: 5px;
 }
@@ -96,6 +103,16 @@ body {
 }
 
 /* Projects Sections */
+#projects {
+    margin-top: 30px;
+    text-align: center;
+    border: 2px solid #c51350;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+
 #projects h1 {
     text-align: left;
 }
@@ -105,8 +122,7 @@ body {
     height: 250px;
     width: 250px;
     margin: 0 10px;
-    background-color: #1C4B8F;
-    color: #e9e9e9;
+    background-color:#e8751a;
     font-size: 24px;
     padding: 100px 10px;
     border-radius: 10px;
@@ -119,6 +135,14 @@ body {
 
 #projects .project a {
     color: #e9e9e9;
-    background-color: #1C4B8F;
+    text-decoration: none;
+}
 
+/* Skills */
+#skills {
+    color: #e9e9e9;
+    background-color: #c51350;
+    margin-top: 30px;
+    padding:5px 10px;
+    border-radius: 10px;
 }
