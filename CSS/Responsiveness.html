@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Responsiveness</title>
+    <style>
+
+      html {
+        font-size: 20px;
+      }
+      
+      #container {
+        width: 75%;
+        border: 1px solid black;
+        box-sizing: border-box;
+      }
+
+      #parent {
+        width: 100%;
+        background-color: aquamarine;
+        height: 200px;
+      }
+
+      #child {
+        width: 50%;
+        background-color: cadetblue;
+        height: 200px;
+      }
+
+      #container-2 {
+        font-size: 20px;
+      }
+
+      #container-2 p {
+        /* font-size: 1.5em; */
+        font-size: 2rem;
+      }
+
+      #container-2 img {
+        width: 30 rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div id="container">
+      <h1>Responsiveness</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
+      </p>
+
+      <img
+        src="https://images.unsplash.com/photo-1755441172753-ac9b90dcd930?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        id="img-1"
+        alt="landscape with body of water"
+        width="300"
+      />
+    </div>
+
+    <div id="parent">
+      <div id="child"></div>
+    </div>
+
+    <div style="background-color: brown; height: 50vh"></div> -->
+    <div id="container-2">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
+      </p>
+
+      <img
+        src="https://plus.unsplash.com/premium_photo-1699391583865-a81bb0769ccc?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt=""
+      />
+    </div>
+  </body>
+</html>
+
+<!-- 
+  # Absolute vs Relative units
+    - Absolute units:
+        - Fixed size.
+        - Dimensions don't change based on a parent element/viewport size 
+        - Examples: Pixels (px), Points (pt)
+    - Relative units:
+       - Dynamic size
+       - Dimensions change based on a parent element/viewport size
+       - Example: 
+        - Percentage (%) is relative to parent element
+        - Viewport (vw) is relative to "viewport width"
+            - 1 vw = 1 % of viewport width
+        - Viewport height (vh)
+            - 1 vh = 1% of "viewport height"
+        - Element (em): font sieze of the parent element
+            - 1em - actual font size of parent element
+        - (rem): font size size of the root element (html)
+            - 1rem = 1* font size of root element
+-->
