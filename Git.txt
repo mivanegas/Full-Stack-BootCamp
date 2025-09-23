@@ -6,49 +6,55 @@
      - Bitbucket
 
 # Terms:
-    - repository : project folder (being tracked by Git)
+    - repository: project folder (being tracked by Git)
         - local repository: local project folder 
         - remote repository: project folder on Github
-        - stage: prepare files to me committed
+        - stage: prepare files to be committed
         - commit: save changes
         - push: upload
         - pull: download
 
-# Steps to upload a project (local repository) on Github:
-    - Create a new remote repository
-        - name: name of project
-        - description: explanation of projection
-        - visibility: private/public
-            - public (open source)
-        - README.md: Proejct description file
+# Local Workflow
+    - Working directory: make changes (red in terminal)
+    - Staging area: changes read to be "comotted" are moved here (green in terminal)
+    - Local repository: (.git): committed chnages are saved here
+
+# Steps to upload a project on Github:
+    - Github
+        - Create a new remote repository
+            - name: name of project
+            - description: explanation of projection
+            - visibility: private/public
+                - public (open source)
+            - README.md: Proejct description file
     - Local:
         - First time:
-            - git init: initialize a local git repository (for the first time)
+            - git init: Initialize a local git repository
             - git add: stage files
                 - git add file1.html: stage file1.html
-                - git add . : stage files
-            - git commit -m "Message" : commit changes
-            - git remote add origin [remote repository link]:link local to remote
-            - git push -u origin main: upload the code to the code to the remote reposity linked in "main" branch
-        - Second time and onward
-            - git add: stage files
+                - git add . : Stage all files
+            - git commit -m "Message": commit changes
+            - git remote add origin [remote repository link]:link local repository to remote repository
+            - git push -u origin main: Push committed chnages to "main" branch in the remote repository
+        - Second time and onwards
+            - git add: 
                 - git add file1.html: stage file1.html
-                - git add . : stage all files
+                - git add . 
             - git commit -m "Message" 
             - git push
 
         - Generic 
-            - git status: current status of lcoal repository
-        - Working with remotes
+            - git status: current status of local repository
+
+# Steps to download a project on Github
+    - First time: 
+      - git clone [remote repository link] Clone of online repository in local machine
+    - Second time and onwards
+      - git pull: Pull latest commits from "main" branch in the rmeote repository to local repository
 
 # Branches 
     - Dafault (master/main)
     - separate branches can be created to work on individual features For eg., in Amazon: Separate branches for Amazon Prime, Shopping, Prime Video 
 
-
-    - Local Workflow
-        - 3 areas:
-            - Working directory: Make changes, where you edit the code
-            - Staging areas: chnages ready to "committed"
-            - Local repository (.git)
-   
+# References:
+https://uidaholib.github.io/get-git/images/workflow.png
