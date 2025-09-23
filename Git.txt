@@ -1,0 +1,44 @@
+# Git: version control tool
+
+# Github: A cloud for uploading project tracked using Git
+    - Alternatives:
+     - Gitlab
+     - Bitbucket
+
+# Terms:
+    - repository : project folder (being tracked by Git)
+        - local repository: local project folder 
+        - remote repository: project folder on Github
+        - stage: prepare files to me committed
+        - commit: save changes
+
+# Steps to upload a project (local repository) on Github:
+    - Create a new remote repository
+        - name: name of project
+        - description: explanation of projection
+        - visibility: private/public
+            - public (open source)
+        - README.md: Proejct description file
+    - Local:
+        - First time:
+            - git init: initialize a local git repository
+            - git add: stage files
+                - git add file1.html: stage file1.html
+                - git add . : stage files
+            - git commit -m "Message" : commit changes
+
+        - Generic 
+            - git status: current status of lcoal repository
+        - Working with remotes
+
+# Branches 
+    - Dafault (master/main)
+    - separate branches can be created to work on individual features For eg., in Amazon: Separate branches for Amazon Prime, Shopping, Prime Video 
+
+
+    - Local Workflow
+        - 3 areas:
+            - Working directory: Make changes, where you edit the code
+            - Staging areas: chnages ready to "committed"
+            - Local repository (.git)
+   

@@ -29,49 +29,79 @@
         background-color: green;
         color: white;
       }
+      /* Generic Devices */
+      #container-2 {
+        background-color: blue;
+        width: 500px;
+        height: 500px;
+      }
 
-      @media screen and (max-width: 576px) {
+      #container-3 {
+        width: 100%;
+        background-color: cornflowerblue;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+
+      /* Mobile Devices (<= 480px) */
+      @media screen and (max-width: 480px) {
         #container-2 {
           background-color: red;
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
         }
       }
     </style>
   </head>
   <body>
-    <div id="container">
+    <!-- <div id="container">
       <div class="card">
         <img
           src="https://images.unsplash.com/photo-1758098491492-6501dfb2ae7d?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxN3x8fGVufDB8fHx8fA%3D%3D"
           alt=""
+          width="300"
         />
-        <p>XYZ Lotion</p>
-        <p>$25</p>
-        <button>Add to cart</button>
-        <button>Buy Now</button>
+        <p>Lamp</p>
+        <p>$45</p>
+        <button type="button">Add to cart</button>
+        <button type="button">Buy Now</button>
       </div>
 
       <div class="card">
         <img
           src="https://images.unsplash.com/photo-1756142753931-87538d2c8cf4?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxNXx8fGVufDB8fHx8fA%3D%3D"
           alt=""
+          width="300"
         />
-        <p>XYZ Lotion</p>
+        <p>Bedroom Duvet</p>
         <p>$25</p>
-        <button>Add to cart</button>
-        <button>Buy Now</button>
+        <button type="button">Add to cart</button>
+        <button type="button">Buy Now</button>
       </div>
 
       <div class="card">
         <img
           src="https://images.unsplash.com/photo-1755869474484-82c181d5367c?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzMnx8fGVufDB8fHx8fA%3D%3D"
           alt=""
+          width="300"
         />
-        <p>XYZ Lotion</p>
-        <p>$25</p>
-        <button>Add to cart</button>
-        <button>Buy Now</button>
+        <p>Bookshelve</p>
+        <p>$30</p>
+        <button type="button">Add to cart</button>
+        <button type="button">Buy Now</button>
       </div>
+    </div> -->
+    <!-- <div id="container-2"></div> -->
+
+    <div id="container-3">
+      <p>Lorem Ipsum blah blah blah</p>
     </div>
+    <img
+      src="https://images.unsplash.com/photo-1758098491492-6501dfb2ae7d?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxN3x8fGVufDB8fHx8fA%3D%3D"
+      alt=""
+      width="300"
+    />
   </body>
 </html>
 
@@ -94,5 +124,12 @@
         - start w/ desktop, then add seprate rules for mobile
     - Mobile-first approach:
         - start w/ mobile, then add seprate rules for desktop
+
+   - Breakpoints - From Bootsrap
+    - Laptops/Desktop: >= 992px ***
+    - Tablet: 480px - 992px
+    - Mobile: <= 480px ***
+
+    - Reference: https://getbootstrap.com/docs/5.3/layout/breakpoints/
        
 -->

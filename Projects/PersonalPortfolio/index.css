@@ -72,21 +72,29 @@ body {
 /* About Section */
 
 #about {
-  /* margin-top: 30px; */
-  margin: 25px;
-  color: #e9e9e9;
   background-color: #8a1253;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  padding: 5px 15px;
+  border-radius: 10px;
+  color: #e9e9e9;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 25px;
+  padding: 15px 25px;
+}
+
+#about p {
+  width: 50%;
+}
+
+#about img {
   border-radius: 10px;
 }
 
 /* Experience Section */
 
 #experience {
-  /* margin-top: 30px; */
   margin: 25px;
-  padding: 5px 10px;
+  padding: 10px 25px;
   border-radius: 10px;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-color: white;
@@ -118,10 +126,9 @@ body {
 
 /* Projects Sections */
 #projects {
-  /* margin-top: 30px; */
   margin: 25px;
   text-align: center;
-  padding: 5px 10px;
+  padding: 10px 25px;
   border-radius: 10px;
   background-color: white;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -156,13 +163,12 @@ body {
 
 /* Skills */
 #skills {
-  color: #e9e9e9;
   background-color: #8a1253;
-  /* margin-top: 30px; */
-  margin: 25px;
-  padding: 5px 10px;
   border-radius: 10px;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  color: #e9e9e9;
+  margin: 25px;
+  padding: 10px 25px;
 }
 
 input[type="range"]::-webkit-slider-runnable-track {
@@ -178,7 +184,7 @@ input[type="range"]::-webkit-slider-runnable-track {
   background-color: white;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin: 25px;
-  padding: 5px 10px;
+  padding: 10px 25px;
 }
 
 button {
@@ -187,8 +193,8 @@ button {
   border-radius: 5px;
   color: white;
   font-family: Georgia, "Times New Roman", Times, serif;
-  padding: 10px;
   margin: 15px;
+  padding: 10px;
 }
 
 input,
