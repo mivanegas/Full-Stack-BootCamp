@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid</title>
+    <style>
+      .container {
+        background-color: violet;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: repeat(3, 100px);
+        /* grid-column-gap: 50px; */
+        /* grid-row-gap: 50px; */
+        gap: 50px 100px;
+      }
+
+      .item {
+        padding: 10px;
+        background-color: rgb(69, 227, 233);
+        border: 1px solid black;
+        width: 100px;
+        height: 100px;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Grid</h1>
+    <div class="container">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+      <div class="item">7</div>
+      <div class="item">8</div>
+      <div class="item">9</div>
+    </div>
+  </body>
+</html>
+
+<!-- 
+  # Grid:
+    - Organize elements in two directions
+        - rows & columns
+    - Properties:
+        - display: grid ** (place elements in a grid like structure)
+        - grid-template-rows: define number of rows w/ indivudal dimensions
+            - Examples:
+                - 100px 100px: 2 columns of 100px each
+                - 100px 200 px: 2 columns (100px, 200px)
+                - auto auto auto: 3 columns of equal space
+        - grid-template-columns: define number of columns w/ indivudal dimensions
+        - grid-column-gap: gap between columns
+        - grid-row-gap: gap between rows
+        - gap, grid-gap: [row gap][column gap]
+-->

@@ -3,10 +3,15 @@
   <head>
     <title>Flexbox</title>
     <style>
+      html {
+        background-color: #bc94a1;
+        font-family: Georgia, "Times New Roman", Times, serif;
+      }
+
       .card {
         background-color: #eee;
-        border: 1px solid black;
         border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         margin: 10px 20px;
         padding: 10px;
       }
@@ -15,35 +20,76 @@
         border-radius: 10px 10px 0 0;
       }
 
+      button {
+        background-color: black;
+        border-radius: 5px;
+        color: white;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 15px;
+      }
+
       .container {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
+        flex-wrap: wrap;
       }
 
       .container-2 {
         display: flex;
-        border: 1px solid black;
+        border: 2px solid black;
         height: 500px;
+        justify-content: center;
+        align-items: center;
+        /* flex-direction: column;
+        flex-wrap: wrap; */
       }
 
       img {
         width: 300px;
       }
+
+      #axis {
+        text-align: center;
+      }
+
+      #img-3 {
+        order: 0;
+      }
+
+      #img-2 {
+        order: 1;
+      }
+
+      #img-1 {
+        order: 2;
+      }
     </style>
   </head>
   <body>
-    <h1>Flex</h1>
+    <h1>Learning Flexbox</h1>
 
-    <!-- <div class="container">
+    <!-- Space between example with Navbar -->
+    <!-- <ul style="display: flex; list-style: none; justify-content: space-between">
+      <div style="display: flex">
+        <li>Home</li>
+        <li>Home</li>
+      </div>
+      <div style="display: flex">
+        <li>Home</li>
+        <li>Home</li>
+      </div>
+    </ul> -->
 
+    <h3>E-commerce Example</h3>
+    <div class="container">
       <div class="card">
         <img
           src="https://plus.unsplash.com/premium_photo-1679513691474-73102089c117?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aGVhZHBob25lc3xlbnwwfHwwfHx8MA%3D%3D"
           alt="headphones"
         />
 
-        <p>Bose Headphones</p>
+        <p>Headphones</p>
         ⭐⭐⭐⭐⭐ (27k+)
         <p>$199.99</p>
         <button>Add to cart</button>
@@ -52,70 +98,100 @@
 
       <div class="card">
         <img
-          src="https://plus.unsplash.com/premium_photo-1679513691474-73102089c117?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aGVhZHBob25lc3xlbnwwfHwwfHx8MA%3D%3D"
-          alt="headphones"
+          src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8cHJvZHVjdHN8ZW58MHx8MHx8fDA%3D"
+          alt="wrist watch"
         />
 
-        <p>Bose Headphones</p>
-        ⭐⭐⭐⭐⭐ (27k+)
-        <p>$199.99</p>
+        <p>Watch</p>
+        ⭐⭐⭐⭐ (15k+)
+        <p>$89.99</p>
         <button>Add to cart</button>
         <button>Buy now</button>
       </div>
 
       <div class="card">
         <img
-          src="https://plus.unsplash.com/premium_photo-1679513691474-73102089c117?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aGVhZHBob25lc3xlbnwwfHwwfHx8MA%3D%3D"
-          alt="headphones"
+          src="https://plus.unsplash.com/premium_photo-1677526496597-aa0f49053ce2?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODF8fHByb2R1Y3RzfGVufDB8fDB8fHww"
+          alt="Cosmetics"
         />
 
-        <p>Bose Headphones</p>
-        ⭐⭐⭐⭐⭐ (27k+)
-        <p>$199.99</p>
+        <p>Cosmetics</p>
+        ⭐⭐⭐ (10k+)
+        <p>$50.99</p>
         <button>Add to cart</button>
         <button>Buy now</button>
       </div>
-    </div> -->
+    </div>
 
+    <br />
+    <hr />
+    <h2>Flex Direction</h2>
+    <h3 id="axis">For Row (default): Main Axis = X Axis ← →</h3>
+    <h3 id="axis">Cross Axis = Y Axis ↑ ↓</h3>
     <div class="container-2">
       <img
         src="https://plus.unsplash.com/premium_photo-1663127037157-5710981bc7b7?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZ3JhbW1pbmclMjBsYW5ndWFnZXxlbnwwfHwwfHx8MA%3D%3D"
         alt="code"
         height="180"
+        width="270"
+        id="img-1"
       />
 
       <img
-        src="https://images.unsplash.com/photo-1615494937408-7f4e41bf45d9?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cHJvZ3JhbW1pbmclMjBsYW5ndWFnZXxlbnwwfHwwfHx8MA%3D%3D"
+        src="https://images.unsplash.com/photo-1662638600476-d563fffbb072?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZ3JhbW1pbmclMjBsYW5ndWFnZXxlbnwwfHwwfHx8MA%3D%3D"
         alt="code"
         height="250"
+        width="370"
+        id="img-2"
       />
 
       <img
-        src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZ3JhbW1pbmclMjBsYW5ndWFnZXxlbnwwfHwwfHx8MA%3D%3D"
+        src="https://plus.unsplash.com/premium_photo-1678566154673-a728037f3f00?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZ3JhbW1pbmclMjBsYW5ndWFnZXxlbnwwfHwwfHx8MA%3D%3D"
         alt="coding"
-        height="350"
+        height="400"
+        width="276"
+        id="img-3"
       />
     </div>
+    <h3 id="axis">For Column (apps): Main Axis = Y Axis ↑ ↓</h3>
+    <h3 id="axis">Cross Axis = X Axis ← →</h3>
   </body>
 </html>
 
 <!-- 
- # Flexbox
+ # Flexbox ***
   - Organize elements in one direction
   - Properties
-    - display: flex (Element flexible in nature)
-    - justify-content: Align the child elements w/in flex container
-        - start = default
-        - end = end of container 
-        - center = center of container
-        - space-around = added equal space around each element
-        - space-evenly = space equal on both sides (space in between will be merged)
-        - align-items ***: Align the child element within the flex container
-        flex container
-            - start (default)
-            - end: end of container
-            - center: center of container
-        - flex-wrap: wrap the child elemtn if they exceed the parent container's width
-            - nowrap (default)
-            - wrap: wrap child elements to the next row
+    - Container
+      - display: flex **(Element flexible in nature)
+      - flex-direction ***: Set the direction of flex container's elements
+            - row (default)
+      - justify-content **: Align the child elements w/in flex container across the main axis (x axis)
+            - start = default
+            - end = end of container 
+            - center = center of container
+            - space-around = added equal space around each element
+            - space-evenly = space equal on both sides (space in between will be merged)
+            - space-between = space in between 2 elements
+      - align-items ***: Align the child element within the flex container through the cross axis (y axis)
+          - Flex container
+              - start (default)
+              - end: end of container
+              - center: center of container
+      - flex-wrap: wrap the child element if they exceed the parent container's width
+              - nowrap (default): no wrapping
+              - wrap: wrap child elements to the next row
+              - wrap-reverse: wraps child element in reverse order
+      - Item
+        - order: set the order of indiviudal item
+          - Min and default (0): the lesser, the higher order
+
+  # Main and Cross axis
+    - flex-direction: row
+      - Main axis: X Axis (horizontal)
+      - Cross axis: Y axis (vertical)
+    - flex-direction: column
+      - Main axis: Y axis (vertical)
+      - Cross axis: X axis (horizontal)
+
 -->
