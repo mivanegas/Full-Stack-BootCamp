@@ -1,0 +1,14 @@
+@media screen and (max-width: 768px) {
+  #category-section {
+    margin-bottom: 1rem;
+  }
+
+  .friend-card {
+    text-align: center;
+  }
+
+  .friend-card img {
+    width: 200px !important;
+    border-radius: 50% !important;
+  }
+}
