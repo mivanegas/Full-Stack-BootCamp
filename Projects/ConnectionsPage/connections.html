@@ -13,52 +13,48 @@
     />
   </head>
   <body>
-    <!-- Navbar Section -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+    <!----- Navbar Section ----->
+    <nav class="navbar navbar-expand-lg bg-danger" data-bs-theme="dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">SocialConnect</a>
+        <a class="navbar-brand" href="#">
+          <img
+            src="/Projects/ConnectionsPage/Assets/logo.png"
+            alt="Logo"
+            width="30"
+            height="30"
+            class="d-inline-block align-text-top"
+          />
+          SocialConnect</a
+        >
         <button
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
+          data-bs-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">Posts</a>
+              <a class="nav-link active" aria-current="page" href="#">Posts</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="#">Friends</a>
+              <a class="nav-link" href="#">Friends</a>
             </li>
-            <!-- <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Dropdown
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </li>
-              </ul>
-            </li> -->
-            <!-- <li class="nav-item">
-              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-            </li> -->
           </ul>
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Messages</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Profile</a>
+            </li>
+          </ul>
+          <!------ Search bar, in case needed later ------->
           <!-- <form class="d-flex" role="search">
             <input
               class="form-control me-2"
@@ -70,18 +66,11 @@
               Search
             </button>
           </form> -->
-          <ul class="navbar-nav mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">Messages</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Profile</a>
-            </li>
-          </ul>
         </div>
       </div>
     </nav>
-    <!-- Main -->
+
+    <!----- Main Section ----->
     <div class="container mt-2">
       <div class="bg-gradient rounded p-5">
         <h1 class="display-4 mt-0">Connections</h1>
@@ -153,6 +142,7 @@
               </div>
             </div>
           </div>
+
           <!-- First Card -->
           <div class="card" style="width: 18rem">
             <img
@@ -169,6 +159,7 @@
               <a href="#" class="btn btn-primary">Confirm</a>
             </div>
           </div>
+          
           <!-- First Card -->
           <div class="card" style="width: 18rem">
             <img
