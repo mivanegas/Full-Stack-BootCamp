@@ -16,7 +16,7 @@
     <!----- Navbar Section ----->
     <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="index.html">
           <img
             src="/Projects/ConnectionsPage/Assets/acnhleaf.png"
             alt="Logo"
@@ -40,10 +40,12 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Posts</a>
+              <a class="nav-link" aria-current="page" href="index.html"
+                >Posts</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Friends</a>
+              <a class="nav-link active" href="#">Friends</a>
             </li>
           </ul>
           <ul class="navbar-nav mb-2 mb-lg-0">
@@ -72,114 +74,99 @@
 
     <!----- Main Section ----->
     <div class="container mt-2">
-      <div class="bg-gradient rounded p-5">
-        <h1 class="display-4 mt-0">Villager Connections</h1>
-        <div class="row">
-          <div class="col-4">
-            <div class="list-group" id="list-tab" role="tablist">
-              <a
-                class="list-group-item list-group-item-action active"
-                id="list-home-list"
-                data-bs-toggle="list"
-                href="#friend-requests"
-                role="tab"
-                aria-controls="list-home"
-                >Friend Requests</a
-              >
-              <a
-                class="list-group-item list-group-item-action"
-                id="list-profile-list"
-                data-bs-toggle="list"
-                href="#suggestions"
-                role="tab"
-                aria-controls="list-profile"
-                >Suggestions</a
-              >
-              <a
-                class="list-group-item list-group-item-action"
-                id="list-messages-list"
-                data-bs-toggle="list"
-                href="#all-friends"
-                role="tab"
-                aria-controls="list-messages"
-                >All Friends</a
-              >
-            </div>
+      <h1 class="display-4 mt-0">Villager Connections</h1>
+      <!-- List Group -->
+      <div class="row">
+        <div class="col-md-4 col-xs-12" id="category-section">
+          <div class="list-group" id="list-tab" role="tablist">
+            <a
+              class="list-group-item list-group-item-action active"
+              id="list-tab"
+              data-bs-toggle="list"
+              href="#friend-request"
+              role="tab"
+              aria-controls="list-home"
+              >Friend Requests</a
+            >
+            <a
+              class="list-group-item list-group-item-action"
+              id="list-profile-list"
+              data-bs-toggle="list"
+              href="#suggestions"
+              role="tab"
+              aria-controls="list-profile"
+              >Suggestions</a
+            >
+            <a
+              class="list-group-item list-group-item-action"
+              id="list-messages-list"
+              data-bs-toggle="list"
+              href="#all-friends"
+              role="tab"
+              aria-controls="list-messages"
+              >All Friends</a
+            >
           </div>
-          <div class="col-8">
-            <div class="tab-content" id="nav-tabContent">
-              <div
-                class="tab-pane fade show active"
-                id="list-home"
-                role="tabpanel"
-                aria-labelledby="list-home-list"
-              >
-                ...
-              </div>
-              <div
-                class="tab-pane fade"
-                id="list-profile"
-                role="tabpanel"
-                aria-labelledby="list-profile-list"
-              >
-                ...
-              </div>
-              <div
-                class="tab-pane fade"
-                id="list-messages"
-                role="tabpanel"
-                aria-labelledby="list-messages-list"
-              >
-                ...
-              </div>
-              <div
-                class="tab-pane fade"
-                id="list-settings"
-                role="tabpanel"
-                aria-labelledby="list-settings-list"
-              >
-                ...
+        </div>
+        <div class="col-md-8 col-xs-12">
+          <div class="tab-content" id="nav-tabContent">
+            <div
+              class="tab-pane fade show active"
+              id="friend-request"
+              role="tabpanel"
+              aria-labelledby="list-home-list"
+            >
+              <h2 class="display-6 fs-2">Friend Requests</h2>
+              <!-- First Card -->
+              <div class="card mb-3" style="max-width: 540px">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img
+                      src="/Projects/ConnectionsPage/Assets/molly.png"
+                      class="img-fluid rounded-start"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body d-flex-column h-100">
+                      <h5 class="card-title">Molly</h5>
+                      <p class="card-text">
+                        <small class="text-body-secondary"
+                          >5 mutual villagers</small
+                        >
+                      </p>
+                      <p class="card-text">
+                        <small class="text-body-secondary">1 day ago</small>
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
 
-          <!-- First Card -->
-          <div class="card" style="width: 18rem">
-            <img
-              src="https://reqres.in/img/faces/5-image.jpg"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Mark Alcocer</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card’s content.
-              </p>
-              <a href="#" class="btn btn-primary">Confirm</a>
+            <div
+              class="tab-pane fade"
+              id="suggestions"
+              role="tabpanel"
+              aria-labelledby="list-profile-list"
+            >
+              Suggestions
             </div>
-          </div>
 
-          <!-- First Card -->
-          <div class="card" style="width: 18rem">
-            <img
-              src="https://reqres.in/img/faces/3-image.jpg"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Mark Alcocer</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card’s content.
-              </p>
-              <a href="#" class="btn btn-primary">Confirm</a>
+            <div
+              class="tab-pane fade"
+              id="all-friends"
+              role="tabpanel"
+              aria-labelledby="list-messages-list"
+            >
+              All Friends
             </div>
           </div>
         </div>
       </div>
     </div>
 
+    <!-- Boostrap -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"

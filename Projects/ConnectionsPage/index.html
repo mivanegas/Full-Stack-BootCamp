@@ -13,12 +13,14 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+    <!-- CSS, link after Bootstrap bc specificity -->
+    <link rel="stylesheet" href="/Projects/ConnectionsPage/index.css" />
   </head>
   <body>
     <!----- Navbar Section ----->
     <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="index.html">
           <img
             src="/Projects/ConnectionsPage/Assets/acnhleaf.png"
             alt="Logo"
@@ -45,7 +47,7 @@
               <a class="nav-link active" aria-current="page" href="#">Posts</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Friends</a>
+              <a class="nav-link" href="connections.html">Friends</a>
             </li>
           </ul>
           <ul class="navbar-nav mb-2 mb-lg-0">
@@ -74,10 +76,10 @@
 
     <!----- Main Section ----->
     <div class="container text-center mt-5">
-      <div class="bg-success bg-gradient rounded p-5">
-        <h1 class="display-2">Nook Book</h1>
-        <p class="lead">Find Friends, Share Stories :)</p>
-        <p class="lead fs-7 bg-white rounded p-4">
+      <div class="custom-header rounded p-5">
+        <h1 class="display-2 fw-semibold">Nook Book</h1>
+        <p class="lead fs-4">Find Villagers, Share Stories :)</p>
+        <p class="lead fs-7 bg-white rounded p-5">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
           inventore voluptatibus at aliquam reprehenderit ipsum vitae tempora
           sequi impedit sed fuga, nulla, totam autem fugit quisquam, iste

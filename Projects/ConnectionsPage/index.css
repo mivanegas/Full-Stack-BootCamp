@@ -1,3 +1,13 @@
+.custom-header {
+  background: #9dffb0;
+  background: linear-gradient(
+    90deg,
+    rgba(157, 255, 176, 1) 0%,
+    rgba(129, 241, 247, 1) 50%,
+    rgba(255, 245, 99, 1) 100%
+  );
+}
+
 @media screen and (max-width: 768px) {
   #category-section {
     margin-bottom: 1rem;
