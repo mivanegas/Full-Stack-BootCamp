@@ -8,6 +8,26 @@
   );
 }
 
+/* Desktop */
+.friend-card {
+  max-width: 600px;
+}
+
+.friend-card img {
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.friend-card .mutual-friends {
+  margin-left: 10px;
+}
+
+.friend-card .mutual-friends img {
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  border-radius: 50%;
+  margin-left: -10px;
+}
+
+/* Mobile */
 @media screen and (max-width: 768px) {
   #category-section {
     margin-bottom: 1rem;
@@ -21,7 +41,9 @@
   }
 
   .friend-card img {
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     width: 100px !important;
+    height: 100px;
     border-radius: 50% !important;
   }
 
@@ -30,6 +52,17 @@
   }
 
   .friend-card .card-text {
+    padding-bottom: 0.5em;
+  }
+
+  .friend-card .mutual-friends {
     padding-bottom: 1em;
+  }
+
+  .mutual-friends img {
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    height: 40px !important;
+    width: 40px !important;
+    object-fit: cover;
   }
 }

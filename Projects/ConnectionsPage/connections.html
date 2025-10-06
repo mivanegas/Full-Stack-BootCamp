@@ -11,6 +11,7 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="index.css" />
   </head>
   <body>
     <!----- Navbar Section ----->
@@ -77,7 +78,7 @@
       <h1 class="display-4 mt-0">Villager Connections</h1>
       <!-- List Group -->
       <div class="row">
-        <div class="col-md-8 col-xs-12" id="category-section">
+        <div class="col-md-4 col-xs-12" id="category-section">
           <div class="list-group pb-3" id="list-tab" role="tablist">
             <a
               class="list-group-item list-group-item-action active"
@@ -110,13 +111,14 @@
         </div>
         <div class="col-md-8 col-xs-12">
           <div class="tab-content" id="nav-tabContent">
+            <!---- Friend Requests ---->
             <div
               class="tab-pane fade show active"
               id="friend-request"
               role="tabpanel"
               aria-labelledby="list-home-list"
             >
-              <!-- First Card -->
+              <!-- 1st Card -->
               <div class="card mb-3 friend-card">
                 <div class="row g-0">
                   <div class="col-md-4">
@@ -130,19 +132,33 @@
                     <div
                       class="card-body d-flex flex-column justify-content-between h-100"
                     >
-                      <!-- Name + Mutual Friends -->
                       <div class="d-flex justify-content-between friend-name">
-                        <h5 class="card-title">Molly</h5>
+                        <h5 class="card-title">Beau</h5>
                         <p class="card-text">
                           <small class="text-body-secondary">1 day ago</small>
                         </p>
                       </div>
-                      <p class="card-text">
-                        <small class="text-body-secondary"
-                          >5 mutual villagers</small
-                        >
-                      </p>
-                      <!-- Buttons -->
+                      <div class="mutual-friends">
+                        <img
+                          src="/Projects/ConnectionsPage/Assets/Molly.png"
+                          alt="Molly the duck"
+                          width="40"
+                          height="40"
+                        />
+                        <img
+                          src="/Projects/ConnectionsPage/Assets/Chevre.png"
+                          alt="Chevre the goat"
+                          width="40"
+                          height="40"
+                        />
+                        <img
+                          src="/Projects/ConnectionsPage/Assets/Sylvana.png"
+                          alt="Sylvana the squirrel"
+                          width="40"
+                          height="40"
+                        />
+                        <span class="text-muted">+ 5 mutual villagers</span>
+                      </div>
                       <div>
                         <button type="button" class="btn btn-primary">
                           Confirm
@@ -155,7 +171,7 @@
                   </div>
                 </div>
               </div>
-              <!-- Second Card -->
+              <!-- 2nd Card -->
               <div class="card mb-3 friend-card">
                 <div class="row g-0">
                   <div class="col-md-4">
@@ -169,19 +185,86 @@
                     <div
                       class="card-body d-flex flex-column justify-content-between h-100"
                     >
-                      <!-- Name + Mutual Friends -->
                       <div class="d-flex justify-content-between friend-name">
                         <h5 class="card-title">Merengue</h5>
                         <p class="card-text">
                           <small class="text-body-secondary">3 days ago</small>
                         </p>
                       </div>
-                      <p class="card-text">
-                        <small class="text-body-secondary"
-                          >10 mutual villagers</small
-                        >
-                      </p>
-                      <!-- Buttons -->
+                      <div class="mutual-friends">
+                        <img
+                          src="/Projects/ConnectionsPage/Assets/Aurora.png"
+                          alt="Aurora the penguin"
+                          width="40"
+                          height="40"
+                        />
+                        <img
+                          src="/Projects/ConnectionsPage/Assets/Bianca.png"
+                          alt="Boomer the penguin"
+                          width="40"
+                          height="40"
+                        />
+                        <img
+                          src="/Projects/ConnectionsPage/Assets/Hornsby.png"
+                          alt="Hornsby the rhino"
+                          width="40"
+                          height="40"
+                        />
+                        <span class="text-muted">+ 12 mutual villagers</span>
+                      </div>
+                      <div>
+                        <button type="button" class="btn btn-primary">
+                          Confirm
+                        </button>
+                        <button type="button" class="btn btn-secondary">
+                          Delete
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 3rd Card -->
+              <div class="card mb-3 friend-card">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img
+                      src="/Projects/ConnectionsPage/Assets/Marshal.png"
+                      class="img-fluid rounded-start w-100"
+                      alt="Marshal the squirrel"
+                    />
+                  </div>
+                  <div class="col-md-8">
+                    <div
+                      class="card-body d-flex flex-column justify-content-between h-100"
+                    >
+                      <div class="d-flex justify-content-between friend-name">
+                        <h5 class="card-title">Marshal</h5>
+                        <p class="card-text">
+                          <small class="text-body-secondary">5 weeks ago</small>
+                        </p>
+                      </div>
+                      <div class="mutual-friends">
+                        <img
+                          src="/Projects/ConnectionsPage/Assets/Ankha.png"
+                          alt="Ankha the cat"
+                          width="40"
+                          height="40"
+                        />
+                        <img
+                          src="/Projects/ConnectionsPage/Assets/Boomer.png"
+                          alt="Boomer the penguin"
+                          width="40"
+                          height="40"
+                        />
+                        <img
+                          src="/Projects/ConnectionsPage/Assets/Eugene.png"
+                          alt="Eugene the koala"
+                          width="40"
+                          height="40"
+                        />
+                        <span class="text-muted">+ 5 mutual villagers</span>
+                      </div>
                       <div>
                         <button type="button" class="btn btn-primary">
                           Confirm
@@ -202,7 +285,7 @@
               role="tabpanel"
               aria-labelledby="list-profile-list"
             >
-              <!-- Friend card -->
+              <!-- 1st Friend -->
               <div class="card mb-3 friend-card">
                 <div class="row g-0">
                   <div class="col-md-4">
@@ -220,11 +303,27 @@
                       <div class="d-flex justify-content-between friend-name">
                         <h5 class="card-title">Axel</h5>
                       </div>
-                      <p class="card-text">
-                        <small class="text-body-secondary"
-                          >15 mutual villagers</small
-                        >
-                      </p>
+                      <div class="mutual-friends">
+                        <img
+                          src="/Projects/ConnectionsPage/Assets/Aurora.png"
+                          alt="Aurora the penguin"
+                          width="40"
+                          height="40"
+                        />
+                        <img
+                          src="/Projects/ConnectionsPage/Assets/Bam.png"
+                          alt="Bam the deer"
+                          width="40"
+                          height="40"
+                        />
+                        <img
+                          src="/Projects/ConnectionsPage/Assets/Big_Top.png"
+                          alt="Big Top the elephant"
+                          width="40"
+                          height="40"
+                        />
+                        <span class="text-muted">+ 15 mutual villagers</span>
+                      </div>
                       <!-- Buttons -->
                       <div>
                         <button type="button" class="btn btn-primary">
@@ -238,7 +337,7 @@
                   </div>
                 </div>
               </div>
-              <!-- 2nd Friend card -->
+              <!-- 2nd Friend -->
               <div class="card mb-3 friend-card">
                 <div class="row g-0">
                   <div class="col-md-4">
@@ -256,11 +355,79 @@
                       <div class="d-flex justify-content-between friend-name">
                         <h5 class="card-title">Agnes</h5>
                       </div>
-                      <p class="card-text">
-                        <small class="text-body-secondary"
-                          >17 mutual villagers</small
-                        >
-                      </p>
+                      <div class="mutual-friends">
+                        <img
+                          src="/Projects/ConnectionsPage/Assets/Boots.png"
+                          alt="Boots the alligator"
+                          width="40"
+                          height="40"
+                        />
+                        <img
+                          src="/Projects/ConnectionsPage/Assets/Bianca.png"
+                          alt="Boomer the penguin"
+                          width="40"
+                          height="40"
+                        />
+                        <img
+                          src="/Projects/ConnectionsPage/Assets/Fang.png"
+                          alt="Fang the wolf"
+                          width="40"
+                          height="40"
+                        />
+                        <span class="text-muted">+ 17 mutual villagers</span>
+                      </div>
+                      <!-- Buttons -->
+                      <div>
+                        <button type="button" class="btn btn-primary">
+                          Send Request
+                        </button>
+                        <button type="button" class="btn btn-secondary">
+                          Ignore
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 3rd Friend -->
+              <div class="card mb-3 friend-card">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img
+                      src="/Projects/ConnectionsPage/Assets/Bertha.png"
+                      class="img-fluid rounded-start w-100"
+                      alt="Bertha the hippo"
+                    />
+                  </div>
+                  <div class="col-md-8">
+                    <div
+                      class="card-body d-flex flex-column justify-content-between h-100"
+                    >
+                      <!-- Name + Mutual Friends -->
+                      <div class="d-flex justify-content-between friend-name">
+                        <h5 class="card-title">Bertha</h5>
+                      </div>
+                      <div class="mutual-friends">
+                        <img
+                          src="/Projects/ConnectionsPage/Assets/Sylvana.png"
+                          alt="Sylvana the squirrel"
+                          width="40"
+                          height="40"
+                        />
+                        <img
+                          src="/Projects/ConnectionsPage/Assets/Hornsby.png"
+                          alt="Hornsby the rhino"
+                          width="40"
+                          height="40"
+                        />
+                        <img
+                          src="/Projects/ConnectionsPage/Assets/Apollo.png"
+                          alt="Apollo the eagle"
+                          width="40"
+                          height="40"
+                        />
+                        <span class="text-muted">+ 9 mutual villagers</span>
+                      </div>
                       <!-- Buttons -->
                       <div>
                         <button type="button" class="btn btn-primary">
@@ -275,14 +442,13 @@
                 </div>
               </div>
             </div>
-
+            <!---- All Friends ---->
             <div
               class="tab-pane fade"
               id="all-friends"
               role="tabpanel"
               aria-labelledby="list-messages-list"
             >
-              <!-- All Friends -->
               <div class="card mb-3 friend-card">
                 <div class="row g-0">
                   <div class="col-md-4">
@@ -299,10 +465,10 @@
                       <!-- Name + Mutual Friends -->
                       <div class="d-flex justify-content-between friend-name">
                         <h5 class="card-title">Aurora</h5>
-                        <p class="card-text">
-                          <small class="text-body-secondary">1 day ago</small>
-                        </p>
                       </div>
+                      <p class="card-text">
+                        <small class="text-body-secondary">📍 Pear Town</small>
+                      </p>
                       <p class="card-text">
                         <small class="text-body-secondary"
                           >35 mutual villagers</small
@@ -311,10 +477,10 @@
                       <!-- Buttons -->
                       <div>
                         <button type="button" class="btn btn-primary">
-                          Confirm
+                          Message
                         </button>
                         <button type="button" class="btn btn-secondary">
-                          Delete
+                          Remove
                         </button>
                       </div>
                     </div>
@@ -337,10 +503,12 @@
                       <!-- Name + Mutual Friends -->
                       <div class="d-flex justify-content-between friend-name">
                         <h5 class="card-title">Bam</h5>
-                        <p class="card-text">
-                          <small class="text-body-secondary">1 day ago</small>
-                        </p>
                       </div>
+                      <p class="card-text">
+                        <small class="text-body-secondary"
+                          >📍 Cherry City</small
+                        >
+                      </p>
                       <p class="card-text">
                         <small class="text-body-secondary"
                           >23 mutual villagers</small
@@ -349,10 +517,10 @@
                       <!-- Buttons -->
                       <div>
                         <button type="button" class="btn btn-primary">
-                          Confirm
+                          Message
                         </button>
                         <button type="button" class="btn btn-secondary">
-                          Delete
+                          Remove
                         </button>
                       </div>
                     </div>
@@ -363,7 +531,7 @@
                 <div class="row g-0">
                   <div class="col-md-4">
                     <img
-                      src="/Projects/ConnectionsPage/Assets/molly.png"
+                      src="/Projects/ConnectionsPage/Assets/Molly.png"
                       class="img-fluid rounded-start w-100"
                       alt="Molly the duck"
                     />
@@ -375,10 +543,10 @@
                       <!-- Name + Mutual Friends -->
                       <div class="d-flex justify-content-between friend-name">
                         <h5 class="card-title">Molly</h5>
-                        <p class="card-text">
-                          <small class="text-body-secondary">1 day ago</small>
-                        </p>
                       </div>
+                      <p class="card-text">
+                        <small class="text-body-secondary">📍 Pear Town</small>
+                      </p>
                       <p class="card-text">
                         <small class="text-body-secondary"
                           >53 mutual villagers</small
@@ -387,10 +555,10 @@
                       <!-- Buttons -->
                       <div>
                         <button type="button" class="btn btn-primary">
-                          Confirm
+                          Message
                         </button>
                         <button type="button" class="btn btn-secondary">
-                          Delete
+                          Remove
                         </button>
                       </div>
                     </div>
@@ -413,10 +581,12 @@
                       <!-- Name + Mutual Friends -->
                       <div class="d-flex justify-content-between friend-name">
                         <h5 class="card-title">Bianca</h5>
-                        <p class="card-text">
-                          <small class="text-body-secondary">1 day ago</small>
-                        </p>
                       </div>
+                      <p class="card-text">
+                        <small class="text-body-secondary"
+                          >📍 Cherry City</small
+                        >
+                      </p>
                       <p class="card-text">
                         <small class="text-body-secondary"
                           >45 mutual villagers</small
@@ -425,10 +595,10 @@
                       <!-- Buttons -->
                       <div>
                         <button type="button" class="btn btn-primary">
-                          Confirm
+                          Message
                         </button>
                         <button type="button" class="btn btn-secondary">
-                          Delete
+                          Remove
                         </button>
                       </div>
                     </div>
@@ -451,10 +621,10 @@
                       <!-- Name + Mutual Friends -->
                       <div class="d-flex justify-content-between friend-name">
                         <h5 class="card-title">Big Top</h5>
-                        <p class="card-text">
-                          <small class="text-body-secondary">1 day ago</small>
-                        </p>
                       </div>
+                      <p class="card-text">
+                        <small class="text-body-secondary">📍 Peachville</small>
+                      </p>
                       <p class="card-text">
                         <small class="text-body-secondary"
                           >21 mutual villagers</small
@@ -463,10 +633,10 @@
                       <!-- Buttons -->
                       <div>
                         <button type="button" class="btn btn-primary">
-                          Confirm
+                          Message
                         </button>
                         <button type="button" class="btn btn-secondary">
-                          Delete
+                          Remove
                         </button>
                       </div>
                     </div>
@@ -489,10 +659,12 @@
                       <!-- Name + Mutual Friends -->
                       <div class="d-flex justify-content-between friend-name">
                         <h5 class="card-title">Boots</h5>
-                        <p class="card-text">
-                          <small class="text-body-secondary">1 day ago</small>
-                        </p>
                       </div>
+                      <p class="card-text">
+                        <small class="text-body-secondary"
+                          >📍 Coconut Village</small
+                        >
+                      </p>
                       <p class="card-text">
                         <small class="text-body-secondary"
                           >15 mutual villagers</small
@@ -501,10 +673,10 @@
                       <!-- Buttons -->
                       <div>
                         <button type="button" class="btn btn-primary">
-                          Confirm
+                          Message
                         </button>
                         <button type="button" class="btn btn-secondary">
-                          Delete
+                          Remove
                         </button>
                       </div>
                     </div>
@@ -527,10 +699,12 @@
                       <!-- Name + Mutual Friends -->
                       <div class="d-flex justify-content-between friend-name">
                         <h5 class="card-title">Boomer</h5>
-                        <p class="card-text">
-                          <small class="text-body-secondary">1 day ago</small>
-                        </p>
                       </div>
+                      <p class="card-text">
+                        <small class="text-body-secondary"
+                          >📍 Apple Hollow</small
+                        >
+                      </p>
                       <p class="card-text">
                         <small class="text-body-secondary"
                           >33 mutual villagers</small
@@ -539,10 +713,286 @@
                       <!-- Buttons -->
                       <div>
                         <button type="button" class="btn btn-primary">
-                          Confirm
+                          Message
                         </button>
                         <button type="button" class="btn btn-secondary">
-                          Delete
+                          Remove
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card mb-3 friend-card">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img
+                      src="/Projects/ConnectionsPage/Assets/Sylvana.png"
+                      class="img-fluid rounded-start w-100"
+                      alt="Sylvana the squirrel"
+                    />
+                  </div>
+                  <div class="col-md-8">
+                    <div
+                      class="card-body d-flex flex-column justify-content-between h-100"
+                    >
+                      <!-- Name + Mutual Friends -->
+                      <div class="d-flex justify-content-between friend-name">
+                        <h5 class="card-title">Sylvana</h5>
+                      </div>
+                      <p class="card-text">
+                        <small class="text-body-secondary"
+                          >📍 Apple Hollow</small
+                        >
+                      </p>
+                      <p class="card-text">
+                        <small class="text-body-secondary"
+                          >19 mutual villagers</small
+                        >
+                      </p>
+                      <!-- Buttons -->
+                      <div>
+                        <button type="button" class="btn btn-primary">
+                          Message
+                        </button>
+                        <button type="button" class="btn btn-secondary">
+                          Remove
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card mb-3 friend-card">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img
+                      src="/Projects/ConnectionsPage/Assets/Hornsby.png"
+                      class="img-fluid rounded-start w-100"
+                      alt="Hornsby the rhino"
+                    />
+                  </div>
+                  <div class="col-md-8">
+                    <div
+                      class="card-body d-flex flex-column justify-content-between h-100"
+                    >
+                      <!-- Name + Mutual Friends -->
+                      <div class="d-flex justify-content-between friend-name">
+                        <h5 class="card-title">Hornsby</h5>
+                      </div>
+                      <p class="card-text">
+                        <small class="text-body-secondary"
+                          >📍 Cherry City</small
+                        >
+                      </p>
+                      <p class="card-text">
+                        <small class="text-body-secondary"
+                          >13 mutual villagers</small
+                        >
+                      </p>
+                      <!-- Buttons -->
+                      <div>
+                        <button type="button" class="btn btn-primary">
+                          Message
+                        </button>
+                        <button type="button" class="btn btn-secondary">
+                          Remove
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card mb-3 friend-card">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img
+                      src="/Projects/ConnectionsPage/Assets/Ankha.png"
+                      class="img-fluid rounded-start w-100"
+                      alt="Ankha the cat"
+                    />
+                  </div>
+                  <div class="col-md-8">
+                    <div
+                      class="card-body d-flex flex-column justify-content-between h-100"
+                    >
+                      <!-- Name + Mutual Friends -->
+                      <div class="d-flex justify-content-between friend-name">
+                        <h5 class="card-title">Ankha</h5>
+                      </div>
+                      <p class="card-text">
+                        <small class="text-body-secondary"
+                          >📍 Coconut Village</small
+                        >
+                      </p>
+                      <p class="card-text">
+                        <small class="text-body-secondary"
+                          >10 mutual villagers</small
+                        >
+                      </p>
+                      <!-- Buttons -->
+                      <div>
+                        <button type="button" class="btn btn-primary">
+                          Message
+                        </button>
+                        <button type="button" class="btn btn-secondary">
+                          Remove
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card mb-3 friend-card">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img
+                      src="/Projects/ConnectionsPage/Assets/Chevre.png"
+                      class="img-fluid rounded-start w-100"
+                      alt="Chevre the goat"
+                    />
+                  </div>
+                  <div class="col-md-8">
+                    <div
+                      class="card-body d-flex flex-column justify-content-between h-100"
+                    >
+                      <!-- Name + Mutual Friends -->
+                      <div class="d-flex justify-content-between friend-name">
+                        <h5 class="card-title">Chevre</h5>
+                      </div>
+                      <p class="card-text">
+                        <small class="text-body-secondary"
+                          >📍 Apple Hollow</small
+                        >
+                      </p>
+                      <p class="card-text">
+                        <small class="text-body-secondary"
+                          >42 mutual villagers</small
+                        >
+                      </p>
+                      <!-- Buttons -->
+                      <div>
+                        <button type="button" class="btn btn-primary">
+                          Message
+                        </button>
+                        <button type="button" class="btn btn-secondary">
+                          Remove
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card mb-3 friend-card">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img
+                      src="/Projects/ConnectionsPage/Assets/Apollo.png"
+                      class="img-fluid rounded-start w-100"
+                      alt="Apollo the eagle"
+                    />
+                  </div>
+                  <div class="col-md-8">
+                    <div
+                      class="card-body d-flex flex-column justify-content-between h-100"
+                    >
+                      <!-- Name + Mutual Friends -->
+                      <div class="d-flex justify-content-between friend-name">
+                        <h5 class="card-title">Apollo</h5>
+                      </div>
+                      <p class="card-text">
+                        <small class="text-body-secondary">📍 Peachville</small>
+                      </p>
+                      <p class="card-text">
+                        <small class="text-body-secondary"
+                          >11 mutual villagers</small
+                        >
+                      </p>
+                      <!-- Buttons -->
+                      <div>
+                        <button type="button" class="btn btn-primary">
+                          Message
+                        </button>
+                        <button type="button" class="btn btn-secondary">
+                          Remove
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card mb-3 friend-card">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img
+                      src="/Projects/ConnectionsPage/Assets/Eugene.png"
+                      class="img-fluid rounded-start w-100"
+                      alt="Eugene the koala"
+                    />
+                  </div>
+                  <div class="col-md-8">
+                    <div
+                      class="card-body d-flex flex-column justify-content-between h-100"
+                    >
+                      <!-- Name + Mutual Friends -->
+                      <div class="d-flex justify-content-between friend-name">
+                        <h5 class="card-title">Eugene</h5>
+                      </div>
+                      <p class="card-text">
+                        <small class="text-body-secondary"
+                          >📍 Cherry City</small
+                        >
+                      </p>
+                      <p class="card-text">
+                        <small class="text-body-secondary"
+                          >27 mutual villagers</small
+                        >
+                      </p>
+                      <!-- Buttons -->
+                      <div>
+                        <button type="button" class="btn btn-primary">
+                          Message
+                        </button>
+                        <button type="button" class="btn btn-secondary">
+                          Remove
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card mb-3 friend-card">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img
+                      src="/Projects/ConnectionsPage/Assets/Fang.png"
+                      class="img-fluid rounded-start w-100"
+                      alt="Fang the wolf"
+                    />
+                  </div>
+                  <div class="col-md-8">
+                    <div
+                      class="card-body d-flex flex-column justify-content-between h-100"
+                    >
+                      <!-- Name + Mutual Friends -->
+                      <div class="d-flex justify-content-between friend-name">
+                        <h5 class="card-title">Fang</h5>
+                      </div>
+                      <p class="card-text">
+                        <small class="text-body-secondary">📍 Pear Town</small>
+                      </p>
+                      <p class="card-text">
+                        <small class="text-body-secondary"
+                          >38 mutual villagers</small
+                        >
+                      </p>
+                      <!-- Buttons -->
+                      <div>
+                        <button type="button" class="btn btn-primary">
+                          Message
+                        </button>
+                        <button type="button" class="btn btn-secondary">
+                          Remove
                         </button>
                       </div>
                     </div>
