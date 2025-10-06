@@ -15,10 +15,21 @@
 
   .friend-card {
     text-align: center;
+    padding-top: 1em;
+    margin: auto;
+    max-width: 300px;
   }
 
   .friend-card img {
-    width: 200px !important;
+    width: 100px !important;
     border-radius: 50% !important;
+  }
+
+  .friend-card .friend-name {
+    flex-direction: column;
+  }
+
+  .friend-card .card-text {
+    padding-bottom: 1em;
   }
 }
