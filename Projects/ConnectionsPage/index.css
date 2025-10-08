@@ -15,6 +15,14 @@ body {
   background-color: #fef9e7;
 }
 
+.posts {
+  max-width: 80%;
+}
+
+.icons {
+  color: rgb(90, 88, 88);
+}
+
 /* Desktop */
 .friend-card {
   max-width: 600px;

@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nook Book</title>
+    <!-- Icons -->
+    <script
+      src="https://kit.fontawesome.com/457602dfdb.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- Image for tab -->
     <link rel="icon" href="/Projects/ConnectionsPage/Assets/acnhleaf.png" />
     <!-- Bootstrap -->
@@ -95,6 +100,31 @@
           class="img-fluid img-thumbnail"
         />
       </div>
+      <!-- Status form -->
+      <form>
+        <div class="d-flex m-4">
+          <img
+            src="/Projects/ConnectionsPage/Assets/profilepic.png"
+            alt="profile picture"
+            width="30"
+            class="rounded m-1"
+          />
+          <input
+            type="text"
+            class="form-control m-1"
+            id="status"
+            aria-describedby="status"
+            placeholder="What's on your mind?"
+            maxlength="200"
+          />
+          <button type="submit" class="btn btn-primary m-1">Post</button>
+        </div>
+        <div class="d-flex justify-content-evenly icons">
+          <i class="fa-solid fa-video"> Live Video</i>
+          <i class="fa-regular fa-image"> Photos/Video</i>
+          <i class="fa-regular fa-face-smile"> Feeling/Activity</i>
+        </div>
+      </form>
       <!-- Icons + Posts -->
       <div class="d-flex flex-column flex-md-row mt-4">
         <!-- Left column -->
@@ -103,6 +133,7 @@
             <img
               src="/Projects/ConnectionsPage/Assets/groups.png"
               alt="groups icon"
+              class="img-fluid groups"
             />
             <p class="display-8 fw-semibold">Groups</p>
           </div>
@@ -110,15 +141,15 @@
             <img
               src="/Projects/ConnectionsPage/Assets/Nook_Shopping.png"
               alt="Nook Shopping Icon"
-              class="img-fluid marketplace"
+              class="img-fluid trading"
             />
-            <p class="display-8 fw-semibold">Marketplace</p>
+            <p class="display-8 fw-semibold">Trading</p>
           </div>
           <div class="bg-info rounded p-2 m-4">
             <img
               src="/Projects/ConnectionsPage/Assets/events.png"
               alt="Nook Shopping Icon"
-              class="img-fluid marketplace"
+              class="img-fluid events"
             />
             <p class="display-8 fw-semibold">Events</p>
           </div>
@@ -126,7 +157,7 @@
             <img
               src="/Projects/ConnectionsPage/Assets/photo_album.png"
               alt="Nook Shopping Icon"
-              class="img-fluid marketplace"
+              class="img-fluid photos"
             />
             <p class="display-8 fw-semibold">Photos</p>
           </div>
@@ -134,7 +165,7 @@
             <img
               src="/Projects/ConnectionsPage/Assets/settings.png"
               alt="Nook Shopping Icon"
-              class="img-fluid marketplace"
+              class="img-fluid settings"
             />
             <p class="display-8 fw-semibold">Settings</p>
           </div>
@@ -142,123 +173,246 @@
         <!-- Right column -->
         <div class="mt-4">
           <div class="bg-white fs-8 rounded p-3 mb-3 shadow-sm posts">
+            <div class="d-flex p-2">
+              <img
+                src="/Projects/ConnectionsPage/Assets/Aurora.png"
+                alt="Aurora the penguin"
+                width="40"
+                class="rounded p-1"
+              />
+              <h4 class="p-1">Aurora</h4>
+            </div>
             <p class="mb-0">
               ❄️ Good afternoon, friends! I tried my wing at making a snowflake
               wreath today, and it turned out so cute I might make one for
               everyone! If anyone has extra large snowflakes, please send them
-              my way! ☃️✨ #CraftingJoy #StayCozy - Aurora 🐧
+              my way! ☃️✨ #CraftingJoy #StayCozy
             </p>
           </div>
 
           <div class="bg-white fs-8 rounded p-3 mb-3 shadow-sm posts">
+            <div class="d-flex p-2">
+              <img
+                src="/Projects/ConnectionsPage/Assets/Bam.png"
+                alt="Bam the deer"
+                width="40"
+                class="rounded p-1"
+              />
+              <h4 class="p-1">Bam</h4>
+            </div>
             <p class="mb-0">
               Yo! Just finished a killer morning workout by the plaza — sprint
               drills, some jumps, and a few laps around the museum. Gotta keep
               those legs ready for bug-catching season! 🏃💪 Anyone wanna race
-              later? #PeakPerformance #IslandEnergy - Bam 🦌
+              later? #PeakPerformance #IslandEnergy
             </p>
           </div>
 
           <div class="bg-white fs-8 rounded p-3 mb-3 shadow-sm posts">
+            <div class="d-flex p-2">
+              <img
+                src="/Projects/ConnectionsPage/Assets/Molly.png"
+                alt="Molly the duck"
+                width="40"
+                class="rounded p-1"
+              />
+              <h4 class="p-1">Molly</h4>
+            </div>
             <p class="mb-0">
               Hi hi ☺️ I spent the whole morning by the river, watching
               dragonflies and reading under my favorite tree. Then I made a
               peach pie to share later! Please stop by if you’d like a slice —
-              it’s still warm! 🥧🍑 #SimpleJoys #PeacefulMoments - Molly 🦆
+              it’s still warm! 🥧🍑 #SimpleJoys #PeacefulMoments
             </p>
           </div>
 
           <div class="bg-white fs-8 rounded p-3 mb-3 shadow-sm posts">
+            <div class="d-flex p-2">
+              <img
+                src="/Projects/ConnectionsPage/Assets/Bianca.png"
+                alt="Bianca the tiger"
+                width="40"
+                class="rounded p-1"
+              />
+              <h4 class="p-1">Bianca</h4>
+            </div>
             <p class="mb-0">
               O-M-G, I finally crafted that shell arch I’ve been talking about!
               It’s giving major beach party vibes. Come take selfies with me
               before sunset — golden hour is everything! 🌅✨ #StyleQueen
-              #ShellYeah - Bianca 🐯
+              #ShellYeah
             </p>
           </div>
 
           <div class="bg-white fs-8 rounded p-3 mb-3 shadow-sm posts">
+            <div class="d-flex p-2">
+              <img
+                src="/Projects/ConnectionsPage/Assets/Big_Top.png"
+                alt="Big Top the elephant"
+                width="40"
+                class="rounded p-1"
+              />
+              <h4 class="p-1">Big Top</h4>
+            </div>
             <p class="mb-0">
               🎉 Superhero break! I just helped Boots plant some new flowers
               near Resident Services. Heroes gotta keep the island beautiful
-              too! 🌻💪 #HeroDuty #TeamWork - Big Top 🐘
+              too! 🌻💪 #HeroDuty #TeamWork
             </p>
           </div>
 
           <div class="bg-white fs-8 rounded p-3 mb-3 shadow-sm posts">
+            <div class="d-flex p-2">
+              <img
+                src="/Projects/ConnectionsPage/Assets/Boots.png"
+                alt="Boots the alligator"
+                width="40"
+                class="rounded p-1"
+              />
+              <h4 class="p-1">Boots</h4>
+            </div>
             <p class="mb-0">
               Woohoo! Just caught a giant snapping turtle by the pier! 🐢 Might
               name him “Snappy” and let him guard my house. Anyone got tips for
-              building him a mini pond? #CatchOfTheDay #BootsLuck - Boots 🐊
+              building him a mini pond? #CatchOfTheDay #BootsLuck
             </p>
           </div>
 
           <div class="bg-white fs-8 rounded p-3 mb-3 shadow-sm posts">
+            <div class="d-flex p-2">
+              <img
+                src="/Projects/ConnectionsPage/Assets/Boomer.png"
+                alt="Boomer the penguin"
+                width="40"
+                class="rounded p-1"
+              />
+              <h4 class="p-1">Boomer</h4>
+            </div>
             <p class="mb-0">
               I may not move fast, but I sure stay steady! 🐧 Today I crafted a
               wooden toolbox to tidy up my DIY bench. Nothing like a clean
               workspace and a cup of coffee to start the day right. ☕🔧
-              #SteadyAsSheGoes #PenguinPower - Boomer 🐧
+              #SteadyAsSheGoes #PenguinPower
             </p>
           </div>
 
           <div class="bg-white fs-8 rounded p-3 mb-3 shadow-sm posts">
+            <div class="d-flex p-2">
+              <img
+                src="/Projects/ConnectionsPage/Assets/Sylvana.png"
+                alt="Sylvana the squirrel"
+                width="40"
+                class="rounded p-1"
+              />
+              <h4 class="p-1">Sylvana</h4>
+            </div>
             <p class="mb-0">
               🌿 I made a log bench today! It’s simple, but it fits perfectly
               under the cedar trees near my house. Please come sit with me
-              sometime — I’ll bring tea. 🍵✨ #NatureLover #QuietMoments -
-              Sylvana 🐿️
+              sometime — I’ll bring tea. 🍵✨ #NatureLover #QuietMoments
             </p>
           </div>
 
           <div class="bg-white fs-8 rounded p-3 mb-3 shadow-sm posts">
+            <div class="d-flex p-2">
+              <img
+                src="/Projects/ConnectionsPage/Assets/Hornsby.png"
+                alt="Hornsby the rhino"
+                width="40"
+                class="rounded p-1"
+              />
+              <h4 class="p-1">Hornsby</h4>
+            </div>
             <p class="mb-0">
               Mmm... finally learned the DIY for a coconut juice! 🥥 I made
               one... then accidentally drank it before I could take a photo.
-              Oops. Guess I’ll have to make another! #Refreshing #RhinoLife -
-              Hornsby 🦏
+              Oops. Guess I’ll have to make another! #Refreshing #RhinoLife
             </p>
           </div>
 
           <div class="bg-white fs-8 rounded p-3 mb-3 shadow-sm posts">
+            <div class="d-flex p-2">
+              <img
+                src="/Projects/ConnectionsPage/Assets/Ankha.png"
+                alt="Ankha the cat"
+                width="40"
+                class="rounded p-1"
+              />
+              <h4 class="p-1">Ankha</h4>
+            </div>
             <p class="mb-0">
               A royal update: I have adorned my home with golden dishes, and it
               is divine. ✨ Please refrain from touching, smudging, or breathing
-              too close to them. Thank you. 😌👑 #RegalLiving #GoldenStandard -
-              Anka 🐱
+              too close to them. Thank you. 😌👑 #RegalLiving #GoldenStandard
             </p>
           </div>
 
           <div class="bg-white fs-8 rounded p-3 mb-3 shadow-sm posts">
+            <div class="d-flex p-2">
+              <img
+                src="/Projects/ConnectionsPage/Assets/Chevre.png"
+                alt="Chevre the goat"
+                width="40"
+                class="rounded p-1"
+              />
+              <h4 class="p-1">Chevre</h4>
+            </div>
             <p class="mb-0">
               🌸 I baked some carrot cake muffins this morning and left a few
               near the plaza bench for anyone who passes by. Please enjoy them
               while they’re still warm! Sharing sweetness makes the day brighter
-              💕 #KindnessMatters #HomeBakedHappiness - Chevre 🐐
+              💕 #KindnessMatters #HomeBakedHappiness
             </p>
           </div>
 
           <div class="bg-white fs-8 rounded p-3 mb-3 shadow-sm posts">
+            <div class="d-flex p-2">
+              <img
+                src="/Projects/ConnectionsPage/Assets/Apollo.png"
+                alt="Apollo the eagle"
+                width="40"
+                class="rounded p-1"
+              />
+              <h4 class="p-1">Apollo</h4>
+            </div>
             <p class="mb-0">
               Spent the morning fishing with Fang. Didn’t catch much, but we
               caught up plenty — and that’s what matters. 🪶🎣 #OldFriends
-              #EasyMorning - Apollo 🦅
+              #EasyMorning
             </p>
           </div>
 
           <div class="bg-white fs-8 rounded p-3 mb-3 shadow-sm posts">
+            <div class="d-flex p-2">
+              <img
+                src="/Projects/ConnectionsPage/Assets/Eugene.png"
+                alt="Eugene the koala"
+                width="40"
+                class="rounded p-1"
+              />
+              <h4 class="p-1">Eugene</h4>
+            </div>
             <p class="mb-0">
               Sup, cool cats 😎 Just dropped a new jam on the island stereo —
               smooth grooves for your sunset strolls. Stop by and vibe. 🕶️🎸
-              #StayCool #MusicIsLife - Eugene 🐨
+              #StayCool #MusicIsLife
             </p>
           </div>
 
           <div class="bg-white fs-8 rounded p-3 mb-3 shadow-sm posts">
+            <div class="d-flex p-2">
+              <img
+                src="/Projects/ConnectionsPage/Assets/Fang.png"
+                alt="Fang the wolf"
+                width="40"
+                class="rounded p-1"
+              />
+              <h4 class="p-1">Fang</h4>
+            </div>
             <p class="mb-0">
               Snow’s falling again. Perfect weather for a quiet walk and a cup
               of joe. Anyone else feel like time slows down a bit here? ☕
-              #CozySeason #WinterVibes - Fang 🐺
+              #CozySeason #WinterVibes
             </p>
           </div>
         </div>
