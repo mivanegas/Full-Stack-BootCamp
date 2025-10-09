@@ -66,22 +66,39 @@
     </nav>
     <!-- Main Section -->
     <div class="container">
-      <div class="d-flex flex-column flex-md-row">
+      <div class="d-flex flex-column profile-header">
         <img
           src="/Projects/ConnectionsPage/Assets/cover.png"
           alt="garden"
-          width="800"
+          width="900"
+          height="400"
+          class="flex-lg-row img-fluid cover-photo"
         />
-        <img
-          src="/Projects/ConnectionsPage/Assets/profilepic.png"
-          alt="profile picture"
-          width="200"
-          height="200"
-          class="img-fluid img-thumbnail profilepic"
-        />
+        <div
+          class="d-flex flex-lg-row justify-content-start align-items-center"
+        >
+          <img
+            src="/Projects/ConnectionsPage/Assets/profilepic.png"
+            alt="profile picture"
+            width="200"
+            height="200"
+            class="img-fluid img-thumbnail profilepic"
+          />
+          <div class="profile-name">
+            <h4 class="d-flex display-5 m-3">Maria Isabel Vanegas</h4>
+            <p class="d-flex text-muted m-3">536 friends</p>
+            <hr />
+            <ul>
+              <li>Posts</li>
+              <li>About</li>
+              <li>Friends</li>
+              <li>Photos</li>
+            </ul>
+          </div>
+        </div>
       </div>
       <!-- Status form -->
-      <form class="bg-white rounded shadow-sm status mt-5">
+      <form class="bg-white rounded status mt-5">
         <div class="d-flex m-4 pt-4">
           <img
             src="/Projects/ConnectionsPage/Assets/profilepic.png"
@@ -101,9 +118,27 @@
         </div>
         <hr />
         <div class="d-flex justify-content-evenly pb-4 icons">
-          <i class="fa-solid fa-video"> Live Video</i>
-          <i class="fa-regular fa-image fw-semibold"> Photos/Video</i>
-          <i class="fa-regular fa-face-smile fw-semibold"> Feeling/Activity</i>
+          <i class="fa-solid fa-video">
+            <a
+              href="#"
+              style="font-family: Georgia, 'Times New Roman', Times, serif"
+              >Live Video</a
+            >
+          </i>
+          <i class="fa-regular fa-image fw-semibold">
+            <a
+              href="#"
+              style="font-family: Georgia, 'Times New Roman', Times, serif"
+              >Photos/Video</a
+            >
+          </i>
+          <i class="fa-regular fa-face-smile fw-semibold">
+            <a
+              href="#"
+              style="font-family: Georgia, 'Times New Roman', Times, serif"
+              >Feeling/Activity</a
+            >
+          </i>
         </div>
       </form>
     </div>
