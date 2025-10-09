@@ -12,17 +12,26 @@ body {
 }
 
 /* Desktop */
-a {
+.icons a {
   text-decoration: none;
   color: rgb(90, 88, 88);
 }
 
+a {
+  text-decoration: none;
+}
 form {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 ul {
   list-style: none;
+}
+
+.thick-hr {
+  height: 2px;
+  background-color: white;
+  opacity: 100%;
 }
 
 .posts {
@@ -37,7 +46,7 @@ ul {
 }
 
 .profile-header {
-  background-color: #ac6912;
+  background-color: #bb7315;
   color: white;
 }
 
