@@ -23,6 +23,36 @@ body {
   color: rgb(90, 88, 88);
 }
 
+.groups {
+  background-color: #f98d62;
+}
+
+.trading {
+  background-color: #ebde53;
+}
+
+.events {
+  background-color: #7ed5bb;
+}
+
+.photos {
+  background-color: #bf8ff3;
+}
+
+.settings {
+  background-color: #9183ce;
+}
+
+.btn-custom-color {
+  background-color: #81bfc7;
+  color: aliceblue;
+  font-weight: bold;
+}
+
+.profilepic {
+  border-radius: 50%;
+}
+
 /* Desktop */
 .friend-card {
   max-width: 600px;

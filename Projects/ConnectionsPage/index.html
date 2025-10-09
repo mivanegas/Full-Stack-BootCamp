@@ -60,21 +60,9 @@
               <a class="nav-link" aria-current="page" href="#">Messages</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Profile</a>
+              <a class="nav-link" href="profile.html">Profile</a>
             </li>
           </ul>
-          <!------ Search bar, in case needed later ------->
-          <!-- <form class="d-flex" role="search">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button>
-          </form> -->
         </div>
       </div>
     </nav>
@@ -101,13 +89,13 @@
         />
       </div>
       <!-- Status form -->
-      <form>
-        <div class="d-flex m-4">
+      <form class="bg-white rounded shadow-sm status mt-5">
+        <div class="d-flex m-4 pt-4">
           <img
             src="/Projects/ConnectionsPage/Assets/profilepic.png"
             alt="profile picture"
-            width="30"
-            class="rounded m-1"
+            width="50"
+            class="img-fluid rounded m-1"
           />
           <input
             type="text"
@@ -117,68 +105,69 @@
             placeholder="What's on your mind?"
             maxlength="200"
           />
-          <button type="submit" class="btn btn-primary m-1">Post</button>
+          <button type="submit" class="btn btn-custom-color m-1">Post</button>
         </div>
-        <div class="d-flex justify-content-evenly icons">
+        <hr />
+        <div class="d-flex justify-content-evenly pb-4 icons">
           <i class="fa-solid fa-video"> Live Video</i>
-          <i class="fa-regular fa-image"> Photos/Video</i>
-          <i class="fa-regular fa-face-smile"> Feeling/Activity</i>
+          <i class="fa-regular fa-image fw-semibold"> Photos/Video</i>
+          <i class="fa-regular fa-face-smile fw-semibold"> Feeling/Activity</i>
         </div>
       </form>
       <!-- Icons + Posts -->
       <div class="d-flex flex-column flex-md-row mt-4">
         <!-- Left column -->
         <div class="d-flex flex-md-column justify-content-start">
-          <div class="bg-info rounded p-2 m-4">
+          <div class="groups rounded p-3 m-5 shadow-sm">
             <img
               src="/Projects/ConnectionsPage/Assets/groups.png"
               alt="groups icon"
-              class="img-fluid groups"
+              class="img-fluid"
             />
             <p class="display-8 fw-semibold">Groups</p>
           </div>
-          <div class="bg-info rounded p-2 m-4">
+          <div class="trading rounded p-3 m-5 shadow-sm">
             <img
               src="/Projects/ConnectionsPage/Assets/Nook_Shopping.png"
               alt="Nook Shopping Icon"
-              class="img-fluid trading"
+              class="img-fluid"
             />
             <p class="display-8 fw-semibold">Trading</p>
           </div>
-          <div class="bg-info rounded p-2 m-4">
+          <div class="events rounded p-3 m-5 shadow-sm">
             <img
               src="/Projects/ConnectionsPage/Assets/events.png"
               alt="Nook Shopping Icon"
-              class="img-fluid events"
+              class="img-fluid"
             />
             <p class="display-8 fw-semibold">Events</p>
           </div>
-          <div class="bg-info rounded p-2 m-4">
+          <div class="photos rounded p-3 m-5 shadow-sm">
             <img
               src="/Projects/ConnectionsPage/Assets/photo_album.png"
               alt="Nook Shopping Icon"
-              class="img-fluid photos"
+              class="img-fluid"
             />
             <p class="display-8 fw-semibold">Photos</p>
           </div>
-          <div class="bg-info rounded p-2 m-4">
+          <div class="settings rounded p-3 m-5 shadow-sm">
             <img
               src="/Projects/ConnectionsPage/Assets/settings.png"
               alt="Nook Shopping Icon"
-              class="img-fluid settings"
+              class="img-fluid"
             />
             <p class="display-8 fw-semibold">Settings</p>
           </div>
         </div>
         <!-- Right column -->
-        <div class="mt-4">
-          <div class="bg-white fs-8 rounded p-3 mb-3 shadow-sm posts">
+        <div class="mt-5">
+          <div class="bg-white fs-8 rounded p-3 mb-4 shadow-sm posts">
             <div class="d-flex p-2">
               <img
                 src="/Projects/ConnectionsPage/Assets/Aurora.png"
                 alt="Aurora the penguin"
                 width="40"
-                class="rounded p-1"
+                class="rounded p-1 shadow-sm"
               />
               <h4 class="p-1">Aurora</h4>
             </div>
@@ -190,13 +179,13 @@
             </p>
           </div>
 
-          <div class="bg-white fs-8 rounded p-3 mb-3 shadow-sm posts">
+          <div class="bg-white fs-8 rounded p-3 mb-4 shadow-sm posts">
             <div class="d-flex p-2">
               <img
                 src="/Projects/ConnectionsPage/Assets/Bam.png"
                 alt="Bam the deer"
                 width="40"
-                class="rounded p-1"
+                class="rounded p-1 shadow-sm"
               />
               <h4 class="p-1">Bam</h4>
             </div>
@@ -208,13 +197,13 @@
             </p>
           </div>
 
-          <div class="bg-white fs-8 rounded p-3 mb-3 shadow-sm posts">
+          <div class="bg-white fs-8 rounded p-3 mb-4 shadow-sm posts">
             <div class="d-flex p-2">
               <img
                 src="/Projects/ConnectionsPage/Assets/Molly.png"
                 alt="Molly the duck"
                 width="40"
-                class="rounded p-1"
+                class="rounded p-1 shadow-sm"
               />
               <h4 class="p-1">Molly</h4>
             </div>
@@ -226,13 +215,13 @@
             </p>
           </div>
 
-          <div class="bg-white fs-8 rounded p-3 mb-3 shadow-sm posts">
+          <div class="bg-white fs-8 rounded p-3 mb-4 shadow-sm posts">
             <div class="d-flex p-2">
               <img
                 src="/Projects/ConnectionsPage/Assets/Bianca.png"
                 alt="Bianca the tiger"
                 width="40"
-                class="rounded p-1"
+                class="rounded p-1 shadow-sm"
               />
               <h4 class="p-1">Bianca</h4>
             </div>
@@ -244,13 +233,13 @@
             </p>
           </div>
 
-          <div class="bg-white fs-8 rounded p-3 mb-3 shadow-sm posts">
+          <div class="bg-white fs-8 rounded p-3 mb-4 shadow-sm posts">
             <div class="d-flex p-2">
               <img
                 src="/Projects/ConnectionsPage/Assets/Big_Top.png"
                 alt="Big Top the elephant"
                 width="40"
-                class="rounded p-1"
+                class="rounded p-1 shadow-sm"
               />
               <h4 class="p-1">Big Top</h4>
             </div>
@@ -261,13 +250,13 @@
             </p>
           </div>
 
-          <div class="bg-white fs-8 rounded p-3 mb-3 shadow-sm posts">
+          <div class="bg-white fs-8 rounded p-3 mb-4 shadow-sm posts">
             <div class="d-flex p-2">
               <img
                 src="/Projects/ConnectionsPage/Assets/Boots.png"
                 alt="Boots the alligator"
                 width="40"
-                class="rounded p-1"
+                class="rounded p-1 shadow-sm"
               />
               <h4 class="p-1">Boots</h4>
             </div>
@@ -278,13 +267,13 @@
             </p>
           </div>
 
-          <div class="bg-white fs-8 rounded p-3 mb-3 shadow-sm posts">
+          <div class="bg-white fs-8 rounded p-3 mb-4 shadow-sm posts">
             <div class="d-flex p-2">
               <img
                 src="/Projects/ConnectionsPage/Assets/Boomer.png"
                 alt="Boomer the penguin"
                 width="40"
-                class="rounded p-1"
+                class="rounded p-1 shadow-sm"
               />
               <h4 class="p-1">Boomer</h4>
             </div>
@@ -296,13 +285,13 @@
             </p>
           </div>
 
-          <div class="bg-white fs-8 rounded p-3 mb-3 shadow-sm posts">
+          <div class="bg-white fs-8 rounded p-3 mb-4 shadow-sm posts">
             <div class="d-flex p-2">
               <img
                 src="/Projects/ConnectionsPage/Assets/Sylvana.png"
                 alt="Sylvana the squirrel"
                 width="40"
-                class="rounded p-1"
+                class="rounded p-1 shadow-sm"
               />
               <h4 class="p-1">Sylvana</h4>
             </div>
@@ -313,13 +302,13 @@
             </p>
           </div>
 
-          <div class="bg-white fs-8 rounded p-3 mb-3 shadow-sm posts">
+          <div class="bg-white fs-8 rounded p-3 mb-4 shadow-sm posts">
             <div class="d-flex p-2">
               <img
                 src="/Projects/ConnectionsPage/Assets/Hornsby.png"
                 alt="Hornsby the rhino"
                 width="40"
-                class="rounded p-1"
+                class="rounded p-1 shadow-sm"
               />
               <h4 class="p-1">Hornsby</h4>
             </div>
@@ -330,13 +319,13 @@
             </p>
           </div>
 
-          <div class="bg-white fs-8 rounded p-3 mb-3 shadow-sm posts">
+          <div class="bg-white fs-8 rounded p-3 mb-4 shadow-sm posts">
             <div class="d-flex p-2">
               <img
                 src="/Projects/ConnectionsPage/Assets/Ankha.png"
                 alt="Ankha the cat"
                 width="40"
-                class="rounded p-1"
+                class="rounded p-1 shadow-sm"
               />
               <h4 class="p-1">Ankha</h4>
             </div>
@@ -347,13 +336,13 @@
             </p>
           </div>
 
-          <div class="bg-white fs-8 rounded p-3 mb-3 shadow-sm posts">
+          <div class="bg-white fs-8 rounded p-3 mb-4 shadow-sm posts">
             <div class="d-flex p-2">
               <img
                 src="/Projects/ConnectionsPage/Assets/Chevre.png"
                 alt="Chevre the goat"
                 width="40"
-                class="rounded p-1"
+                class="rounded p-1 shadow-sm"
               />
               <h4 class="p-1">Chevre</h4>
             </div>
@@ -365,13 +354,13 @@
             </p>
           </div>
 
-          <div class="bg-white fs-8 rounded p-3 mb-3 shadow-sm posts">
+          <div class="bg-white fs-8 rounded p-3 mb-4 shadow-sm posts">
             <div class="d-flex p-2">
               <img
                 src="/Projects/ConnectionsPage/Assets/Apollo.png"
                 alt="Apollo the eagle"
                 width="40"
-                class="rounded p-1"
+                class="rounded p-1 shadow-sm"
               />
               <h4 class="p-1">Apollo</h4>
             </div>
@@ -382,13 +371,13 @@
             </p>
           </div>
 
-          <div class="bg-white fs-8 rounded p-3 mb-3 shadow-sm posts">
+          <div class="bg-white fs-8 rounded p-3 mb-4 shadow-sm posts">
             <div class="d-flex p-2">
               <img
                 src="/Projects/ConnectionsPage/Assets/Eugene.png"
                 alt="Eugene the koala"
                 width="40"
-                class="rounded p-1"
+                class="rounded p-1 shadow-sm"
               />
               <h4 class="p-1">Eugene</h4>
             </div>
@@ -399,13 +388,13 @@
             </p>
           </div>
 
-          <div class="bg-white fs-8 rounded p-3 mb-3 shadow-sm posts">
+          <div class="bg-white fs-8 rounded p-3 mb-4 shadow-sm posts">
             <div class="d-flex p-2">
               <img
                 src="/Projects/ConnectionsPage/Assets/Fang.png"
                 alt="Fang the wolf"
                 width="40"
-                class="rounded p-1"
+                class="rounded p-1 shadow-sm"
               />
               <h4 class="p-1">Fang</h4>
             </div>
