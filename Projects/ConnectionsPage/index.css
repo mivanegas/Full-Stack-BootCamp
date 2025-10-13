@@ -28,6 +28,21 @@ ul {
   list-style: none;
 }
 
+.photo-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.photo-container img {
+  object-fit: cover;
+  width: 100%;
+  border-radius: 5px;
+  max-height: 110px;
+}
+
 .thick-hr {
   height: 2px;
   background-color: white;
@@ -145,5 +160,13 @@ ul {
     height: 40px !important;
     width: 40px !important;
     object-fit: cover;
+  }
+
+  a {
+    font-size: 10px;
+  }
+
+  .posting a {
+    font-size: 9px;
   }
 }
