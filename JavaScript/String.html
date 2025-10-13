@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Strings</title>
+  </head>
+  <body>
+    <h1>Strings</h1>
+    <p id="description"></p>
+    <script>
+      /*
+            # Strings
+             - "",'', ``
+             - Next line character (\n)
+             - Escape character (\)
+             - Tab space character (\t)
+
+             - Access a specific character in  a string using index
+                - Syntax: str[index]
+                    - Index: Position -1 (starts on zero)
+                    - String of length 'n', index range: 0 -> n-1
+
+            - '+' operator works as a concatenation operator with strings
+            - string + string = string
+            - string + any data = string
+            - any data + string = string
+
+            - Properties:
+                - length: total number of characters in a string
+                - Methods:
+                    - toUpperCase(): return string in upper case
+                    - toLowerCase(): return string in lower case
+                    - indexOf() **: Returns the index of the first occurence of the substring in the string, else returns -1 
+                        - lastIndexOf(): Returns the index of the last occurence of the substring in the string, else returns -1
+                    - includes() **: return true if the substring exists, else returns false
+                        - It is case sensitive
+                    - contact(): Concatenate two or more strings
+                        - alternative "+" operator
+                    - charAt(index): returns the character at the specific index
+                        - Alternative: st[index]
+                    - slice(startIndex, endIdex) **: returns a substring (Ensure startIndex < endIndex)
+                        - startIndex, endIndex: startIndex to end Index - 1
+                        - startIndex: startIndex to the end of the string
+                        - No arguments: returns the complete string
+                        - Alternatives:
+                            - substr(startIndex, substringLength): substringLength starting from starIndex
+                            - substring (startIndex, endIndex): Similar to slice 
+                                - negative index will be treated as 0
+                                - startIndex > end Index: index will be swapped
+
+
+        */
+
+      //   var x = "test";
+      //   console.log(x);
+
+      //   var x = `We are learning JavaScript.\n This is the 3rd tech we are learning after HTML and CSS`;
+      //   console.log(x);
+
+      //   document.getElementById("description").innerHTML = x;
+
+      //   var x = 'She said,"I love reading novels"';
+
+      // var x = "My hobbies are:\n \t1. Swimming 2. Dancing 3. Singing";
+      // console.log(x);
+
+      //   var name = "Maria";
+      //   console.log(name[0]);
+
+      //   var firstName = "Maria";
+      //   var lastName = "Vanegas";
+      //   console.log(firstName + " " + lastName);
+
+      //   var student1 = "Anne";
+      //   console.log(student1.length);
+
+      //  # Formula to get last character of any string
+      //   var name = "Marvin";
+      //   console.log(name[name.length - 1]);
+
+      //   var name = "Simon";
+      //   console.log(name.toUpperCase());
+      //   console.log(name.toLowerCase());
+      //   console.log(name.indexOf("n"));
+      //   console.log(name.indexOf("y"));
+      //   console.log(name.indexOf("im"));
+      //   console.log(name.lastIndexOf("n"));
+
+      //   var name = "Banana";
+      //   console.log(name.includes("B"));
+
+      var student1 = "Ananya";
+      //   console.log(student1.slice(0, 3)); // 0 -> 2
+      //   console.log(student1.slice(2, 5)); // 2 -> 4
+      //   console.log(student1.slice(2)); // starts at 3rd position and keeps the rest
+      //   console.log(student1.slice()); // return complete string
+      //   console.log(student1.substr(1, 2)); // first number is position, second is the number of characters
+      //   console.log(student1.slice(-3));
+      console.log(student1.substring(-3));
+    </script>
+  </body>
+</html>
