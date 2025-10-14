@@ -37,6 +37,10 @@ ul {
   list-style: none;
 }
 
+.container-messages {
+  max-width: 80%;
+}
+
 .photo-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -175,7 +179,26 @@ ul {
     font-size: 10px;
   }
 
+  .messages-a {
+    font-size: 14px;
+    padding-right: -10px;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
   .posting a {
     font-size: 9px;
+  }
+
+  .sidebar-icons {
+    display: flex;
+    overflow: auto;
+  }
+
+  .sidebar-icons,
+  .icon-box {
+    flex: 0 0 auto;
   }
 }
