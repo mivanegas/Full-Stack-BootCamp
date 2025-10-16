@@ -48,6 +48,8 @@
                             - substring (startIndex, endIndex): Similar to slice 
                                 - negative index will be treated as 0
                                 - startIndex > end Index: index will be swapped
+                        - replace (substring,replaceValue): return a string where a substrings are replaced with replaceValue
+                          - replaceAll (substring,replaceValue); Replace all occurences
 
 
         */
@@ -97,7 +99,12 @@
       //   console.log(student1.slice()); // return complete string
       //   console.log(student1.substr(1, 2)); // first number is position, second is the number of characters
       //   console.log(student1.slice(-3));
-      console.log(student1.substring(-3));
+      // console.log(student1.substr(2, 3));
+      // console.log(student1.slice(-3));
+      // console.log(student1.slice(3, 2)); // Empty string bc the startIndex is greater than the endIdex
+      // console.log(student1.substring(3, 2));
+
+      // console.log(student1.replace("A", "Z"));
     </script>
   </body>
 </html>

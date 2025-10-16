@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conditions</title>
+  </head>
+  <body>
+    <script>
+      /*
+              # Condition:
+                  - Create logic based on boolean value (true/false)
+                  - if else ***
+                    - Syntax:
+                    - if(condition) {
+                        // Code for the true condition
+                    } else {
+                        // Code for the false condition
+                    }
+
+                    - else if: add follow up conditions
+                    - Syntax:
+                    - if(condition1) {
+                        // Code to execute if condition1 is true
+                    } else if(condition2){
+                        // condtion1 is false, but condition2  is true
+                    } else {
+                        // condtion1 and condition2 are false
+                    }
+                - Switch case consition: check one value against multiple values
+                    - Syntax:
+                    switch(variable) {
+                    case 'value1':
+                     // Code to be execute when condition == value1
+                     case 'value2':
+                     // Code to be execute when condition == value2
+                     case 'value3':
+                     // Code to be execute when condition == value3
+                     ...
+                     default: default case
+                    }
+                - Ternary Operator (?:) *
+                    - 'Syntactic sugar' for if else blocks
+                    - Syntax: condition ? valueIfTrue : valueIfFalse
+          */
+
+      //   var x = 10;
+      //   var y = 20;
+      //   var z = 30;
+
+      //   if (y > x) {
+      //     console.log("Y is greater than x");
+      //   } else {
+      //     console.log("No");
+      //   }
+
+      //    if (y > z) {
+      //     console.log("Y is greater than x");
+      //   } else {
+      //     console.log("No");
+      //   }
+
+      //   if (x > y) {
+      //     console.log("Test 1");
+      //   } else if (x > z) {
+      //     console.log("Test 2");
+      //   } else {
+      //     console.log("Test 3");
+      //   }
+
+      //   // Ex 1: Check if number is greater than 100
+      //   var number = Number(prompt("Enter any number")); // number() converts string input to number
+      //   console.log(number);
+
+      //   if (number > 100) {
+      //     console.log("Input is greater than 100");
+      //   } else {
+      //     console.log("Input is less than 100");
+      //   }
+
+      // Ex 2: Check if 2 number are equal or not
+      //   var num1 = Number(prompt("Enter first number"));
+      //   var num2 = Number(prompt("Enter second number"));
+
+      //   if (num1 == num2) {
+      //     console.log("Both numbers are equal");
+      //   } else {
+      //     console.log("Both numbers are npt equal");
+      //   }
+
+      // Ex 3: Find greater number among the 2 input numbers
+      //   var num1 = 10;
+      //   var num2 = 20;
+
+      //   //condition logic
+      //   if (num1 > num2) {
+      //     console.log("Number 1 is greater than num2");
+      //   } else if (num2 > num1) {
+      //     console.log("Number 2 is greater than num1");
+      //   } else {
+      //     console.log("The numbers are equal");
+      //   }
+
+      // Ex 4: Find color of a fruit (Switch Case)
+
+      //   var fruit = prompt("Enter fruit name");
+
+      //   if (fruit == "Apple") {
+      //     console.log("Red");
+      //   } else if (fruit == "Orange") {
+      //     console.log("Orange");
+      //   } else if (fruit == "Banana") {
+      //     console.log("Yellow");
+      //   } else {
+      //     console.log("NA");
+      //   }
+
+      //   var fruit = prompt("Enter fruit  name");
+      //   switch (fruit) {
+      //     case "Apple":
+      //       console.log("Red");
+      //       break;
+      //     case "Orange":
+      //       console.log("Orange");
+      //       break;
+      //     case "Banana":
+      //       console.log("Yellow");
+      //       break;
+      //     default:
+      //       console.log("NA");
+      //   }
+
+      var num1 = 10;
+      var num2 = 20;
+      console.log(
+        num1 == num2 ? "Both numbers are equal" : "Both numbers are unequal"
+      );
+    </script>
+  </body>
+</html>
