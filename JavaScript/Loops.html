@@ -7,32 +7,44 @@
   </head>
   <body>
     <script>
-        /*
-              # Loops: Something to be executed on a repeated basis
-               - Terms:
-                  - Iteration: Individual cycles
-                  - Condition: Determine to proceed or halt
-              - Process:
-                  - In each iteration, condition will be checked
-                  - Only if condition is true, iteration will be process
-                  - Else, the loop will break
-              - One similarity in all types of loops
-                  - Initialization
-                  - Condition
-                  - Increment/Decrement
+      /*
+                # Loops: Something to be executed on a repeated basis
+                 - Terms:
+                    - Iteration: Individual cycles
+                    - Condition: Determine to proceed or halt
+                - Process:
+                    - In each iteration, condition will be checked
+                    - Only if condition is true, iteration will be process
+                    - Else, the loop will break
+                - One similarity in all types of loops
+                    - Initialization
+                    - Condition
+                    - Increment/Decrement
 
-               - Types of Loops
-                  1. 'While' loop *
-                   - Syntax:
-                    // Initialization
-                    while(condition) {
-                      // loop logic
-                      // increment/decrement loop variable
-                    }
+                 - Types of Loops
+                    1. 'While' loop *
+                     - Syntax:
+                      // Initialization
+                      while(condition) {
+                        // loop logic
+                        // increment/decrement loop variable
+                      }
+                    2.  do while loop
+                       - Syntax:
+                       // Initialization
+                      do {
+                        // loop logic
+                        // increment/decrement loop variable
+                      } while (condition)
+                       - Similar towhile loop, but the condition is not checked for the first iteration
+                    3. for loop ***
+                      - Syntax:
+                       for(initilization; condiiton; increment/decrement) {
+                        // loop logic
+                       }
+            */
 
-          */
-
-        // Example 1: Print first 10 number
+      // Example 1: Print first 10 number
       //   var x = 1;
       //   while (x <= 10) {
       //     console.log(x);
@@ -40,11 +52,115 @@
       //   }
 
       // Example 2: Print first 10 number in reverse order
-    //   var x = 10;
-    //   while (x <= 10) {
-    //       console.log(x);
-    //       x--;
-    //   }
+      // var x = 10;
+      // while (x >= 1) {
+      //     console.log(x);
+      //     x--;
+      // }
+
+      // # Caution: Infinite Loops(a loop where the condition never becomes false)
+
+      // Example 3: Print all even numbers from 1 to 10
+      // var x = 1;
+      // while (x <= 10) {
+      //   if (x % 2 == 0) {
+      //     console.log(x);
+      //   }
+      //   x++;
+      // }
+
+      // You use the % the remainder operator bc if 2 can go into an even number without a remainder you will have 0 left over
+
+      // Example 4: Print all character of a string
+      // var student1 = "Malvin";
+      //While loop
+      // var i = 0;
+      // while (i < student1.length) {
+      //   console.log(student1[i]);
+      //   i++;
+      // }
+
+      //For loop
+      // for (var i = 0; i < student1.length; i++) {
+      //   console.log(student1[i]);
+      // }
+
+      // Do While Example
+
+      //Print first 10 numbers
+      // var x = 1;
+      // do {
+      //   console.log(x);
+      //   x++;
+      // } while (x <= 10);
+
+      // Do while loop does not check the condition of the first iteration
+
+      // Example 1 for For Loop: Print first 10 numbers
+
+      // for (var x = 1; x <= 10; x++) {
+      //   console.log(x);
+      // }
+
+      // Example 2: Print all Characters of a string with a for loop
+
+      // var student = "Malvin";
+      // for (var i = 0; i < student.length; i++) {
+      //   console.log(student[i]);
+      // }
+
+      // Example 3: Evaluate all characters of a string and print whether it's a vowel or consonant or none
+
+      // var student = "Luis Carter";
+      // student = student.toLowerCase()
+      // for (var i = 0; i < student.length; i++) {
+      //     if (
+      //       student[i] == "a" ||
+      //       student[i] == "e" ||
+      //       student[i] == "i" ||
+      //       student[i] == "o" ||
+      //       student[i] == "u"
+      //     ) {
+      //       console.log(student[i], "Vowel");
+      //     } else if (student[i] == " ") {
+      //       console.log(student[i], "Space");
+      //     } else {
+      //       console.log(student[i], "Consonant");
+      //     }
+      //   }
+
+      // Same example using switch case
+
+      var student = "Luis Carter";
+      student = student.toLowerCase();
+      for (var i = 0; i < student.length; i++) {
+        switch (student[i]) {
+          case "a":
+            console.log(student[i], "Vowel");
+            break;
+          case "e":
+            console.log(student[i], "Vowel");
+            break;
+          case "i":
+            console.log(student[i], "Vowel");
+            break;
+          case "o":
+            console.log(student[i], "Vowel");
+            break;
+          case "u":
+            console.log(student[i], "Vowel");
+            break;
+          case " ":
+            console.log(student[i], "Space");
+            break;
+          case "'":
+            console.log(student[i], "None");
+            break;
+          default:
+            console.log(student[i], "Consant");
+            break;
+        }
+      }
     </script>
   </body>
 </html>
