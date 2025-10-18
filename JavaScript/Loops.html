@@ -131,36 +131,45 @@
 
       // Same example using switch case
 
-      var student = "Luis Carter";
-      student = student.toLowerCase();
-      for (var i = 0; i < student.length; i++) {
-        switch (student[i]) {
-          case "a":
-            console.log(student[i], "Vowel");
-            break;
-          case "e":
-            console.log(student[i], "Vowel");
-            break;
-          case "i":
-            console.log(student[i], "Vowel");
-            break;
-          case "o":
-            console.log(student[i], "Vowel");
-            break;
-          case "u":
-            console.log(student[i], "Vowel");
-            break;
-          case " ":
-            console.log(student[i], "Space");
-            break;
-          case "'":
-            console.log(student[i], "None");
-            break;
-          default:
-            console.log(student[i], "Consant");
-            break;
-        }
+      // var student = "Luis Carter";
+      // student = student.toLowerCase();
+      // for (var i = 0; i < student.length; i++) {
+      //   switch (student[i]) {
+      //     case "a":
+      //       console.log(student[i],"Vowel");
+      //       break;
+      //     case "e":
+      //       console.log(student[i],"Vowel");
+      //       break;
+      //     case "i":
+      //       console.log(student[i],"Vowel");
+      //       break;
+      //     case "o":
+      //       console.log(student[i],"Vowel");
+      //       break;
+      //     case "u":
+      //       console.log(student[i],"Vowel");
+      //       break;
+      //     case " ":
+      //       console.log(student[i],"Space");
+      //       break;
+      //     case "'":
+      //       console.log(student[i],"None");
+      //       break;
+      //     default:
+      //       console.log(student[i],"Consant");
+      //       break;
+      //   }
+      // }
+
+      // Example 4: Find the factorial of the given number
+      let num1 = Number(prompt("Enter number to find the factorial"));
+      let factorial = 1;
+
+      for (let i = num1; i > 1; i--) {
+        factorial = factorial * i;
       }
+      console.log(factorial);
     </script>
   </body>
 </html>
