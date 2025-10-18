@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Type Conversions</title>
+  </head>
+  <body>
+    <script>
+      /*
+              # Type Conversion: converting a value from one data type to another
+                  - Type refers to data type
+
+                  - 2 Types
+                      - Implicit type conversion (automatic)
+                          - aka Type coercion
+                          - Examples:
+                              - JS converts: String to Number
+                                  - Equality operator (==)
+                                  - Arithmetic operator excluding the '+' operator
+                              - Number to string
+                                  - Arithmetic operator '+'
+                              - JavaScript implicitly coverts any data type to the boolean data type (truthy/falsy concept applies)
+                                - When the value is directly place in the condition placeholder
+                      - Explicit type conversion (manual)
+                          - aka Type casting
+                          - Examples:
+                              - Inbuilt constructor
+                                  - Number(): any data type to number
+                                  - String(): any data type to string
+                                  - Boolean(): Any data type to boalean
+
+              # NaN: Not a Number
+                  - represents an invalid number
+                  - When you console.log(typeof Nan) = it gives you number lol
+                  - isNan(): to check if a value that converts to true when evaluated
+
+              # Truthy and Falsy Values:
+                  - Truthy values: Any values that converts to true when evaluated in a boolean context
+                      - Number: Any non-zero number including negatives and floats
+                      - String: Any non-empty string including spaces
+                  - Falsy values: Any values that converts to false when evaluated in a boolean context
+                      - Number: 0
+                      - String: empty string
+                      - undefined (default values of variables)
+                      - null (forced value, empty placeholder)
+                      - Nan (Not a Number)
+
+          */
+
+      //   console.log(5 - "5"); //gives 0
+
+      //   console.log("5" - "5"); //gives 0
+
+      //   console.log("Abdiel" - "0"); //gives NaN "Not a Number"
+
+      //  console.log(5 + "5"); //gives 55 because it combines them not adds them
+
+      //   console.log(5 + "5" - 5); // gives 50 because first you get 55 then subtraqct 5
+
+      //   console.log(5 + "5" / 5 - 5); // Gives you 1 (folow order of operations start with divide first)
+
+      //   let x = "678";
+      //   console.log(x);
+      //   console.log(Number(x)); // Converts any data type to number
+
+      //   console.log(String(5)); // Converts any data type to string
+
+      //   console.log(Boolean(5)); // Converts any data type to boolean with truthy values
+
+      //   console.log(Boolean("Madeline")); //Gives truthy values with boolean
+
+      //   console.log(Boolean("")); //Gives falsy values with boolean
+
+      //   console.log(Boolean(undefined)); //Gives falsy values with boolean
+
+      //   console.log(Boolean(null)); //Gives falsy values with boolean
+
+      //   if (5 == "5") {
+      //     console.log("Yes");
+      //   } else {
+      //     console.log("No");
+      //   }
+
+      //   console.log(typeof String(550 - 550)); // gives you string
+
+      console.log(String(typeof Boolean(550 - 550))); // gives you boolean
+    </script>
+  </body>
+</html>
