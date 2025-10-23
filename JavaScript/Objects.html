@@ -40,7 +40,7 @@
 
               - JSON: JavaScript Object Notation
                 - JSON.stringify(): Convert any JS object to string
-                - JSON
+                - JSON.parse(): Convert
 
 
           */
@@ -95,11 +95,11 @@
 
       // Inbuild methods
 
-      const anneDetails = {
-        name: "Anne",
-        age: 27,
-        isGraduated: false,
-      };
+      // const anneDetails = {
+      //   name: "Anne",
+      //   age: 27,
+      //   isGraduated: false,
+      // };
 
       // console.log(Object.keys(anneDetails));
       // console.log(Object.values(anneDetails));
@@ -118,9 +118,31 @@
 
       // JSON
 
-      const jsonString = JSON.stringify(anneDetails);
-      console.log(jsonString);
-      console.log(JSON.parse('{"firstName" "Kelly"}'));
+      // const jsonString = JSON.stringify(anneDetails);
+      // console.log(jsonString);
+      // console.log(JSON.parse('{"firstName" "Kelly"}'));
+
+      /* ---------------------------------- */
+      /*
+        # Constructor: create ojects of similar type
+          - Inbuilt constructor
+            - Number()
+            - String()
+            - Boolean()
+
+      */
+
+      // const num1 = 5;
+      // const num2 = new Number(5);
+      // console.log(typeof num1, typeof num2); // the first is a number the second is an object
+
+      // const str1 = "Yaritza";
+      // const str2 = new String("Yaritza");
+      // console.log(typeof str1, typeof str2); // the first is a string the second is an object
+
+      const str1 = "Yaritza";
+      console.log(str1.toUpperCase()); // JS under the hood, wraps this string value as a String object so that properties and methods can be used
+      console.log(typeof str1);
     </script>
   </body>
 </html>
