@@ -3,7 +3,8 @@
         1. Minimum length should be 8 characters
         2. At least one lower case character
         3. At least one uppercase character
-        4. At least one special character ($, @, #)
+        4. At least one special character ($, @, #, !)
+        5. At least one number
 
         - Additional rules: 
             - Should not contain name
@@ -18,64 +19,121 @@
 */
 
 function validatePassword(password) {
-  // Check: Password isn't empty or null
+  // Check: if password is empty or null
   if (!password) {
-    console.log("Invalid Password! Please enter a valid password");
+    document.getElementById("invalid-pwd-alert").style.display = "block";
     return;
   }
 
   // Check: 1. At least 8 characters
   if (password.length >= 8) {
     document.getElementById("length-check").innerText = "✅";
+    document
+      .getElementById("length-check-container")
+      .classList.add("list-group-item-success");
   } else {
     document.getElementById("length-check").innerText = "⚠️";
+    document
+      .getElementById("length-check-container")
+      .classList.add("list-group-item-danger");
   }
 
+  // Check:At least 1 lowercase, one uppercase, 1 number
   let hasLowercaseChar = false;
   let hasUppercaseChar = false;
   let hasNumber = false;
   let hasSpecialChar = false;
-
   // a iterate through each character of the password string
   for (let i = 0; i < password.length; i++) {
     let char = password[i];
     if (char >= "a" && char <= "z") {
       hasLowercaseChar = true;
     }
+    if (char >= "A" && char <= "Z") {
+      hasUppercaseChar = true;
+    }
+    if (char > "0" && char <= "9") {
+      hasNumber = true;
+    }
+    if (char == "$" || char == "@" || char == "#" || char == "!") {
+      hasSpecialChar = true;
+    }
   }
 
   if (hasLowercaseChar) {
-    console.log("At least one lowercase character ✅");
+    document.getElementById("lowercase-check").innerText = "✅";
+    document
+      .getElementById("lowercase-check-container")
+      .classList.add("list-group-item-success");
   } else {
-    console.log("At least one lowercase character  ⚠️");
+    document.getElementById("lowercase-check").innerText = "⚠️";
+    document
+      .getElementById("lowercase-check-container")
+      .classList.add("list-group-item-danger");
+  }
+
+  if (hasUppercaseChar) {
+    document.getElementById("uppercase-check").innerText = "✅";
+    document
+      .getElementById("uppercase-check-container")
+      .classList.add("list-group-item-success");
+  } else {
+    document.getElementById("uppercase-check").innerText = "⚠️";
+    document
+      .getElementById("uppercase-check-container")
+      .classList.add("list-group-item-danger");
+  }
+
+  if (hasNumber) {
+    document.getElementById("number-check").innerText = "✅";
+    document
+      .getElementById("number-check-container")
+      .classList.add("list-group-item-success");
+  } else {
+    document.getElementById("number-check").innerText = "⚠️";
+    document
+      .getElementById("number-check-container")
+      .classList.add("list-group-item-danger");
+  }
+
+  if (hasSpecialChar) {
+    document.getElementById("specialchar-check").innerText = "✅";
+    document
+      .getElementById("specialchar-check-container")
+      .classList.add("list-group-item-success");
+  } else {
+    document.getElementById("specialchar-check").innerText = "⚠️";
+    document
+      .getElementById("specialchar-check-container")
+      .classList.add("list-group-item-danger");
   }
 }
-// Check: 5 At least one number
-const digits = ["0", "1", "2", "3", "4", "5", "6", "8", "9"];
-// a. Iterate through each character of the password string
-for (let i = 0; i < password.length; i++) {
-  // b. Check whether the character is = any of the character in digits
-  if (digits.includes(password[i]));
-  {
-    console.log("At least one number ✅");
-    containsDigit = true;
-    break;
-  }
-}
-if (!containsDigit) {
-  console.log("At least one number ⚠️");
-}
 
-// Check: 2. At least one lowercase character
+const inputPassword = prompt("Enter your password");
+console.log(inputPassword);
 
-// Check: 2. At least one lowercase character
-
-const password = prompt("Enter your password");
-console.log(password);
-
-validatePassword(password);
+validatePassword(inputPassword);
 
 /*
     # Additional resources:
         - https://www.w3schools.com/charsets/ref_html_ascii.asp
+
+
+    # Additional code:
+      // // Check: 5. At least one number
+      // const digits = ["0", "1", "2", "3", "4", "5", "6", "8", "9"];
+      // // a. Iterate through each character of the password string
+      // let containsDigit = false;
+      // for (let i = 0; i < password.length; i++) {
+      //   // b. Check whether character is = any of the character in digits
+      //   if (digits.includes(password[i]));
+      //   {
+      //     console.log("At least one number ✅");
+      //     containsDigit = true;
+      //     break;
+      //   }
+      // }
+      // if (!containsDigit) {
+      //   console.log("At least one number ⚠️");
+      // }
 */

@@ -17,41 +17,57 @@
   <body>
     <div class="container mt-3 text-center">
       <h1 class="display-4">Password Strength Checker</h1>
-      <div class="alert alert-danger" role="alert">
-        A simple danger alert—check it out!
+      <!-- Alert message -->
+      <div
+        class="alert alert-danger alert-dismissible fade show"
+        role="alert"
+        id="invalid-pwd-alert"
+        style="display: none"
+      >
+        <strong>Invalid password!</strong> Please enter a valid password
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="alert"
+          aria-label="Close"
+        ></button>
       </div>
+      <!-- Password Criteria -->
       <ul class="list-group">
         <li
           class="list-group-item d-flex justify-content-between align-items-center"
+          id="length-check-container"
         >
           At least 8 characters
-          <span class="badge text-bg-primary rounded-pill" id="length-check"
-            >14</span
-          >
+          <span id="length-check"></span>
         </li>
         <li
           class="list-group-item d-flex justify-content-between align-items-center"
+          id="lowercase-check-container"
         >
           At least one lowercase character
-          <span class="badge text-bg-primary rounded-pill">2</span>
+          <span id="lowercase-check"></span>
         </li>
         <li
           class="list-group-item d-flex justify-content-between align-items-center"
+          id="uppercase-check-container"
         >
           At least one uppercase character
-          <span class="badge text-bg-primary rounded-pill">1</span>
+          <span id="uppercase-check"></span>
         </li>
         <li
           class="list-group-item d-flex justify-content-between align-items-center"
+          id="number-check-container"
         >
           At least one number
-          <span class="badge text-bg-primary rounded-pill">1</span>
+          <span id="number-check"></span>
         </li>
         <li
           class="list-group-item d-flex justify-content-between align-items-center"
+          id="specialchar-check-container"
         >
-          At least one special character ($, @, #)
-          <span class="badge text-bg-primary rounded-pill">1</span>
+          At least one special character ($, @, #, !)
+          <span id="specialchar-check"></span>
         </li>
       </ul>
     </div>
