@@ -16,7 +16,7 @@
   </head>
   <body>
     <div class="container mt-3 text-center">
-      <h1 class="display-4">Password Strength Checker</h1>
+      <h1 class="display-4 mb-3">Password Strength Checker</h1>
       <!-- Alert message -->
       <div
         class="alert alert-danger alert-dismissible fade show"
@@ -31,6 +31,21 @@
           data-bs-dismiss="alert"
           aria-label="Close"
         ></button>
+      </div>
+      <!-- Strength Badge -->
+      <div class="my-3 fs-5">
+        <span
+          class="badge text-bg-success"
+          style="display: none"
+          id="strong-pwd"
+          >Your password is strong</span
+        >
+        <span class="badge text-bg-warning" style="display: none" id="fair-pwd"
+          >Your password is fair</span
+        >
+        <span class="badge text-bg-danger" style="display: none" id="weak-pwd"
+          >Your password is weak</span
+        >
       </div>
       <!-- Password Criteria -->
       <ul class="list-group">

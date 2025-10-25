@@ -25,12 +25,15 @@ function validatePassword(password) {
     return;
   }
 
+  let score = 0;
+
   // Check: 1. At least 8 characters
   if (password.length >= 8) {
     document.getElementById("length-check").innerText = "✅";
     document
       .getElementById("length-check-container")
       .classList.add("list-group-item-success");
+    score++;
   } else {
     document.getElementById("length-check").innerText = "⚠️";
     document
@@ -65,6 +68,7 @@ function validatePassword(password) {
     document
       .getElementById("lowercase-check-container")
       .classList.add("list-group-item-success");
+    score++;
   } else {
     document.getElementById("lowercase-check").innerText = "⚠️";
     document
@@ -77,6 +81,7 @@ function validatePassword(password) {
     document
       .getElementById("uppercase-check-container")
       .classList.add("list-group-item-success");
+    score++;
   } else {
     document.getElementById("uppercase-check").innerText = "⚠️";
     document
@@ -89,6 +94,7 @@ function validatePassword(password) {
     document
       .getElementById("number-check-container")
       .classList.add("list-group-item-success");
+    score++;
   } else {
     document.getElementById("number-check").innerText = "⚠️";
     document
@@ -101,11 +107,20 @@ function validatePassword(password) {
     document
       .getElementById("specialchar-check-container")
       .classList.add("list-group-item-success");
+    score++;
   } else {
     document.getElementById("specialchar-check").innerText = "⚠️";
     document
       .getElementById("specialchar-check-container")
       .classList.add("list-group-item-danger");
+  }
+
+  if (score >= 5) {
+    document.getElementById("strong-pwd").style.display = "block";
+  } else if (score >= 3) {
+    document.getElementById("fair-pwd").style.display = "block";
+  } else {
+    document.getElementById("weak-pwd").style.display = "block";
   }
 }
 
