@@ -5,12 +5,12 @@
         3. At least one uppercase character
         4. At least one special character ($, @, #, !)
         5. At least one number
+        6. No easy passwords
 
         - Additional rules: 
-            - Should not contain name
-            - Should not contain email
-            - Should not be any of these simple passwords (user123, admin123, password123, test123 etc.)
-
+            - Should not contain name (need to do)
+            - Should not contain email (need to do)
+          
     # Category
         - Strong
         - Medium
@@ -115,9 +115,24 @@ function validatePassword(password) {
       .classList.add("list-group-item-danger");
   }
 
-  if (score >= 5) {
+  const easyPwds = ["user123", "admin123", "password123", "test123", "1234"];
+  // Check no easy passwords
+  if (!easyPwds.includes(password)) {
+    document.getElementById("no-easy-pwd-check").innerText = "✅";
+    document
+      .getElementById("no-easy-pwd-container")
+      .classList.add("list-group-item-success");
+    score++;
+  } else {
+    document.getElementById("no-easy-pwd-check").innerText = "⚠️";
+    document
+      .getElementById("no-easy-pwd-container")
+      .classList.add("list-group-item-danger");
+  }
+
+  if (score >= 6) {
     document.getElementById("strong-pwd").style.display = "block";
-  } else if (score >= 3) {
+  } else if (score >= 4) {
     document.getElementById("fair-pwd").style.display = "block";
   } else {
     document.getElementById("weak-pwd").style.display = "block";
