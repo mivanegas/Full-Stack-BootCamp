@@ -55,7 +55,7 @@ function validatePassword(password) {
     if (char >= "A" && char <= "Z") {
       hasUppercaseChar = true;
     }
-    if (char > "0" && char <= "9") {
+    if (char >= "0" && char <= "9") {
       hasNumber = true;
     }
     if (char == "$" || char == "@" || char == "#" || char == "!") {
@@ -139,10 +139,16 @@ function validatePassword(password) {
   }
 }
 
-const inputPassword = prompt("Enter your password");
-console.log(inputPassword);
+//Connecting form to password validation function
+document
+  .getElementById("search-bar")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+    const userpassword = document.getElementById("search-password").value;
+    console.log("Password: ", userpassword);
 
-validatePassword(inputPassword);
+    validatePassword(userpassword);
+  });
 
 // Initialize Lucide icons
 lucide.createIcons();
