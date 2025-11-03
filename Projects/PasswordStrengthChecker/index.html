@@ -11,12 +11,17 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+    <!-- FontAwesome -->
+    <script
+      src="https://kit.fontawesome.com/457602dfdb.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- Connecting CSS -->
     <link rel="stylesheet" href="/Projects/PasswordStrengthChecker/index.css" />
   </head>
   <body>
     <div class="container mt-3 text-center">
-      <h1 class="display-4 mb-3">Password Strength Checker</h1>
+      <h1 class="display-4 m-4">Password Strength Checker</h1>
       <!-- Alert message -->
       <div
         class="alert alert-danger alert-dismissible fade show"
@@ -35,20 +40,47 @@
       <!-- Strength Badge -->
       <div class="my-3 fs-5">
         <span
-          class="badge text-bg-success"
+          class="badge text-bg bg-strong"
           style="display: none"
           id="strong-pwd"
           >Your password is strong</span
         >
-        <span class="badge text-bg-warning" style="display: none" id="fair-pwd"
+        <span class="badge text-bg bg-fair" style="display: none" id="fair-pwd"
           >Your password is fair</span
         >
-        <span class="badge text-bg-danger" style="display: none" id="weak-pwd"
+        <span class="badge text-bg bg-weak" style="display: none" id="weak-pwd"
           >Your password is weak</span
         >
       </div>
+      <!-- Form to Enter Password -->
+      <form class="m-3">
+        <div class="d-flex flex-row justify-content-center mb-4">
+          <div class="d-flex flex-column-md-4 align-items-center my-3">
+            <label for="exampleInputPassword1" class="form-label"
+              >How secure is my password?</label
+            >
+          </div>
+          <div class="d-flex flex-column-md-4 align-items-center my-3">
+            <input
+              type="password"
+              class="dform-control m-2"
+              id="exampleInputPassword1"
+              placeholder="Enter a password"
+              maxlength="100"
+            />
+          </div>
+          <div class="d-flex flex-column-md-4 align-items-center m-2">
+            <button class="squishy squishy-tech">
+              <i data-lucide="rocket"></i>
+              Submit
+            </button>
+          </div>
+          <!-- <button type="submit" class="btn btn btn-submit m-2">Submit</button> -->
+        </div>
+      </form>
+
       <!-- Password Criteria -->
-      <ul class="list-group">
+      <ul class="list-group m-2">
         <li
           class="list-group-item d-flex justify-content-between align-items-center"
           id="length-check-container"
@@ -94,6 +126,10 @@
       </ul>
     </div>
 
+    <!-- Load Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Initialize icons -->
+    <script src="script.js"></script>
     <!-- Bootstrap -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

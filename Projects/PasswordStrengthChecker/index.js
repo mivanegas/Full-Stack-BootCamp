@@ -29,7 +29,7 @@ function validatePassword(password) {
 
   // Check: 1. At least 8 characters
   if (password.length >= 8) {
-    document.getElementById("length-check").innerText = "✅";
+    document.getElementById("length-check").innerText = "✅ ";
     document
       .getElementById("length-check-container")
       .classList.add("list-group-item-success");
@@ -143,6 +143,9 @@ const inputPassword = prompt("Enter your password");
 console.log(inputPassword);
 
 validatePassword(inputPassword);
+
+// Initialize Lucide icons
+lucide.createIcons();
 
 /*
     # Additional resources:

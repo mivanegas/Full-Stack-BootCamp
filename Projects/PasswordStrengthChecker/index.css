@@ -1,0 +1,134 @@
+body {
+  background: linear-gradient(
+    109.6deg,
+    rgb(0, 0, 0) 11.2%,
+    rgb(11, 132, 145) 91.1%
+  );
+
+  color: white;
+
+  font-family: monospace;
+}
+
+@font-face {
+  font-family: "spaceFont";
+  src: url("Assets/space-age.regular.ttf");
+}
+
+h1 {
+  font-family: "spaceFont", monospace;
+}
+
+.list-group {
+  box-shadow: rgba(193, 255, 114, 0.4) 5px 5px,
+    rgba(193, 255, 114, 0.3) 10px 10px, rgba(193, 255, 114, 0.2) 15px 15px,
+    rgba(193, 255, 114, 0.1) 20px 20px, rgba(193, 255, 114, 0.05) 25px 25px;
+}
+
+.bg-strong {
+  background: #c1ff72;
+  color: #021b1e;
+}
+
+.bg-fair {
+  background: #f8fe85;
+  color: #021b1e;
+}
+
+.bg-weak {
+  background: #ff6464;
+  color: #021b1e;
+}
+
+/* Submit Button Special Effects */
+
+/* Base Button Styles */
+.squishy {
+  /* position: relative;
+  font-size: 1.875rem;
+  padding: 0.75rem 2rem;
+  font-weight: 600; */
+  /* border: none;
+  cursor: pointer;
+  transition: all 250ms; */
+  /* display: inline-flex; */
+  /* align-items: center; */
+  /* gap: 0.5rem; */
+}
+
+.squishy-tech {
+  border: none;
+  cursor: pointer;
+  font-size: 11px;
+  font-family: "spaceFont";
+  padding: 0.5rem 1.5rem;
+  transition: all 250ms;
+  background-color: rgb(193, 255, 114);
+  color: #021b1e;
+  border-radius: 0.5rem;
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.3), 0 2px 0 0 #99c85c,
+    0 4px 0 0 #7ea945, 0 6px 0 0 #5a7c2d, 0 8px 0 0 #4a6b1e,
+    0 8px 16px 0 rgba(5, 150, 105, 0.5);
+  overflow: hidden;
+}
+
+.squishy-tech::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transform: translateX(-100%);
+  animation: shimmer 2s infinite;
+}
+
+.squishy-tech:hover {
+  transform: translateY(4px);
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.3), 0 1px 0 0 #059669,
+    0 2px 0 0 #047857, 0 3px 0 0 #065f46, 0 4px 0 0 #064e3b,
+    0 4px 8px 0 rgba(5, 150, 105, 0.5);
+}
+
+.squishy-tech:hover i {
+  animation: bounce 1s infinite;
+}
+
+/* Animations */
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-25%);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* @keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+} */
