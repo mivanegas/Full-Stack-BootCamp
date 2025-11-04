@@ -18,6 +18,20 @@
 
 */
 
+// Ability to show password with eye icon
+let eyeicon = document.getElementById("search-img");
+let password = document.getElementById("search-password");
+
+eyeicon.onclick = function () {
+  if (password.type == "password") {
+    password.type = "text";
+    eyeicon.src = "./Assets/eye-icons/eye-open.png";
+  } else {
+    password.type = "password";
+    eyeicon.src = "./Assets/eye-icons/eye-close.png";
+  }
+};
+
 function validatePassword(password) {
   // Check: if password is empty or null
   if (!password) {
@@ -29,7 +43,7 @@ function validatePassword(password) {
 
   // Check: 1. At least 8 characters
   if (password.length >= 8) {
-    document.getElementById("length-check").innerText = "✅ ";
+    document.getElementById("length-check").innerText = "✅";
     document
       .getElementById("length-check-container")
       .classList.add("list-group-item-success");
@@ -115,7 +129,14 @@ function validatePassword(password) {
       .classList.add("list-group-item-danger");
   }
 
-  const easyPwds = ["user123", "admin123", "password123", "test123", "1234"];
+  const easyPwds = [
+    "user123",
+    "admin123",
+    "password123",
+    "test123",
+    "1234",
+    "Test123!",
+  ];
   // Check no easy passwords
   if (!easyPwds.includes(password)) {
     document.getElementById("no-easy-pwd-check").innerText = "✅";

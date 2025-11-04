@@ -1,13 +1,13 @@
+html,
 body {
   background: linear-gradient(
     109.6deg,
     rgb(0, 0, 0) 11.2%,
     rgb(11, 132, 145) 91.1%
   );
-
   color: white;
-
   font-family: monospace;
+  height: 100%;
 }
 
 @font-face {
@@ -40,46 +40,63 @@ h1 {
   color: #021b1e;
 }
 
+/* Input box */
 #search-password {
   box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.3), 0 2px 0 0 #99c85c,
     0 4px 0 0 #7ea945, 0 6px 0 0 #5a7c2d, 0 8px 0 0 #4a6b1e,
     0 8px 16px 0 rgba(5, 150, 105, 0.5);
+  margin-left: 10px;
+}
+
+#search-img {
+  background-color: white;
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.3), 0 2px 0 0 #99c85c,
+    0 4px 0 0 #7ea945, 0 6px 0 0 #5a7c2d, 0 8px 0 0 #4a6b1e,
+    0 8px 16px 0 rgba(5, 150, 105, 0.5);
+  border-radius: 25%;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  cursor: pointer;
+  height: 31px;
+  margin-right: 5px;
+  padding: 10px;
 }
 
 /* Submit Button Special Effects */
-/* Base Button Styles */
 .squishy-tech {
-  border: none;
-  cursor: pointer;
-  font-size: 12px;
-  font-family: "spaceFont";
-  padding: 0.5rem 1.5rem;
-  transition: all 250ms;
   background-color: rgb(193, 255, 114);
-  color: #021b1e;
+  border: none;
   border-radius: 0.5rem;
   box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.3), 0 2px 0 0 #99c85c,
     0 4px 0 0 #7ea945, 0 6px 0 0 #5a7c2d, 0 8px 0 0 #4a6b1e,
     0 8px 16px 0 rgba(5, 150, 105, 0.5);
+  color: #021b1e;
+  cursor: pointer;
+  font-size: 12px;
+  font-family: "spaceFont";
   overflow: hidden;
+  padding: 0.5rem 1.5rem;
+  transition: all 250ms ease;
 }
 
+/* Shimmer Layer */
 .squishy-tech::before {
-  content: "";
-  position: absolute;
-  inset: 0;
+  animation: shimmer 6s infinite;
   background: linear-gradient(
     to right,
     transparent,
     rgba(255, 255, 255, 0.1),
     transparent
   );
+  content: "";
+  inset: 0;
+  top: 0;
+  position: absolute;
+  pointer-events: none;
   transform: translateX(-100%);
-  animation: shimmer 8s infinite;
 }
 
 .squishy-tech:hover {
-  transform: translateY(4px);
   box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.3), 0 1px 0 0 #059669,
     0 2px 0 0 #047857, 0 3px 0 0 #065f46, 0 4px 0 0 #064e3b, 0 4px 8px 0 #06434a;
 }
@@ -89,35 +106,6 @@ h1 {
 }
 
 /* Animations */
-@keyframes bounce {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-25%);
-  }
-}
-
-@keyframes pulse {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-}
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 @keyframes shimmer {
   100% {
     transform: translateX(100%);

@@ -54,20 +54,26 @@
       </div>
       <!-- Form to Enter Password -->
       <form class="m-3" id="search-bar">
-        <div class="d-flex flex-row justify-content-center mb-4">
-          <div class="d-flex flex-column-md-4 align-items-center my-3">
+        <div class="d-flex flex-row flex-wrap justify-content-center mb-4">
+          <div class="d-flex flex-column-md-3 align-items-center my-3">
             <label class="form-label">How secure is your password?</label>
           </div>
-          <div class="d-flex flex-column-md-4 align-items-center my-3">
+          <div class="d-flex flex-column-md-6 align-items-center my-3">
             <input
               type="password"
-              class="form-control m-2"
+              class="form-control rounded-end-0"
               placeholder="Enter a password"
               maxlength="100"
               id="search-password"
             />
+            <img
+              src="./Assets/eye-icons/eye-close.png"
+              alt="eye-close icon"
+              id="search-img"
+              class="img-fluid"
+            />
           </div>
-          <div class="d-flex flex-column-md-4 align-items-center m-2">
+          <div class="d-flex flex-column-md-3 align-items-center m-2">
             <button class="squishy squishy-tech">
               <i data-lucide="rocket"></i>
               Submit
@@ -126,8 +132,7 @@
 
     <!-- Load Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    <!-- Initialize icons -->
-    <script src="script.js"></script>
+
     <!-- Bootstrap -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
