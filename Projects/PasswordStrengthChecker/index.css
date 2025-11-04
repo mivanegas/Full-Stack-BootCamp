@@ -5,6 +5,8 @@ body {
     rgb(0, 0, 0) 11.2%,
     rgb(11, 132, 145) 91.1%
   );
+  background-attachment: fixed;
+  background-size: cover;
   color: white;
   font-family: monospace;
   height: 100%;
@@ -17,6 +19,15 @@ body {
 
 h1 {
   font-family: "spaceFont", monospace;
+}
+
+p {
+  color: rgb(193, 255, 114);
+}
+
+.passCriteria {
+  max-width: 75%;
+  margin: 0 auto;
 }
 
 .list-group {
@@ -59,7 +70,7 @@ h1 {
   cursor: pointer;
   height: 31px;
   margin-right: 5px;
-  padding: 10px;
+  padding: 9px;
 }
 
 /* Submit Button Special Effects */
@@ -75,7 +86,7 @@ h1 {
   font-size: 12px;
   font-family: "spaceFont";
   overflow: hidden;
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem 1rem;
   transition: all 250ms ease;
 }
 

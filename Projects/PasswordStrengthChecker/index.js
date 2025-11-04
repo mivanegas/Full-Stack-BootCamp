@@ -6,10 +6,6 @@
         4. At least one special character ($, @, #, !)
         5. At least one number
         6. No easy passwords
-
-        - Additional rules: 
-            - Should not contain name (need to do)
-            - Should not contain email (need to do)
           
     # Category
         - Strong
@@ -18,7 +14,7 @@
 
 */
 
-// Ability to show password with eye icon
+// To show password with eye icon
 let eyeicon = document.getElementById("search-img");
 let password = document.getElementById("search-password");
 
@@ -40,7 +36,6 @@ function validatePassword(password) {
   }
 
   let score = 0;
-
   // Check: 1. At least 8 characters
   if (password.length >= 8) {
     document.getElementById("length-check").innerText = "✅";
@@ -136,6 +131,23 @@ function validatePassword(password) {
     "test123",
     "1234",
     "Test123!",
+    "123456",
+    "password",
+    "qwerty123",
+    "qwerty1",
+    "secret",
+    "111111",
+    "12345678",
+    "123123",
+    "abc123",
+    "paswword1",
+    "dragon",
+    "monkey",
+    "iloveyou",
+    "football",
+    "princess",
+    "sunshine",
+    "computer",
   ];
   // Check no easy passwords
   if (!easyPwds.includes(password)) {
@@ -166,12 +178,11 @@ document
   .addEventListener("submit", function (event) {
     event.preventDefault();
     const userpassword = document.getElementById("search-password").value;
-    console.log("Password: ", userpassword);
 
     validatePassword(userpassword);
   });
 
-// Initialize Lucide icons
+// Initialize Lucide icons aka fancy button
 lucide.createIcons();
 
 /*

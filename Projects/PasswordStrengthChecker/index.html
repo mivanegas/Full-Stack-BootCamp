@@ -53,81 +53,84 @@
         >
       </div>
       <!-- Form to Enter Password -->
-      <form class="m-3" id="search-bar">
-        <div class="d-flex flex-row flex-wrap justify-content-center mb-4">
-          <div class="d-flex flex-column-md-3 align-items-center my-3">
-            <label class="form-label">How secure is your password?</label>
+      <div class="container">
+        <form id="search-bar">
+          <div class="d-flex flex-row justify-content-center flex-wrap mb-4">
+            <div class="d-flex flex-column-md align-items-center">
+              <label class="form-label">How secure is your password?</label>
+            </div>
+            <div class="d-flex flex-column-md align-items-center my-3">
+              <input
+                type="password"
+                class="form-control rounded-end-0"
+                placeholder="Enter a password"
+                maxlength="100"
+                id="search-password"
+              />
+              <img
+                src="./Assets/eye-icons/eye-close.png"
+                alt="eye-close icon"
+                id="search-img"
+                class="img-fluid"
+              />
+            </div>
+            <div class="d-flex flex-column-md align-items-center m-2">
+              <button class="squishy squishy-tech">Submit</button>
+            </div>
+            <!-- <button type="submit" class="btn btn btn-submit m-2">Submit</button> -->
           </div>
-          <div class="d-flex flex-column-md-6 align-items-center my-3">
-            <input
-              type="password"
-              class="form-control rounded-end-0"
-              placeholder="Enter a password"
-              maxlength="100"
-              id="search-password"
-            />
-            <img
-              src="./Assets/eye-icons/eye-close.png"
-              alt="eye-close icon"
-              id="search-img"
-              class="img-fluid"
-            />
-          </div>
-          <div class="d-flex flex-column-md-3 align-items-center m-2">
-            <button class="squishy squishy-tech">
-              <i data-lucide="rocket"></i>
-              Submit
-            </button>
-          </div>
-          <!-- <button type="submit" class="btn btn btn-submit m-2">Submit</button> -->
-        </div>
-      </form>
+        </form>
+      </div>
 
       <!-- Password Criteria -->
-      <ul class="list-group m-2">
-        <li
-          class="list-group-item d-flex justify-content-between align-items-center"
-          id="length-check-container"
-        >
-          At least 8 characters
-          <span id="length-check"></span>
-        </li>
-        <li
-          class="list-group-item d-flex justify-content-between align-items-center"
-          id="lowercase-check-container"
-        >
-          At least one lowercase character
-          <span id="lowercase-check"></span>
-        </li>
-        <li
-          class="list-group-item d-flex justify-content-between align-items-center"
-          id="uppercase-check-container"
-        >
-          At least one uppercase character
-          <span id="uppercase-check"></span>
-        </li>
-        <li
-          class="list-group-item d-flex justify-content-between align-items-center"
-          id="number-check-container"
-        >
-          At least one number
-          <span id="number-check"></span>
-        </li>
-        <li
-          class="list-group-item d-flex justify-content-between align-items-center"
-          id="specialchar-check-container"
-        >
-          At least one special character ($, @, #, !)
-          <span id="specialchar-check"></span>
-        </li>
-        <li
-          class="list-group-item d-flex justify-content-between align-items-center"
-          id="no-easy-pwd-container"
-        >
-          No easy password
-          <span id="no-easy-pwd-check"></span>
-        </li>
-      </ul>
+      <div class="passCriteria">
+        <ul class="list-group m-3">
+          <li
+            class="list-group-item d-flex justify-content-between align-items-center"
+            id="length-check-container"
+          >
+            At least 8 characters
+            <span id="length-check"></span>
+          </li>
+          <li
+            class="list-group-item d-flex justify-content-between align-items-center"
+            id="lowercase-check-container"
+          >
+            At least one lowercase character
+            <span id="lowercase-check"></span>
+          </li>
+          <li
+            class="list-group-item d-flex justify-content-between align-items-center"
+            id="uppercase-check-container"
+          >
+            At least one uppercase character
+            <span id="uppercase-check"></span>
+          </li>
+          <li
+            class="list-group-item d-flex justify-content-between align-items-center"
+            id="number-check-container"
+          >
+            At least one number
+            <span id="number-check"></span>
+          </li>
+          <li
+            class="list-group-item d-flex justify-content-between align-items-center"
+            id="specialchar-check-container"
+          >
+            At least one special character ($, @, #, !)
+            <span id="specialchar-check"></span>
+          </li>
+          <li
+            class="list-group-item d-flex justify-content-between align-items-center"
+            id="no-easy-pwd-container"
+          >
+            No easy password
+            <span id="no-easy-pwd-check"></span>
+          </li>
+        </ul>
+      </div>
+      <br />
+      <p class="m-6">Passwords entered are not collected nor stored.</p>
     </div>
 
     <!-- Load Lucide Icons -->
