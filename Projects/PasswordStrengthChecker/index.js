@@ -129,6 +129,7 @@ function validatePassword(password) {
     "admin123",
     "password123",
     "test123",
+    "123",
     "1234",
     "Test123!",
     "123456",
@@ -148,6 +149,7 @@ function validatePassword(password) {
     "princess",
     "sunshine",
     "computer",
+    "qwerty",
   ];
   // Check no easy passwords
   if (!easyPwds.includes(password)) {
