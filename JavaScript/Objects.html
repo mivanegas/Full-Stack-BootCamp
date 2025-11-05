@@ -21,17 +21,20 @@
                   }
 
               - Access values using keys
-                - Syntax 1: obj1['key1'].   (in some scenarios, you'll only be able to use this)
+                - Syntax 1: obj1['key1']. 
                 - Syntax 2: obj1.key1 **
 
               - Add/Update values using keys
-                - Syntax 1: obj1['key1'].
-                - Syntax 2: obj1.key1 **
+                - Syntax 1: obj1['key1'] = value1
+                - Syntax 2: obj1.key1 = value1 **
+
+              - Delete a key
+                - Use the 'delete' keyword
+                - Syntax: delete obj1.key1
 
               - Properites and Methods
                 - Properties: keys holding any values other than function
                 - Methods: keys holding functions as a reference
-                  - Methods are functions within an object
 
               - Inbuild object methods:
                 - Object.keys(). Returns an array of keys belonging to an object
@@ -40,9 +43,10 @@
 
               - JSON: JavaScript Object Notation
                 - JSON.stringify(): Convert any JS object to string
-                - JSON.parse(): Convert
+                - JSON.parse(): Convert a JSON string to a JS object
 
-
+              - Side Note:
+                - [object Object]: Object in the HTML document flow
           */
 
       // An Array
