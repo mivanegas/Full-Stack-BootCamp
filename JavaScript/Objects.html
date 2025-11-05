@@ -42,8 +42,8 @@
                 - Object.entries(). Returns an array of [key, values] belonging to an object
 
               - JSON: JavaScript Object Notation
-                - JSON.stringify(): Convert any JS object to string
-                - JSON.parse(): Convert a JSON string to a JS object
+                - JSON.stringify(): Converts any JS object to string
+                - JSON.parse(): Converts a JSON string to a JS object
 
               - Side Note:
                 - [object Object]: Object in the HTML document flow
@@ -129,12 +129,17 @@
       /* ---------------------------------- */
       /*
         # Constructor: create ojects of similar type
-          - Inbuilt constructor
+          - To create a new object from a constructor use the "new" keyword
+          - Inbuilt constructor (used by JS behind the scenes)
             - Number()
             - String()
             - Boolean()
 
       */
+
+      // const num1 = 5;
+      // const num2 = new Number(5);
+      // console.log(num1, num2);
 
       // const num1 = 5;
       // const num2 = new Number(5);
@@ -144,9 +149,14 @@
       // const str2 = new String("Yaritza");
       // console.log(typeof str1, typeof str2); // the first is a string the second is an object
 
-      const str1 = "Yaritza";
-      console.log(str1.toUpperCase()); // JS under the hood, wraps this string value as a String object so that properties and methods can be used
-      console.log(typeof str1);
+      // const str1 = "Yaritza";
+      // const str2 = new String("Yaritza");
+      // console.log(typeof str1, typeof str2);
+      // console.log(str2.valueOf());   // valueOf: gets the primitive value
+
+      // const str1 = "Yaritza";
+      // console.log(str1.toUpperCase()); // JS under the hood, wraps this string value as a String object so that properties and methods can be used
+      // console.log(typeof str1);
     </script>
   </body>
 </html>

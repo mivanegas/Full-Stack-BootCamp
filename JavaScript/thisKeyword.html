@@ -10,6 +10,7 @@
       /*
             # this keyword: refers to it's immediate parent object
                 - within a method of an objet: refers to the parent object
+                - In global scope: refers to the window object
 
             - Addition note:
                 - Window object is the Browser Object Model (BOM)
@@ -25,13 +26,18 @@
       //     favoriteColor: null,
       //     hobbies: ["Swimming", "Cycling", "Dancing"],
       //     displayingIntro: function () {
-      //       console.log(
-      //         "Hi, I'm  " + this.name + "! I'm" + this.age + " years old."
-      //       );
+      //       console.log("Hi, I'm  " + this.name + "! I'm" + this.age + " years old.");
       //     },
       //   };
 
       //   simonDetails.displayingIntro();
+
+      // console.log(this) //Window Object
+
+      //All will work and all the same
+      // this.alert("You have successfully logged in.");
+      // alert("You have successfully logged in.");
+      // window.alert("You have successfully logged in.");
     </script>
   </body>
 </html>
