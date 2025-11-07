@@ -10,18 +10,25 @@
       /*
             # Hoisting: variables and function declaration are moved to the top of the execution context before executing
                 - In JS, you can access variables and functions before declaration
+                - Initializations and assignements are not hoisted
 
             - Temporal Dead Zone (TDZ)
-                - let and const keyword are hosited, but they continue to remain in TDZ until it i assigned a value
+                - let and const keyword are hosited, but they continue to remain in TDZ until it is assigned a value
+                - JavaScript is aware of the variable/constant created using let/const, but it can't be accessed until it has been declared/initialized.
         */
 
-      console.log(x);
-      var x;
+      //In JavaScript you can access a value before its declaration
+      // console.log(x);
+      // var x;
 
-      sayHi();
-      function sayHi() {
-        console.log("Hi");
-      }
+      // sayHi();
+      // function sayHi() {
+      //   console.log("Hi");
+      // }
+
+      // // Temporal Dead Zone Example
+      // console.log(x);
+      // let x;
     </script>
   </body>
 </html>
