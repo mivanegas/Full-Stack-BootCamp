@@ -20,35 +20,46 @@
                             - const: declare constants
                         2. Template literals/strings (`)
                             - Starts and ends w/ back ticks (`)
-                            - Supports multi-line strings and expression
+                            - Supports multi-line strings and expressions
                             - Syntax to use variables within template strings
                                 - `${variable}
                         3. Default parameters
                             - Default parameters can be provided to the function parameters. In case,
                             - Syntax: function abc(a = 0,b = 0) {}
-                        4. Arrow functions (( => {})) ***
-                            - Syntax:
-                                const abc = () => {
-                                console.log('abc')
-                                }
+                        4. Arrow functions (() => {}) ***
+                            - Syntactic sugar for anonymous functions
+                              - Syntax:
+                                  const abc = () => {
+                                  console.log('Hi')
+                                  }
+                                  abc()
                             - Single line arrow function
                               - Syntax:
+                                    const abc = () => console.log('hi')
                               - Scenarios:
-                                  - Executes a single expression
+                                  - Executes a single expression (Skip {} and return)
                                   - Has a single expression which returns a value
-                                  (Skip {} and return)
-                                  - Additional notes: Skip () if only 1 parameter exist
+                                  - Additional notes: Skip () if only one parameters exists
                           5. Object property shorthand ({prop1, prop2})
-                              - Whenever the variable name and the object property name are the same , instead of 'key:value', only 'key' can be specified
+                              - Whenever variable name & object property name are the same, instead of 'key:value', only 'key' can be specified
                           6. Destructuring ({prop1} = obj)
-                              - Create variables having the smae name as propertyname and have the value = value of that property
+                              - Create variables having the same name as property name and have the value = value of that property
                               - Syntax:
                                   const {a,b} = obj1
                                   - Different variable name for properties
-                                  const { a:test1, b test2} = obj1
-                          7. Spread Operator
-
-
+                                  const { a: test1, b: test2} = obj1
+                          7. Spread Operator (...)
+                              - Used with arrays and objects
+                              - Syntax: 
+                               [ ...arr ](Arrays)
+                                {...obj} (Objects)
+                              - Additional Notes
+                                - Shallow copy: 
+                                  - First order properties/elements are copied
+                                  - best for simple arrays and objects
+                                - Deep Copy:
+                                  - Complete copy of the properties across all levels/orders
+                                  - Best for complex arrays and objects
 
             */
 
@@ -62,6 +73,8 @@
       //     - Coding`;
       //   console.log(str1);
 
+      /* --------------------------------- */
+
       //   const student1 = {
       //     name: "Madeline",
       //     projects: 5,
@@ -71,14 +84,18 @@
       //   const str1 = `Hi, I'm ${student1.name}. I have submitted ${student.projects} number of projects so far. I reside in ${student1.city}`;
       //   console.log(str1);
 
+      /* --------------------------------- */
+
       //   function sum(num1, num2, num3) {
       //     return num1 + num2 + num3;
       //   }
       //   console.log(sum(5, 10));
 
+      /* --------------------------------- */
+
       //Arrow function example
       //   const abc = () => {
-      //     console.log("abc");
+      //     console.log("Test");
       //   };
       //   abc();
 
@@ -94,10 +111,25 @@
 
       //   const sum = (num1, num2) => num1 + num2;
       //   console.log(sum(5, 10));
+      /* --------------------------------- */
+      //Single-Line Arrow Function
 
-      //   const add = (a, b) => a + b;
+      // const abc = () => console.log('Hi')
+      // abc()
+
+      // const add = (a, b) => a + b;
+      // const subtract = (a, b) => a - b;
+      // const multiply = (a, b) => a * b;
+      // const divide = (a, b) => a / b;
+
+      //Skipping () bc only one parameter
+      // const sayHi = friend => console.log(`Hi ${friend}!`)
+      // sayHi('Mark')
+      // sayHi('Kelly')
 
       /* --------------------------------- */
+      //Object Property shorthand
+
       //   const name = "Mark";
       //   const batch = 2;
       //   const projectSub = 5;
@@ -115,6 +147,8 @@
       //   const student1 = { name, batch, projectSub, city };
       //   console.log(student1);
 
+      /* --------------------------------- */
+
       //Destructure example: Reverse example
       //   const student1 = {
       //     name: "Madeline",
@@ -122,29 +156,41 @@
       //     country: "USA",
       //   };
 
-      //   //   const name = student1.name;
-      //   //   const city = student1.city;
-      //   //   const country = student1.country;
-
       //   const { name, city, country } = student1;
 
       //   console.log(`Hi, I'm ${name}. I reside in ${city}, ${country}`);
 
       /* --------------------------------- */
-      const arr = [1, 2, 3, 4, 5];
+      // const arr = [1, 2, 3, 4, 5];
       //   console.log(arr); //Output is [1, 2, 3, 4, 5]
       //   console.log(...arr); //Output is (spread) 1 2 3 4 5
 
       //Copy of array
 
-      //Way 1
-      const arr2 = arr1; //Both are referring to the same array in the heap memory
-      arr1[0] = 100;
-      console.log(arr1);
-      console.log(arr2);
+      //Way 1 - Non-Primitive assignment = reference gets assigned
+      // const arr2 = arr1; //Both are referring to the same array in the heap memory
+      // arr1[0] = 100;
+      // console.log(arr1);
+      // console.log(arr2);
 
-      //Way 2 (Shallow copy: creating a brand new copy of the array)
-      const arr3 =
+      //Way 2 - Shallow copy: Creating a brand new copy of array
+      // const arr3 = [...arr1];
+      // arr1[0] = 100;
+      // console.log(arr1);
+      // console.log(arr3);
+
+      //Deep Copy Example
+      // const student1 = {
+      //   name: "Madeline",
+      //   address: {
+      //     city: "New York",
+      //     country: "USA",
+      //   },
+      // };
+
+      // const student2 = JSON.parse(JSON.stringify(student1));
+      // student1.address.city = "California";
+      // console.log(student2);
     </script>
   </body>
 </html>
