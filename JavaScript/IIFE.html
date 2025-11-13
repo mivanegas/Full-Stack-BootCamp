@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IIFE</title>
+  </head>
+  <body>
+    <script>
+      /*
+            # IIFE (Immediately invoked function expression)
+                - a.k.a Self-invoking functions
+                - A function which gets invoked during declaration itself
+                - Syntax
+                    (function (){
+                    // your code
+                    }) ();
+                - Use cases: 
+                    - Avoid global scope pollution
+                    - Achieve modularization
+        */
+
+      //Examples of IIFE
+      //   (function () {
+      //     console.log("Hi");
+      //   })();
+
+      //   (function (num1, num2) {
+      //     console.log(num1 + num2);
+      //   })(100, 200);
+
+      // Moving the var variables inside the function was a workaround to the global scope issue
+
+      //We have achieve modularization
+      //   (function sum() {
+      //     var num1 = 10;
+      //     var num2 = 20;
+      //     console.log(num1 + num2);
+      //   })();
+
+      //   (function fullName() {
+      //     var firstName = "Kelly";
+      //     var lastName = "Cook";
+      //     console.log(`${firstName} ${lastName}`);
+      //   })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Higher Order Functions</title>
+  </head>
+  <body>
+    <script>
+      /*
+              # HOFs: Higher Order Functions
+                  - A function which
+                      - Takes another function as an argument (callbacks)
+                      - Return another function as it's result (closures)
+
+              # Callbacks: a function passed as an argument to another fucntion
+                  - Syntax 1:
+                        func2(func1)
+                  - Syntax 2:
+                        funct2(function() {
+                        //your code
+                        })
+                  - Callbacks give you a way to take a function reference and execute later
+
+              # Closures: 
+          */
+
+      //Callback Examples
+      //   function sum(num1, num2) {
+      //     console.log(num1 + num2);
+      //   }
+      //   sum(10, 20);
+
+      //   function getName(first, last) {
+      //     console.log(`${first} ${last}`);
+      //   }
+      //   getName("Maria", "Vanegas");
+
+      //   function hasAccessToMovies(isPremium) {
+      //     console.log(isPremium ? "Has access" : "Does not have access");
+      //   }
+      //   hasAccessToMovies(false);
+
+      //   function getAverageMarks(marks) {
+      //     if (!marks || marks.length) {
+      //       return "Invalid array";
+      //     }
+      //     let totalMarks = 0;
+      //     for (let i = 0; i < marks.length; i++) {
+      //       totalMarks += marks[i];
+      //     }
+      //     return totalMarks / marks.length;
+      //   }
+      //   console.log(getAverageMarks([87, 98, 85, 91, 78]));
+
+      //   function getStudentIntro(student) {
+      //     console.log(
+      //       `Hi, I'm ${student.fullName}. I reside in ${student.city}, ${
+      //         student.country
+      //       }. My hobbies are ${student.hobbies.join(",")}.`
+      //     );
+      //   }
+
+      //   getStudentIntro({
+      //     fullName: "Abdiel",
+      //     city: "London",
+      //     country: "UK",
+      //     hobbies: ["swimming", "dancing", "and singing"],
+      //   });
+
+      // Callbacks - passing a function as an argument
+      // Syntax 1
+      //   function func1() {
+      //     console.log("func1");
+      //   }
+
+      //   function func2(callback) {
+      //     console.log("func2");
+      //     callback();
+      //   }
+      //   func2(func1);
+
+      //Syntax 2
+      //   function func2(callback) {
+      //     callback();
+      //     console.log("func2");
+      //   }
+
+      //   func2(function () {
+      //     console.log("func1");
+      //   });
+
+      /* ---------------------------- */
+
+      //Closure Examples
+
+      //   function outer() {
+      //     console.log("Outer Function");
+
+      //     function inner() {
+      //       console.log("Inner Function");
+      //     }
+      //     inner();
+      //   }
+      //   outer();
+
+      //For a number
+      //   function outer() {
+      //     console.log("Outer Function");
+
+      //     function inner() {
+      //       console.log("Inner Function");
+      //     }
+      //     let x = 5;
+      //     return x;
+      //   }
+      //   console.log(outer());
+
+      //For a string
+      //   function outer() {
+      //     console.log("Outer Function");
+
+      //     function inner() {
+      //       console.log("Inner Function");
+      //     }
+      //     let x = "Test";
+      //     return x;
+      //   }
+      //   console.log(outer().toUpperCase());
+
+      //Another example
+      //   function outer() {
+      //     console.log("Outer Function");
+
+      //     function inner() {
+      //       console.log("Inner Function");
+      //     }
+      //     return inner;
+      //   }
+      //   //The second () is invoking inner within outer
+      //   outer()();
+
+      //Another example
+      const outer = function () {
+        console.log("Outer Function");
+
+        const inner = function () {
+          console.log("Inner Function");
+        };
+        const x = 10;
+        return x;
+      };
+
+      //The value being returned is X
+      console.log(outer());
+    </script>
+  </body>
+</html>
