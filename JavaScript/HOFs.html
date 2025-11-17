@@ -22,7 +22,9 @@
                         })
                   - Callbacks give you a way to take a function reference and execute later
 
-              # Closures: 
+              # Closures ***: Inner function continues to have access to the outer variablkes (lexical environment) even after the outer function has completed execution.
+                - In easy words, Closure = [function scope + lexical environment]
+                - Inner function "remembers" lexical environment
           */
 
       //Callback Examples
@@ -140,19 +142,32 @@
       //   //The second () is invoking inner within outer
       //   outer()();
 
+      //   //Another example
+      //   const outer = function () {
+      //     console.log("Outer Function");
+
+      //     const inner = function () {
+      //       console.log("Inner Function");
+      //     };
+      //     const x = 10;
+      //     return x;
+      //   };
+
+      //   //The value being returned is X
+      //   console.log(outer());
+
       //Another example
-      const outer = function () {
-        console.log("Outer Function");
+      //   const outer = function () {
+      //     let outerVar = 5;
 
-        const inner = function () {
-          console.log("Inner Function");
-        };
-        const x = 10;
-        return x;
-      };
+      //     const inner = function () {
+      //       console.log(outerVar);
+      //     };
+      //     return inner;
+      //   };
 
-      //The value being returned is X
-      console.log(outer());
+      //   const abc = outer();
+      //   abc();
     </script>
   </body>
 </html>
