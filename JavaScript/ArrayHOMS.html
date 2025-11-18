@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Higher Order Methods</title>
+  </head>
+  <body>
+    <script>
+      /*
+              # Array Higher Order Methods:
+                  -  Methods which use callback syntax
+
+                  1. forEach() ***
+                      - Syntax:
+                        arr.forEach((element, index) => {
+                        //code which executes for each element
+                        })
+
+                      -Iterate through the elements of the array and execute callback for each element
+                      - Callback parameters:
+                          - 1st parameter: Element
+                          - 2nd parameter: Index
+                      - Does not return anything (undefined)
+          */
+
+      //Example 1: Simple iteration
+      //   const arr = [100, 150, 200, 250, 300];
+      //   arr.forEach((element, index) => {
+      //     console.log(index, element);
+      //   });
+
+      //Example 2: Calculate sum of elements of an array
+      //   const arr = [129, 478, 389, 295];
+      //   let sum = 0;
+      //   arr.forEach((element, index) => {
+      //     sum += element;
+      //   });
+      //   console.log(sum);
+
+      //Example 2: Calculate sum of elements of an array - Simplified
+      //   const arr = [129, 478, 389, 295];
+      //   let sum = 0;
+      //   arr.forEach((element, index) => (sum += element));
+      //   console.log(sum);
+
+      //Example 3: Find the largest number in the array
+      //   const arr = [250, 150, 100, 450, 300];
+      //   let max = 0; //if the element may contain a negative number use arr[0] for max value. Otherise set it to 0
+      //   // Use let max = Number.NEGATIVE_INFINITY if you don't know what number wilkl be entered and there's no array
+      //   arr.forEach((element) => {
+      //     if (element > max) {
+      //       max = element;
+      //     }
+      //   });
+      //   console.log(max);
+
+      //Example 4: Filter even numbers from an array
+      //   const arr = [100, 97, 86, 91, 75];
+
+      //   const result = [];
+      //   arr.forEach((element) => {
+      //     if (element % 2 == 0) {
+      //       result.push(element);
+      //     }
+      //   });
+      //   console.log(result);
+
+      //Example 5: Return an array which has elements multiplied by 2
+      // Expected outcome: [4, 6, 10, 12, 14, 18]
+      //   const arr = [2, 3, 5, 7, 9];
+      //   const result = [];
+      //   arr.forEach((element) => {
+      //     result.push(element * 2);
+      //   });
+      //   console.log(result);
+
+      /*
+              # Array Higher Order Methods:
+
+                  2. filter() ***
+                       - Syntax:
+                        arr.filter((element, index) => {
+                         return "condition"
+                        })
+
+                      -Iterate through the elements of the array and execute callback for each element
+                      - Callback parameters:
+                          - 1st parameter: Element
+                          - 2nd parameter: Index
+                      - Returns a filtered array based on the condition provided. For each element, a boolean value is returned by the callback, if true - value is added to the filtered array, else skipped
+                        - Doesn't modify the orginal array
+
+                    - Additional pointers:
+                         - If "true" boolean value is returned by the callback, filtered array will have all the elements
+                         - If "false" boolean value is returned by the callback, filtered array will be an empty array
+                         - filtered Array.length <= originalArray.length
+
+          */
+
+      //Example 1: Filter even numbers from an array
+      //   const arr = [100, 97, 86, 91, 75];
+
+      //   const evenNumbers = arr.filter((element) => {
+      //     return element % 2 == 0;
+      //   });
+      //   console.log(evenNumbers);
+
+      // Example 2: Filter student names which have exactly 5 characters
+      //   const students = ["Kelly", "Kayla", "Jeff", "Madeline", "Sonal"];
+      //   const result = students.filter((student) => {
+      //     return student.length == 5;
+      //   });
+      //   console.log(result);
+
+      // Example about additional pointers
+      //   const arr = [3, 6, 2, 5, 1];
+      //   const result = arr.filter((e) => {
+      //     return true;
+      //   });
+      //   console.log(result);
+
+      /*
+              # Array Higher Order Methods:
+
+                  3. map() ***
+                       - Syntax:
+                        arr.map((element, index) => {
+                         return [modifiedElement]
+                        })
+
+                      -Iterate through the elements of the array and execute callback for each element
+                      - Callback parameters:
+                          - 1st parameter: Element
+                          - 2nd parameter: Index
+                      - Returns a modified array based on the return value for each element provided. For each element, a modified value can be returned which will be the element at the index in the returned array
+                        - Doesn't modify the orginal array
+
+                    - Additional pointers:
+                         - mappedArray.length = original
+          */
+
+      //Example 1: Return an array which has elements multiplied by 2
+      // Expected outcome: [4, 6, 10, 12, 14, 18]
+      //   const arr = [2, 3, 5, 7, 9];
+
+      //   const result = arr.map((element) => {
+      //     return element * 2;
+      //   });
+      //   console.log(result);
+
+      //Example 2: Return an array with the square of elements in the input array
+      //   const arr = [2, 7, 3, 6, 5];
+      //   const result = arr.map((element) => {
+      //     return element ** 2;
+      //   });
+      //   console.log(result);
+
+      //Example 3: Return an array with full name of users
+      //   const users = [
+      //     {
+      //       firstName: "Yaritza",
+      //       lastName: "Hernandez",
+      //     },
+      //     {
+      //       firstName: "Madeline",
+      //       lastName: "WG",
+      //     },
+      //     {
+      //       firstName: "Mary",
+      //       lastName: "Moreno",
+      //     },
+      //   ];
+      //   const fullName = users.map((users) => {
+      //     return `${users.firstName} ${users.lastName}`;
+      //   });
+      //   console.log(fullName);
+
+      // Example 4: Return an array with another field 'votingEligibility' in the user object, with value as 'eligible'/'not eligible'
+      //   const users = [
+      //     {
+      //       firstName: "Yaritza",
+      //       lastName: "Hernandez",
+      //       age: 17,
+      //     },
+      //     {
+      //       firstName: "Madeline",
+      //       lastName: "WG",
+      //       age: 21,
+      //     },
+      //     {
+      //       firstName: "Mary",
+      //       lastName: "Moreno",
+      //       age: 19,
+      //     },
+      //   ];
+      //   const result = users.map((user) => {
+      //     user.votingEligibility = user.age >= 18 ? "Eligible" : "Not eligible";
+      //     return user;
+      //   });
+      //   console.log(result);
+
+      // Example 5: Return an array with "Even/Odd" string for given set of input elements in the array
+      //   const arr = [2, 5, 8, 10, 11];
+
+      //   const evenOrOdd = arr.map((element) => {
+      //     return element % 2 == 0 ? "Even" : "Odd";
+      //   });
+      //   console.log(evenOrOdd);
+    </script>
+  </body>
+</html>
