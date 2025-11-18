@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+    <script
+      src="https://kit.fontawesome.com/b957a6364d.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- <input type="text" onclick="test()" /> -->
+    <!-- <input type="text" ondblclick="test()" /> -->
+    <!-- <input type="text" onmouseover="test()" /> -->
+    <!-- <input type="text" onmouseout="test()" />  -->
+    <!-- <input type="text" onmousemove="test()" /> -->
+    <!-- <input type="text" onkeydown="test()" /> -->
+    <!-- <input type="text" onfocus="test()" /> -->
+    <!-- <input type="text" onblur="test()" /> -->
+    <!-- <input type="text" onchange="test()" /> -->
+
+    <!-- <button onclick="alert('You have clicked on the button')">
+      Click Here
+    </button> -->
+
+    <input type="password" id="password-input" />
+    <button onclick="togglePasswordVisibility()" id="visibility-btn">
+      <i class="fa-regular fa-eye"></i>
+    </button>
+
+    <!-- <input type="text" id="password-input" oninput="checkPasswordStrength()" /> -->
+
+    <script>
+      /*
+            # Events: Any activity performed by a user on the browser/ Any occurence in the browser.
+
+            # Event Handling: Create a logic which executes whenever a specific event has occured.
+                - 2 ways to handle events:
+                    - Inline event handling
+                    - Event listeners (addEventListener)
+
+            # Inline event handlers:
+                - Used as attributes within HTML tags
+                - Syntax: <tag eventhandler= "[JS Logic]"></tag>
+
+                - Examples:
+                 - onClick: 'click' event ***
+                 - ondbclick: 'double click' event
+                 - onmouseover: 'mouseover' event (hover) ***
+                 - onmouseout: 'mouseout' event (opposite of hover)
+                 - onmousemove: 'mouseout' event (cursor minute movement)
+                 - oninput: 'input' event (Any input change within a text field) ***
+                 - onchange: 'change' event
+                 - onkeydown: 'keydown' event (Key is pressed downwards) ***
+                 - onkeyup: 'keydown' event (Key is pressed upwards)
+                 - onfocus: 'focus' event (Element gets focused) ***
+                 - onblur: 'blur' event (Element gets looses focus) ***
+                 - onload: 'load' event (Element gets loaded)
+
+        */
+
+      function test() {
+        console.log("test");
+      }
+
+      //   function checkPasswordStrength() {
+      //     const password = document.getElementById("password-input").value;
+      //     console.log(password.value);
+      //   }
+
+      function togglePasswordVisibility() {
+        const password = document.getElementById("password-input");
+        const visibilityBtn = document.getElementById("visibility-btn");
+        if (password.type == "password") {
+          password.type = "text";
+          visibilityBtn.innerHTML = '<i class="fa-solid fa-eye-slash"></i>';
+        } else {
+          password.type = "password";
+          visibilityBtn.innerHTML = '<i class="fa-regular fa-eye"></i>';
+        }
+      }
+    </script>
+  </body>
+</html>
