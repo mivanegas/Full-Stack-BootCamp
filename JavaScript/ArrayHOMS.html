@@ -201,12 +201,105 @@
       //   console.log(result);
 
       // Example 5: Return an array with "Even/Odd" string for given set of input elements in the array
-      //   const arr = [2, 5, 8, 10, 11];
+      // const arr = [2, 5, 8, 10, 11];
 
-      //   const evenOrOdd = arr.map((element) => {
-      //     return element % 2 == 0 ? "Even" : "Odd";
+      // const evenOrOdd = arr.map((element) => {
+      //   return element % 2 == 0 ? "Even" : "Odd";
+      // });
+      // console.log(evenOrOdd);
+
+      /*
+              # Array Higher Order Methods:
+
+                  4. some() 
+                       - Syntax:
+                        arr.some((element, index) => {
+                         return [modifiedElement]
+                        })
+
+                      -Iterate through the elements of the array and execute callback for each element
+                      - Callback parameters:
+                          - 1st parameter: Element
+                          - 2nd parameter: Index
+                      - Returns true/false based on the condition provided if there exists at least one element that satisfies the condition
+          */
+
+      //Example: Check if there's one element that's an even number
+      //   const arr = [3, 5, 2, 1, 7];
+      //   const result = arr.some((e) => {
+      //     return e % 2 === 0;
       //   });
-      //   console.log(evenOrOdd);
+      //   console.log(result);
+
+      /*
+              # Array Higher Order Methods:
+
+                  5. every()
+                       - Syntax:
+                        arr.every((element, index) => {
+                         return [modifiedElement]
+                        })
+
+                      -Iterate through the elements of the array and execute callback for each element
+                      - Callback parameters:
+                          - 1st parameter: Element
+                          - 2nd parameter: Index
+                      - Returns true/false based on the condition provided if "all the elements" satisfies the condition
+          */
+      //Example: Check if there's one element that's an even number
+      //   const arr = [8, 2, 4, 6, 10];
+      //   const result = arr.every((e) => {
+      //     return e % 2 === 0;
+      //   });
+      //   console.log(result);
+
+      /*
+              # Array Higher Order Methods:
+
+                  6. find()
+                       - Syntax:
+                        arr.find((element, index) => {
+                         return [modifiedElement]
+                        })
+
+                      -Iterate through the elements of the array and execute callback for each element
+                      - Callback parameters:
+                          - 1st parameter: Element
+                          - 2nd parameter: Index
+                      - Returns the first element that matches the condition. If none of the elements match the condition, then undefine is returned.
+          */
+
+      //Example: Filter even numbers from an array
+      //   const arr = [100, 97, 86, 91, 75];
+
+      //   const result = arr.find((element) => {
+      //     return element % 2 == 0;
+      //   });
+      //   console.log(result);
+
+      /*
+              # Array Higher Order Methods:
+
+                  7. findIndex()
+                       - Syntax:
+                        arr.findIndex((element, index) => {
+                         return [modifiedElement]
+                        })
+
+                      -Iterate through the elements of the array and execute callback for each element
+                      - Callback parameters:
+                          - 1st parameter: Element
+                          - 2nd parameter: Index
+                      - Returns the index of first element that matches the condition. If none of the elements match the condition, then -1 is returned
+          */
+
+      //Example: Filter even numbers from an array
+      // const arr = [100, 97, 86, 91, 75];
+
+      // const result = arr.findIndex((element) => {
+      //   return element % 2 == 0;
+      // });
+      // console.log(result);
     </script>
   </body>
 </html>
