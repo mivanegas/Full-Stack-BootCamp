@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Listener</title>
+  </head>
+  <body>
+    <input type="text" id="test-input" />
+
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum voluptatem
+      labore, iure eaque temporibus nostrum illum at. In cum ab, neque voluptate
+      eaque optio officia, eius magni impedit praesentium labore.Lorem ipsum
+      dolor, sit amet consectetur adipisicing elit. Rerum voluptatem labore,
+      iure eaque temporibus nostrum illum at. In cum ab, neque voluptate eaque
+      optio officia, eius magni impedit praesentium labore.Lorem ipsum dolor,
+      sit amet consectetur adipisicing elit. Rerum voluptatem labore, iure eaque
+      temporibus nostrum illum at. In cum ab, neque voluptate eaque optio
+      officia, eius magni impedit praesentium labore.Lorem ipsum dolor, sit amet
+      consectetur adipisicing elit. Rerum voluptatem labore, iure eaque
+      temporibus nostrum illum at. In cum ab, neque voluptate eaque optio
+      officia, eius magni impedit praesentium labore.
+    </p>
+    <script>
+      /*
+            # Event Listeners:
+                - Create a logic which executes whenever a specific event has occured
+                - Using .addEventListeners() method
+                - Syntax:
+                    element.addEventListener('event', function(event) {
+                      //Logic to be executed when the event is fired
+                    })
+
+                - Callback parameter: 'event' object
+                    - .type: Name of the event
+                    - .target: the element/node where the event occured
+                    - .target.value: Access value of the input text
+
+                - Examples:
+                 - onClick: 'click' event ***
+                 - ondbclick: 'double click' event
+                 - onmouseover: 'mouseover' event (hover) ***
+                 - onmouseout: 'mouseout' event (opposite of hover)
+                 - onmousemove: 'mouseout' event (cursor minute movement)
+                 - oninput: 'input' event (Any input change within a text field) ***
+                 - onchange: 'change' event
+                 - onkeydown: 'keydown' event (Key is pressed downwards) ***
+                 - onkeyup: 'keydown' event (Key is pressed upwards)
+                 - onfocus: 'focus' event (Element gets focused) ***
+                 - onblur: 'blur' event (Element gets looses focus) ***
+                 - onload: 'load' event (Element gets loaded)
+
+        */
+
+      const inputElement = document.getElementById("test-input");
+
+      //   inputElement.addEventListener("click", (event) => {
+      //     console.log("test", event);
+      //   });
+
+      //   inputElement.addEventListener("input", (event) => {
+      //     console.log("test", event.target.value);
+      //   });
+
+      //   inputElement.addEventListener("mousemove", (event) => {
+      //     console.log("test", event.screenX, event.screenY);
+      //   });
+
+      //   inputElement.addEventListener("change", (event) => {
+      //     console.log("test", event.target.value);
+      //   });
+
+      //   document.addEventListener("scroll", (event) => {
+      //     console.log("Scrolled", window.scrollY);
+      //     document.getElementById("range-input").value = window.scrollY;
+      //   });
+
+      /*
+        # Event Propagation: Process by which events are handled and propated through the DOM tree (Applicable for nested elements)
+
+        - 2 Phases
+            - Event capturing:
+                - Event capturing: Event is propagated from the last ancestor to the child node and so on till the target element
+                - Event bubbling *** : Event is propagated from target
+
+            - Stop event propagation
+                - event.stopPropagation()
+
+    */
+    </script>
+  </body>
+</html>

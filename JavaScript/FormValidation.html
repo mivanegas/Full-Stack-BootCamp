@@ -78,19 +78,20 @@
         <div>
           <input
             type="radio"
-            name="female"
+            name="gender"
             value="female"
             class="gender"
           />Female
-          <input type="radio" name="male" value="male" class="gender" />Male
+          <input type="radio" name="gender" value="male" class="gender" />Male
           <input
             type="radio"
-            name="nonbinary"
+            name="gender"
             value="nonbinary"
             class="gender"
           />Nonbinary
         </div>
       </div>
+
       <div>
         <label>Hobbies</label>
         <div>
@@ -104,8 +105,20 @@
           <input type="checkbox" name="hobby" value="sing" class="hobby" />Sing
         </div>
       </div>
+      <div>
+        <label for="">Bio</label>
+        <textarea rows="5" id="bio" placeholder="Enter your bio"></textarea>
+      </div>
+      <div>
+        <label>Education</label>
+        <select name="" id="education">
+          <option value="">Post Graduate</option>
+          <option value="">Graduate</option>
+          <option value="">Undergraduated</option>
+        </select>
+      </div>
       <div style="justify-content: center">
-        <button type="submit" onclick="handleFormData()">Submit</button>
+        <button type="button" onclick="handleFormData()">Submit</button>
       </div>
     </form>
 
@@ -135,6 +148,8 @@
           return h.value;
         });
 
+        const bio = document.getElementById("bio").value;
+        const education = document.getElementById("education");
         const userData = {
           name,
           email,
@@ -143,8 +158,87 @@
           gender: selectedGender && selectedGender.value,
           hobby: selectedHobbies,
         };
+
         console.log("User data collected", userData);
+
+        const result = validateFormData(userData);
+        console.log(result);
       }
+
+      /*
+          # Validation Rules:
+            1. Name:
+              - Cannot be empty
+              - At least 3 chracters
+              - No special characters
+              - No digits
+            2. Email
+              - Cannot be empty
+              - Should have @
+              - Should have "."
+              - Should have 3 characters after "." (ex: .com, .org, etc.)
+              - At least 2 characters before @
+            3. Password (like password strength checker project)
+            4. Gender
+              - At least one selection
+            5. Hobbies
+              - At least one selection
+            6. Bio
+              - Cannot be empty
+              At least 100 characters
+            7. Education
+              - At least one selection
+
+        */
+
+      // function validateFormData(userData) {
+      //   const {
+      //     name,
+      //     email,
+      //     password,
+      //     confirmPassword,
+      //     gender,
+      //     hobby,
+      //     bio,
+      //     education,
+      //   } = userData;
+
+      //   // 1. Name
+      //   if (!name || name.length < 3) {
+      //     return "Invalid name";
+      //   }
+      //   for (let i = 0; i < name.length; i++) {
+      //     if (name[i] >= "!" && name[i] <= "@") {
+      //       //ASCII 33-64{}
+      //       return "Invalid name";
+      //     }
+      //   }
+
+      //   // 2. Email
+      //   if (!email || !email.includes("@") || !email.includes(".")) {
+      //     return "Invalid name";
+      //   }
+
+      //   const lastDotIndex = email.lastIndexof(".");
+      //   const lastCharIndex = email.length - 1;
+      //   if (lastCharIndex - lastDotIndex > 3) {
+      //     return "Invalid name";
+      //   }
+
+      //   //Same purpose as above but different solution
+      //   // const parts = email.split('.')
+      //   // const last = part[part.length - 1]
+      //   // if(last.length > 3){
+      //   //   return 'Invalid name'
+      //   // }
+
+      //   return "Form Validated Successfully";
+
+      //   // 3. Password
+      //   if (password != confirmPassword) {
+      //     return "Password & confirm password does not match";
+      //   }
+      // }
     </script>
   </body>
 </html>
