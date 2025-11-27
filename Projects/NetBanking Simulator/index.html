@@ -64,27 +64,27 @@
           <div class="list-group" id="list-tab" role="tablist">
             <a
               class="list-group-item list-group-item-action list-group-item-secondary active"
-              id="list-home-list"
+              id="account-summary-list"
               data-bs-toggle="list"
-              href="#list-home"
+              href="#account-summary"
               role="tab"
               aria-controls="list-home"
               >Account Summary</a
             >
             <a
               class="list-group-item list-group-item-action list-group-item-secondary"
-              id="list-profile-list"
+              id="transfer-in-list"
               data-bs-toggle="list"
-              href="#list-profile"
+              href="#transfer-in"
               role="tab"
               aria-controls="list-profile"
               >Transfer In</a
             >
             <a
               class="list-group-item list-group-item-action list-group-item-secondary"
-              id="list-messages-list"
+              id="transfer-out-list"
               data-bs-toggle="list"
-              href="#list-messages"
+              href="#transfer-out"
               role="tab"
               aria-controls="list-messages"
               >Transfer Out</a
@@ -95,40 +95,224 @@
           <div class="tab-content" id="nav-tabContent">
             <div
               class="tab-pane fade show active"
-              id="list-home"
+              id="account-summary"
               role="tabpanel"
-              aria-labelledby="list-home-list"
+              aria-labelledby="account-summary-list"
             >
-              ...
+              <!-- Account Summary -->
+              <div class="card mb-3" style="max-width: 540px">
+                <div class="row g-0">
+                  <div class="col-md-4 d-flex align-items-center">
+                    <img
+                      src="./Assets/profile1-female.svg"
+                      class="img-fluid rounded-start"
+                      alt="Female user avatar"
+                    />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <p class="card-text mb-0">
+                        <small class="text-body-secondary"
+                          >Available Details</small
+                        >
+                      </p>
+                      <p class="card-text mb-0">
+                        Account Number:
+                        <span id="account-digits">*********866</span>
+                        <i
+                          class="fa-solid fa-eye-slash"
+                          id="see-account-number"
+                        ></i>
+                      </p>
+                      <p class="card-text">Account Holder: Rebecca</p>
+                      <p class="card-text mb-0">
+                        <small class="text-body-secondary"
+                          >Available Balance</small
+                        >
+                      </p>
+                      <p class="card-text fs-2">$120,875.00</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Accordion -->
+              <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseOne"
+                      aria-expanded="true"
+                      aria-controls="collapseOne"
+                    >
+                      Account Statement
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseOne"
+                    class="accordion-collapse collapse show"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <!-- List Group -->
+                    <div class="list-group">
+                      <a
+                        href="#"
+                        class="list-group-item list-group-item-action"
+                        aria-current="true"
+                      >
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">ACH Transction: Jeff</h5>
+                          <div class="fs-5 text-danger">- $10,858.00</div>
+                        </div>
+                        <p class="mb-1">Transfer Out</p>
+                        <div class="d-flex w-100 justify-content-between">
+                          <small>11/22/2025 11:34 AM</small>
+                          <small>Balance: $110,987.05</small>
+                        </div>
+                      </a>
+                      <a
+                        href="#"
+                        class="list-group-item list-group-item-action"
+                        aria-current="true"
+                      >
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">Wire Transfer: Ayana</h5>
+                          <div class="fs-5 text-danger">- $9,000.00</div>
+                        </div>
+                        <p class="mb-1">Transfer Out</p>
+                        <div class="d-flex w-100 justify-content-between">
+                          <small>11/22/2025 11:34 AM</small>
+                          <small>Balance: $110,987.05</small>
+                        </div>
+                      </a>
+                      <a
+                        href="#"
+                        class="list-group-item list-group-item-action"
+                        aria-current="true"
+                      >
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">Deposit Transfer</h5>
+                          <div class="fs-5 text-success">+ $25,276.56</div>
+                        </div>
+                        <p class="mb-1">Transfer Out</p>
+                        <div class="d-flex w-100 justify-content-between">
+                          <small>11/22/2025 11:34 AM</small>
+                          <small>Balance: $110,987.05</small>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+
+            <!-- Transfer In -->
             <div
               class="tab-pane fade"
-              id="list-profile"
+              id="transfer-in"
               role="tabpanel"
-              aria-labelledby="list-profile-list"
+              aria-labelledby="transfer-in-list"
             >
-              ...
+
+              <h2 class="display-4">Transfer In</h2>
+              <!-- Form -->
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label"
+                  >Beneficiary Account Number:</label
+                >
+                <input
+                  type="number"
+                  class="form-control"
+                  id="exampleFormControlInput1"
+                  placeholder=""
+                />
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label"
+                  >Transfer Amount:</label
+                >
+                <input
+                  type="number"
+                  class="form-control"
+                  id="exampleFormControlInput1"
+                  placeholder=""
+                />
+              </div>
+          
+              <button type="button" class="btn btn-dark mb-3">
+                Deposit
+              </button>
             </div>
+
+            <!-- Transfer Out -->
             <div
               class="tab-pane fade"
-              id="list-messages"
+              id="transfer-out"
               role="tabpanel"
-              aria-labelledby="list-messages-list"
+              aria-labelledby="transfer-out-list"
             >
-              ...
+             <h2 class="display-4">Transfer Out</h2>
+             <!-- Form -->
+               <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >Beneficiary Name:</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="exampleFormControlInput1"
+                  placeholder=""
+                />
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label"
+                  >Beneficiary Account Number:</label
+                >
+                <input
+                  type="number"
+                  class="form-control"
+                  id="exampleFormControlInput1"
+                  placeholder=""
+                />
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label"
+                  >Transfer Amount:</label
+                >
+                <input
+                  type="number"
+                  class="form-control"
+                  id="exampleFormControlInput1"
+                  placeholder=""
+                />
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label"
+                  >Transfer Purpose:</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="exampleFormControlInput1"
+                  placeholder=""
+                />
+              </div>
+              <button type="button" class="btn btn-dark mb-3">
+                Send Money
+              </button>
             </div>
-            <div
-              class="tab-pane fade"
-              id="list-settings"
-              role="tabpanel"
-              aria-labelledby="list-settings-list"
-            >
-              ...
             </div>
           </div>
         </div>
       </div>
     </div>
+    <!-- FontAwesome -->
+    <script
+      src="https://kit.fontawesome.com/b957a6364d.js"
+      crossorigin="anonymous"
+    ></script>
 
     <!-- Bootsrap -->
     <script
