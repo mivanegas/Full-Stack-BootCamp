@@ -156,7 +156,7 @@
                     data-bs-parent="#accordionExample"
                   >
                     <!-- List Group -->
-                    <div class="list-group">
+                    <div class="list-group" id="transaction-list">
                       <a
                         href="#"
                         class="list-group-item list-group-item-action"
@@ -254,6 +254,11 @@
               aria-labelledby="transfer-out-list"
             >
              <h2 class="display-4">Transfer Out</h2>
+             <select class="form-select" aria-label="Default select example">
+              <option selected>Type</option>
+              <option value="1">Wire</option>
+              <option value="2">ACH</option>
+            </select>
              <!-- Form -->
                <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label"
