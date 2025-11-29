@@ -98,8 +98,8 @@ function sendMoney() {
   h5.innerText = `${transferType} Transfer: ${beneficiaryName}`;
 
   const amount = document.createElement("div");
-  amount.classList.add("fs-5", "text-success");
-  amount.innerText = `- $${amountToDeposit.toFixed(2)}`;
+  amount.classList.add("fs-5", "text-danger");
+  amount.innerText = `- $${amountToTransfer.toFixed(2)}`;
 
   topPart.append(h5, amount);
 
