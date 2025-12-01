@@ -15,6 +15,8 @@ eyeBtn.addEventListener("click", () => {
   }
 });
 
+let balance = 120000;
+document.getElementById("account-balance").innerText = `$${balance.toFixed(2)}`;
 // Adding transactions to Account Statement
 const transactionList = document.getElementById("transaction-list");
 
@@ -38,6 +40,10 @@ function deposit() {
   const amountIn = document.getElementById("amount-to-deposit");
   const amountToDeposit = Number(amountIn.value);
   amountIn.value = "";
+  balance += amountToDeposit;
+  document.getElementById("account-balance").innerText = `$${balance.toFixed(
+    2
+  )}`;
 
   //Creating element structure using DOM Methods
   const listGroupItem = document.createElement("a");
@@ -64,16 +70,33 @@ function deposit() {
   lastPart.classList.add("d-flex", "w-100", "justify-content-between");
 
   const small1 = document.createElement("small");
-  small1.innerText = "11/28/2025 1:28 PM";
+  const currentDateTime = new Date();
+  small1.innerText = currentDateTime.toLocaleString();
   const small2 = document.createElement("small");
-  small2.innerText = "Balance: $178,000.75";
+  small2.innerText = `Updated Balance: $${balance.toFixed(2)}`;
   lastPart.append(small1, small2);
 
+  // Makes latest transfer out go to the top
   listGroupItem.append(topPart, middlePart, lastPart);
+  const existingList = transactionList.innerHTML;
+  transactionList.innerHTML = "";
   transactionList.append(listGroupItem);
+  transactionList.innerHTML += existingList;
 
   // Show alert
-  document.getElementById("deposit-successful").classList.add("show");
+  document.getElementById("deposit-successful").innerHTML = `
+            <div
+                class="alert alert-success alert-dismissible fade show mt-2"
+                role="alert"
+              >
+                Deposit successful.
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="alert"
+                  aria-label="Close"
+                ></button>
+              </div>`;
 }
 
 function sendMoney() {
@@ -85,6 +108,10 @@ function sendMoney() {
   const beneficiaryName = document.getElementById("beneficiary-name").value;
   const sendMoneyForm = document.getElementById("send-money-form");
   sendMoneyForm.reset();
+  balance -= amountToTransfer;
+  document.getElementById("account-balance").innerText = `$${balance.toFixed(
+    2
+  )}`;
 
   //Creating element structure using DOM Methods
   const listGroupItem = document.createElement("a");
@@ -111,16 +138,26 @@ function sendMoney() {
   lastPart.classList.add("d-flex", "w-100", "justify-content-between");
 
   const small1 = document.createElement("small");
-  small1.innerText = "11/28/2025 1:28 PM";
+  const currentDateTime = new Date();
+  small1.innerText = currentDateTime.toLocaleString();
   const small2 = document.createElement("small");
-  small2.innerText = "Balance: $178,000.75";
+  small2.innerText = `Updated Balance: $${balance.toFixed(2)}`;
   lastPart.append(small1, small2);
 
+  // Makes latest transfer out go to the top
   listGroupItem.append(topPart, middlePart, lastPart);
+  const existingList = transactionList.innerHTML;
+  transactionList.innerHTML = "";
   transactionList.append(listGroupItem);
+  transactionList.innerHTML += existingList;
 
   // Show alert
-  document.getElementById("transfer-successful").classList.add("show");
+  document.getElementById("transfer-successful").innerHTML = `
+    <div class="alert alert-success alert-dismissible fade show mt-3" role="alert" >
+      Transfer successful!
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  `;
 }
 
 /*

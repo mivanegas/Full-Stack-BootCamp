@@ -130,7 +130,7 @@
                           >Available Balance</small
                         >
                       </p>
-                      <p class="card-text fs-2">$120,875.00</p>
+                      <p class="card-text fs-2" id="account-balance"></p>
                     </div>
                   </div>
                 </div>
@@ -157,7 +157,7 @@
                   >
                     <!-- List Group -->
                     <div class="list-group" id="transaction-list">
-                      <a
+                      <!-- <a
                         href="#"
                         class="list-group-item list-group-item-action"
                         aria-current="true"
@@ -168,7 +168,7 @@
                         </div>
                         <p class="mb-1">Transfer Out</p>
                         <div class="d-flex w-100 justify-content-between">
-                          <small>11/22/2025 11:34 AM</small>
+                          <small>11/22/2025 11:13:34 AM</small>
                           <small>Balance: $110,987.05</small>
                         </div>
                       </a>
@@ -183,7 +183,7 @@
                         </div>
                         <p class="mb-1">Transfer Out</p>
                         <div class="d-flex w-100 justify-content-between">
-                          <small>11/22/2025 11:34 AM</small>
+                          <small>11/22/2025 11:45:34 AM</small>
                           <small>Balance: $110,987.05</small>
                         </div>
                       </a>
@@ -198,10 +198,10 @@
                         </div>
                         <p class="mb-1">Transfer Out</p>
                         <div class="d-flex w-100 justify-content-between">
-                          <small>11/22/2025 11:34 AM</small>
+                          <small>11/22/2025 11:50:34 AM</small>
                           <small>Balance: $110,987.05</small>
                         </div>
-                      </a>
+                      </a> -->
                     </div>
                   </div>
                 </div>
@@ -235,19 +235,7 @@
               </button>
 
               <!-- Alert -->
-              <div
-                class="alert alert-success alert-dismissible fade mt-2"
-                role="alert"
-                id="deposit-successful"
-              >
-                Deposit successful.
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="alert"
-                  aria-label="Close"
-                ></button>
-              </div>
+              <div id="deposit-successful"></div>
             </div>
 
             <!-- Transfer Out -->
@@ -315,7 +303,7 @@
                 >
                   Send money
                 </button>
-
+                <!-- Alert -->
                 <div id="transfer-successful"></div>
               </form>
             </div>
