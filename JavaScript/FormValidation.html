@@ -46,6 +46,7 @@
           autocomplete="off"
         />
       </div>
+
       <div>
         <label for="email">Email</label>
         <input
@@ -55,6 +56,7 @@
           autocomplete="off"
         />
       </div>
+
       <div>
         <label for="password">Password</label>
         <input
@@ -64,6 +66,7 @@
           autocomplete="off"
         />
       </div>
+
       <div>
         <label for="confirm-password">Confirm Password</label>
         <input
@@ -73,6 +76,7 @@
           autocomplete="off"
         />
       </div>
+
       <div>
         <label>Gender</label>
         <div>
@@ -106,17 +110,19 @@
         </div>
       </div>
       <div>
-        <label for="">Bio</label>
+        <label>Bio</label>
         <textarea rows="5" id="bio" placeholder="Enter your bio"></textarea>
       </div>
+
       <div>
         <label>Education</label>
-        <select name="" id="education">
-          <option value="">Post Graduate</option>
-          <option value="">Graduate</option>
-          <option value="">Undergraduated</option>
+        <select id="education">
+          <option value="post graduate">Post Graduate</option>
+          <option value="graduate">Graduate</option>
+          <option value="undergraduate">Undergraduate</option>
         </select>
       </div>
+
       <div style="justify-content: center">
         <button type="button" onclick="handleFormData()">Submit</button>
       </div>
@@ -138,7 +144,7 @@
         );
 
         const hobbyOptions = document.getElementsByClassName("hobby");
-        const selectedHobbies = Array.from(hobbyOptions).filter(
+        let selectedHobbies = Array.from(hobbyOptions).filter(
           (hobbyOptions) => {
             return hobbyOptions.checked;
           }
@@ -149,7 +155,8 @@
         });
 
         const bio = document.getElementById("bio").value;
-        const education = document.getElementById("education");
+        const education = document.getElementById("education").value;
+
         const userData = {
           name,
           email,
@@ -157,12 +164,85 @@
           confirmPassword,
           gender: selectedGender && selectedGender.value,
           hobby: selectedHobbies,
+          userBio: bio,
+          education,
         };
 
         console.log("User data collected", userData);
-
         const result = validateFormData(userData);
         console.log(result);
+      }
+
+      function validateFormData(userData) {
+        const {
+          name,
+          email,
+          password,
+          confirmPassword,
+          gender,
+          hobby,
+          bio,
+          education,
+        } = userData;
+
+        // 1. Checking for valid name
+        if (!name || name.length < 3) {
+          return "Invalid name";
+        }
+
+        for (let i = 0; i < name.length; i++) {
+          if (name[i] >= "!" && name[i] <= "@") {
+            //ASCII 33-64{}
+            return "Invalid name";
+          }
+        }
+
+        // 2. Checking for valid email
+        if (
+          !email ||
+          !email.includes("@") ||
+          !email.includes(".") ||
+          email.lastIndexOf("@") < 2
+        ) {
+          return "Invalid email";
+        }
+
+        const lastDotIndex = email.lastIndexOf(".");
+        const lastCharIndex = email.length - 1;
+        if (lastCharIndex - lastDotIndex > 3) {
+          return "Invalid email";
+        }
+
+        //Same purpose as above but different solution
+        // const parts = email.split('.')
+        // const last = part[part.length - 1]
+        // if(last.length > 3){
+        //   return 'Invalid name'
+        // }
+
+        return "Form Validated Successfully";
+
+        // 3. Check for valid password
+        if (password != confirmPassword) {
+          return "Password & confirm password does not match";
+        }
+
+        // 4. Check for gender selection
+        if (!gender) {
+          return "Please select gender";
+        }
+
+        // 5. Check for hobbies selection
+        if (!hobbies.length) {
+          return "Please select at least one hobby";
+        }
+
+        // 5. Check for bio entry
+        if (!userbio || userBio.length < 100) {
+          return "Invalid bio";
+        }
+
+        return "Form Validated Successfully";
       }
 
       /*
@@ -186,59 +266,8 @@
             6. Bio
               - Cannot be empty
               At least 100 characters
-            7. Education
-              - At least one selection
 
         */
-
-      // function validateFormData(userData) {
-      //   const {
-      //     name,
-      //     email,
-      //     password,
-      //     confirmPassword,
-      //     gender,
-      //     hobby,
-      //     bio,
-      //     education,
-      //   } = userData;
-
-      //   // 1. Name
-      //   if (!name || name.length < 3) {
-      //     return "Invalid name";
-      //   }
-      //   for (let i = 0; i < name.length; i++) {
-      //     if (name[i] >= "!" && name[i] <= "@") {
-      //       //ASCII 33-64{}
-      //       return "Invalid name";
-      //     }
-      //   }
-
-      //   // 2. Email
-      //   if (!email || !email.includes("@") || !email.includes(".")) {
-      //     return "Invalid name";
-      //   }
-
-      //   const lastDotIndex = email.lastIndexof(".");
-      //   const lastCharIndex = email.length - 1;
-      //   if (lastCharIndex - lastDotIndex > 3) {
-      //     return "Invalid name";
-      //   }
-
-      //   //Same purpose as above but different solution
-      //   // const parts = email.split('.')
-      //   // const last = part[part.length - 1]
-      //   // if(last.length > 3){
-      //   //   return 'Invalid name'
-      //   // }
-
-      //   return "Form Validated Successfully";
-
-      //   // 3. Password
-      //   if (password != confirmPassword) {
-      //     return "Password & confirm password does not match";
-      //   }
-      // }
     </script>
   </body>
 </html>
