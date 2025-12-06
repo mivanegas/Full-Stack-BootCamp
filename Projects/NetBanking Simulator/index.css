@@ -26,12 +26,17 @@ a {
 }
 
 .rewards-img {
-  height: 100%;
+  height: auto;
   object-fit: cover;
+  width: 100%;
 }
 
 .support-bg {
   background-color: #032169;
+}
+
+.greeting {
+  color: #032169;
 }
 
 .rewards-bg {
@@ -60,5 +65,9 @@ a {
 
   h2 {
     padding: 20px;
+  }
+
+  .greeting {
+    padding: 0;
   }
 }
