@@ -41,7 +41,9 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./rewards.html">Rewards & Deals</a>
+              <a class="nav-link" href="./rewards.html"
+                >Rewards & Deals <i class="fa-solid fa-credit-card"></i
+              ></a>
             </li>
           </ul>
           <!-- Right side -->
@@ -63,11 +65,15 @@
 
     <!-- Main Section -->
     <div class="container mt-3">
-      <div class="row">
-        <div class="col-4">
-          <div class="list-group" id="list-tab" role="tablist">
+      <div class="row" id="account-details">
+        <div class="col-md-4 col-xs-12">
+          <div
+            class="list-group accounts-list-group"
+            id="list-tab"
+            role="tablist"
+          >
             <a
-              class="list-group-item list-group-item-action list-group-item-secondary active"
+              class="list-group-item list-group-item-action list-group-item-light active"
               id="account-summary-list"
               data-bs-toggle="list"
               href="#account-summary"
@@ -76,7 +82,7 @@
               >Account Summary</a
             >
             <a
-              class="list-group-item list-group-item-action list-group-item-secondary"
+              class="list-group-item list-group-item-action list-group-item-light"
               id="transfer-in-list"
               data-bs-toggle="list"
               href="#transfer-in"
@@ -85,7 +91,7 @@
               >Transfer In</a
             >
             <a
-              class="list-group-item list-group-item-action list-group-item-secondary"
+              class="list-group-item list-group-item-action list-group-item-light"
               id="transfer-out-list"
               data-bs-toggle="list"
               href="#transfer-out"
@@ -104,7 +110,10 @@
               aria-labelledby="account-summary-list"
             >
               <!-- Account Summary -->
-              <div class="card mb-3" style="max-width: 540px">
+              <div
+                class="card mb-3 account-summary p-3"
+                style="max-width: 540px"
+              >
                 <div class="row g-0">
                   <div class="col-md-4 d-flex align-items-center">
                     <img
