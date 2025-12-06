@@ -1,4 +1,8 @@
 /* Desktop */
+li > a {
+  font-size: 14px;
+}
+
 a {
   color: #032169;
 }
@@ -43,6 +47,15 @@ a {
 
   #account-details {
     justify-content: center;
+  }
+
+  .column-one,
+  .column-two {
+    margin-top: 0;
+  }
+
+  .p-3 {
+    padding: 0 !important;
   }
 
   h2 {
