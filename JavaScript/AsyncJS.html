@@ -6,6 +6,31 @@
     <title>Asynchronous JavaScript</title>
   </head>
   <body>
+    <!-- <button onclick="startStopwatch()">Start 1 min timer</button> -->
+
+    <!-- <button onclick="clear()">Clear timeout</button> -->
+
+    <!-- BOMB EXPLOSION (setTimeout, clearTimeout)-->
+    <!-- <h2 id="status"></h2>
+    <button onclick="startBombTimer()">
+      Start the timer for the explosion
+    </button>
+    <button onclick="diffuseBomb()">Diffuse bomb</button> -->
+
+    <!-- <button onclick="test()">Clear interval</button> -->
+
+    <!-- ROCKET LAUNCH (setInterval, clearInterval)-->
+    <div style="text-align: center">
+      <img
+        src="https://github.com/MasteringWebDev/FullStackBatch/blob/master/JavaScript/assets/rocket.png?raw=true"
+        width="300"
+        id="rocket-img"
+      />
+      <h2 id="status"></h2>
+      <button onclick="startLaunch()">Start Launch</button>
+      <button onclick="abortLaunch()">Abort Launch</button>
+    </div>
+
     <script>
       /*
         # Asynchronous JavaScript
@@ -22,9 +47,15 @@
                     setTimeout(() => {
                     // logic
                     }, time)
-                    - Parameters: 
+                    - Parameters:
                         - Callback: function to execute after the specified time
                         - timeL in milliseconds (ms)
+                    - Return:
+                        - timerId: Unique ID assined the timeout created by setTimeout method
+                    - clearTimeout(timerId): clear the timeout created by setTimeout method
+                    - setInterval(): Execute code after repeated after a specified time interval
+                    - clearInterval(timerId): Clears the interval created by SetInterval() method
+ 
             - Synchronous codes always gets executed first, then asynchronous regardless of hous much time is set.
         */
 
@@ -54,12 +85,112 @@
       //   console.log(5);
 
       // Async code - Bye comes first bc time
-      setTimeout(() => {
-        console.log("Hi");
-      }, 3000);
-      setTimeout(() => {
-        console.log("Bye");
-      }, 2000);
+      //   setTimeout(() => {
+      //     console.log("Hi");
+      //   }, 3000);
+      //   setTimeout(() => {
+      //     console.log("Bye");
+      //   }, 2000);
+
+      //   function startStopwatch() {
+      //     setTimeout(() => {
+      //       alert("1 min up!");
+      //     }, 60*1000);
+      //   }
+
+      //   const timerId = setTimeout(() => {
+      //     console.log("Hi");
+      //   }, 3000);
+
+      //   // cleaTimeout cancels the count down
+      //   function clear() {
+      //     clearTimeout(timerId);
+      //   }
+
+      /*----------------------------------*/
+
+      //   let timerId;
+
+      //   function startBombTimer() {
+      //     document.getElementById("status").innerText =
+      //       "Bomb will explode in 10 seconds 💣";
+      //     timerId = setTimeout(() => {
+      //       document.getElementById("status").innerText = "Explosion! 💥💥💥";
+      //     }, 1000);
+      //   }
+
+      //   function diffuseBomb() {
+      //     clearTimeout(timerId);
+      //     document.getElementById("status").innerText = "Bomb diffused! 🥳🎉";
+      //   }
+
+      //   setInterval(() => {
+      //     console.log("Hi");
+      //   }, 2000);
+
+      /*-----------------------*/
+      //Interval and Clear Interval Example
+      //   let count = 0;
+      //   const timerId = setInterval(() => {
+      //     console.log(count);
+      //     count++;
+      //   }, 1000);
+
+      //   function test() {
+      //     clearInterval(timerId);
+      //   }
+
+      /*-----------------------*/
+      //   let timerId;
+      //   let countDown = 10;
+      //   function startLaunch() {
+      //     timerId = setInterval(() => {
+      //       if (countDown == 0) {
+      //         clearInterval(timerId);
+      //         document.getElementById(
+      //           "status"
+      //         ).innerText = `🚀 LAUNCH SUCCESSFUL!!`;
+      //         return;
+      //       }
+      //       document.getElementById(
+      //         "status"
+      //       ).innerText = `🚀 Launching in ${countDown} seconds ...`;
+      //       countDown--;
+      //     }, 1000);
+      //   }
+
+      //GIF Example
+      //   function abortLaunch() {
+      //     clearInterval(timerId);
+      //     document.getElementById("status").innerText = `🚀 LAUNCH ABORTED ❌`;
+      //   }
+
+      //   let timerId;
+      //   let countDown = 10;
+      //   function startLaunch() {
+      //     timerId = setInterval(() => {
+      //       if (countDown == 0) {
+      //         clearInterval(timerId);
+      //         document.getElementById(
+      //           "status"
+      //         ).innerText = `🚀 LAUNCH SUCCESSFUL!!`;
+      //         document.getElementById("rocket-img").src =
+      //           "https://mir-s3-cdn-cf.behance.net/project_modules/source/e59b07112562445.6017104965538.gif";
+      //         return;
+      //       }
+      //       document.getElementById(
+      //         "status"
+      //       ).innerText = `🚀 Launching in ${countDown} seconds ...`;
+      //       countDown--;
+      //     }, 1000);
+      //   }
+
+      //   function abortLaunch() {
+      //     clearInterval(timerId);
+      //     document.getElementById("status").innerText = `🚀 LAUNCH ABORTED ❌`;
+      //   }
+
+      /*-----------------------*/
     </script>
   </body>
 </html>
