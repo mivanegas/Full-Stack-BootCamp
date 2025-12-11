@@ -17,16 +17,69 @@
   <body>
     <!-- Main -->
     <div class="container mt-5 text-center">
-      <button type="button" class="btn btn-dark" onclick="placeOrder()">
-        Place Order
-      </button>
+      <div style="max-width: 300px" class="m-auto mb-4">
+        <form>
+          <p class="text-muted">Enter the details for the order</p>
+          <table class="table">
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td><input type="text" id="item-1" placeholder="Item 1" /></td>
+                <td>
+                  <input
+                    type="number"
+                    id="quantity-1"
+                    placeholder="Quantity 1"
+                  />
+                </td>
+                <td>
+                  <input type="number" id="price-1" placeholder="Price 1" />
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td><input type="text" id="item-2" placeholder="Item 2" /></td>
+                <td>
+                  <input
+                    type="number"
+                    id="quantity-2"
+                    placeholder="Quantity 2"
+                  />
+                </td>
+                <td>
+                  <input type="number" id="price-2" placeholder="Price 2" />
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td><input type="text" id="item-3" placeholder="Item 3" /></td>
+                <td>
+                  <input
+                    type="number"
+                    id="quantity-3"
+                    placeholder="Quantity 3"
+                  />
+                </td>
+                <td>
+                  <input type="number" id="price-3" placeholder="Price 3" />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <button type="button" class="btn btn-dark" onclick="placeOrder()">
+            Place Order
+          </button>
+        </form>
+      </div>
+
       <div class="row" id="order-list">
-        <div class="col-lg-4 col-md-6">
-          <!-- Card -->
+        <!-- card below got removed after JS, but kept for reference -->
+        <!-- <div class="col-xl-4 col-md-6">
+         
           <div class="card text-center mt-2">
             <div class="card-header">Order No.1</div>
             <div class="card-body">
-              <!-- Table -->
+             
               <table class="table table-striped">
                 <thead>
                   <tr>
@@ -65,11 +118,11 @@
               </table>
               <img src="" id="order-status-img" width="75" />
               <p class="card-text" id="order-status-txt"></p>
-              <a href="#" class="btn btn-danger btn-sm">Cancel</a>
+              <button class="btn btn-danger btn-sm">Cancel</button>
             </div>
-            <div class="card-footer text-muted">2 days ago</div>
+            <div class="card-footer text-muted">12/11/2025, 11:27:00 AM</div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
 
@@ -84,6 +137,6 @@
       integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
       crossorigin="anonymous"
     ></script>
-    <script src="./index.js" defer></script>
+    <script src="./index.js"></script>
   </body>
 </html>
