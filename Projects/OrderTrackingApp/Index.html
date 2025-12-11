@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Order Tracking App</title>
-    <link rel="stylesheet" href="./index.css" />
+
     <!-- Bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
@@ -12,6 +12,7 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
     <!-- Main -->
@@ -19,7 +20,7 @@
       <button type="button" class="btn btn-dark" onclick="placeOrder()">
         Place Order
       </button>
-      <div class="row">
+      <div class="row" id="order-list">
         <div class="col-lg-4 col-md-6">
           <!-- Card -->
           <div class="card text-center mt-2">
@@ -62,7 +63,7 @@
                   </tr>
                 </tbody>
               </table>
-              <img src="" alt="" id="order-status-img" />
+              <img src="" id="order-status-img" width="75" />
               <p class="card-text" id="order-status-txt"></p>
               <a href="#" class="btn btn-danger btn-sm">Cancel</a>
             </div>
