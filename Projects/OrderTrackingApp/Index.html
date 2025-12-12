@@ -17,29 +17,37 @@
   <body>
     <!-- Main -->
     <div class="container mt-5">
-      <div style="max-width: 300px" class=" ">
-        <h1 class="p-3">SMOKEHOUSE</h1>
-        <div class="image-container">
-          <img
-            src="./assets/burgerandfries.png"
-            alt="Burger and Fries"
-            class="img-fluid img-thumbnail p-2 m-3 image-one"
-          />
-          <img
-            src="./assets/burgerstogether.png"
-            alt="Table of burgers and fries"
-            class="img-fluid img-thumbnail p-2 m-3 image-two"
-          />
-          <img
-            src="./assets/neonsign.png"
-            alt="Neon Burger Sign"
-            class="img-fluid img-thumbnail p-2 m-3 image-three"
-          />
+      <div class="row">
+        <div class="col">
+          <h1 class="p-3 text-center">SMOKEHOUSE</h1>
+          <div class="row justify-content-centers">
+            <div class="col-12 col-md-6 col-lg-4">
+              <img
+                src="./assets/burgerandfries.png"
+                alt="Burger and Fries"
+                class="img-fluid img-thumbnail p-2 w-100"
+                style="height: 250px; object-fit: cover"
+              />
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <img
+                src="./assets/burgerstogether.png"
+                alt="Table of burgers and fries"
+                class="img-fluid img-thumbnail p-2 w-100"
+                style="height: 250px; object-fit: cover"
+              />
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <img src="./assets/neonsign.png" alt="Neon Burger Sign"
+              class="img-fluid img-thumbnail p-2 w-100" style="height: 250px;
+              object-fit: cover;"
+            </div>
+          </div>
         </div>
 
         <div class="text-center">
-          <h3>MENU</h3>
-          <table class="table table-danger table-striped">
+          <h4 class="pt-4 pb-2 text-danger fw-bolder">MENU</h4>
+          <table class="table table-danger table-striped menu">
             <tbody>
               <thead>
                 <tr>
@@ -49,41 +57,41 @@
                 </tr>
               </thead>
               <tr>
-                <td>Hamburger</td>
-                <td>Hot Dog</td>
-                <td>Oreo</td>
+                <td>HAMBURGER</td>
+                <td>CHICAGO DOG</td>
+                <td>OREO</td>
               </tr>
               <tr>
-                <td>$6.59</td>
-                <td>$5.59</td>
-                <td>$5.29</td>
+                <td class="fw-bolder">$6.59</td>
+                <td class="fw-bolder">$5.59</td>
+                <td class="fw-bolder">$5.29</td>
               </tr>
               <tr>
-                <td>Cheeseburger</td>
-                <td>Chili Dog</td>
-                <td>Strawberry</td>
+                <td>CHEESEBURGER</td>
+                <td>CHILI DOG</td>
+                <td>STRAWBERRY</td>
               </tr>
               <tr>
-                <td>$7.59</td>
-                <td>$6.69</td>
-                <td>$5.29</td>
+                <td class="fw-bolder">$7.59</td>
+                <td class="fw-bolder">$6.69</td>
+                <td class="fw-bolder">$5.29</td>
               </tr>
               <tr>
-                <td>Veggie Burger</td>
-                <td>Chili Cheese Dog</td>
-                <td>Vanilla</td>
+                <td>VEGGIE BURGER</td>
+                <td>CHILI CHEESE DOG</td>
+                <td>TARO</td>
               </tr>
               <tr>
-                <td>$5.49</td>
-                <td>$6.69</td>
-                <td>$5.29</td>
+                <td class="fw-bolder">$5.49</td>
+                <td class="fw-bolder">$6.69</td>
+                <td class="fw-bolder">$5.29</td>
               </tr>
             </tbody>
           </table>
         </div>
 
         <form id="order-form" class="m-auto">
-          <p class="text-muted">Enter the details for the order</p>
+          <p class="text-muted text-center">Enter the details for the order</p>
           <table class="table">
             <tbody>
               <tr>
