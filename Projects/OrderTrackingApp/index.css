@@ -1,1 +1,13 @@
+html {
+  background: repeating-conic-gradient(#df2a2a 0 25%, #0000 0 50%) 50% / 25px
+    25px;
+}
 
+form {
+  justify-content: start;
+}
+
+.image-container {
+  display: flex;
+  justify-content: start;
+}
