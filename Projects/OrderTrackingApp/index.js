@@ -90,6 +90,7 @@ function createOrderCard() {
 
   const colDiv = document.createElement("div");
   colDiv.classList.add("col-lx-4", "col-md-6");
+  colDiv.id = `order-${orderNo}`;
 
   const cardDiv = document.createElement("div");
   cardDiv.classList.add("card", "text-center", "mt-2");
@@ -111,44 +112,48 @@ function createOrderCard() {
   const quantity3 = document.getElementById("quantity-3").value;
   const price3 = document.getElementById("price-3").value;
 
-  // const total = Number(price1) + Number(price2) + Number(price3);
+  const total = Number(price1) + Number(price2) + Number(price3);
+  const orderForm = document.getElementById("order-form");
+  orderForm.reset();
 
-  cardBodyDiv.innerHTML = ` <table class="table table-striped">
-                <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Item</th>
-                    <th scope="col">Quantity</th>
-                    <th scope="col">Price</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>${item1}</td>
-                    <td>${quantity1}</td>
-                    <td>$5</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>${item2}</td>
-                    <td>${quantity2}</td>
-                    <td>$10</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>${item3}</td>
-                    <td>${quantity3}</td>
-                    <td>$20</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Total</th>
-                    <td></td>
-                    <td></td>
-                    <td>$47</td>
-                  </tr>
-                </tbody>
-              </table>`;
+  cardBodyDiv.innerHTML = ` 
+    <table class="table table-striped">
+       <thead>
+          <tr>
+             <th scope="col">#</th>
+             <th scope="col">Item</th>
+             <th scope="col">Quantity</th>
+             <th scope="col">Price</th>
+            </tr>
+        </thead>
+         <tbody>
+            <tr>
+              <th scope="row">1</th>
+                <td>${item1}</td>
+                <td>${quantity1}</td>
+                <td>$${Number(price1).toFixed(2)}</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+                <td>${item2}</td>
+                <td>${quantity2}</td>
+                <td>$${Number(price2).toFixed(2)}</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>${item3}</td>
+                <td>${quantity3}</td>
+                <td>$${Number(price3).toFixed(2)}</td>
+              </tr>
+              <tr>
+                 <th scope="row">Total</th>
+                  <td></td>
+                  <td></td>
+                  <td>$${Number(total).toFixed(2)}</td>
+               </tr>
+          </tbody>
+      </table>
+      `;
 
   const orderStatusImg = document.createElement("img");
   orderStatusImg.src = "";
@@ -162,6 +167,11 @@ function createOrderCard() {
   const cancelBtn = document.createElement("button");
   cancelBtn.classList.add("btn", "btn-danger", "btn-sm");
   cancelBtn.innerText = "Cancel";
+  // To cancel order
+  cancelBtn.addEventListener("click", () => {
+    const cancelOrderBtn = document.getElementById(`order-${orderNo}`);
+    orderList.remove(cancelOrderBtn);
+  });
 
   cardBodyDiv.append(orderStatusImg, orderStatusTxt, cancelBtn);
 
