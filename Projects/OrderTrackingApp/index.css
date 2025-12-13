@@ -17,10 +17,6 @@ body {
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-form {
-  justify-content: start;
-}
-
 img {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
