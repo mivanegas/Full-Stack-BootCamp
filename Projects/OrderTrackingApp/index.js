@@ -1,3 +1,13 @@
+// Updating Prices
+document.querySelectorAll(".menu-item").forEach((select) => {
+  select.addEventListener("change", function () {
+    const selectedMenuOption = this.options[this.selectedIndex];
+    const price = selectedMenuOption.getAttribute("data-price");
+    const priceField = this.getAttribute("data-price-field");
+    document.getElementById(priceField).value = price;
+  });
+});
+
 const orderBeingPrepared = (orderNo) =>
   new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -93,7 +103,7 @@ function createOrderCard() {
   colDiv.id = `order-${orderNo}`;
 
   const cardDiv = document.createElement("div");
-  cardDiv.classList.add("card", "text-center", "mt-2");
+  cardDiv.classList.add("card", "text-center", "mt-2", "mb-2");
 
   const cardHeaderDiv = document.createElement("div");
   cardHeaderDiv.classList.add("card-header");
@@ -112,9 +122,16 @@ function createOrderCard() {
   const quantity3 = document.getElementById("quantity-3").value;
   const price3 = document.getElementById("price-3").value;
 
-  const total = Number(price1) + Number(price2) + Number(price3);
+  const total =
+    Number(price1) * Number(quantity1) +
+    Number(price2) * Number(quantity2) +
+    Number(price3) * Number(quantity3);
+
   const orderForm = document.getElementById("order-form");
   orderForm.reset();
+  document.getElementById("price-1").value = "0";
+  document.getElementById("price-2").value = "0";
+  document.getElementById("price-3").value = "0";
 
   cardBodyDiv.innerHTML = ` 
     <table class="table table-striped">
