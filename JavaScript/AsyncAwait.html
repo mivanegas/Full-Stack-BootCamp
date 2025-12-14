@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async Await</title>
+  </head>
+  <body>
+    <script>
+      /*
+            # Async Await
+                - Syntactic Sugar for promise handling
+                - 'async' keyword: Makes any function asychronous
+                - 'await' keyword:
+                    - To pause the execution of async function until the promise is resolved
+                    - Returns the resolved result of the promise when the promise is resolved
+                    - Throws the rejected result of the promise when the promise is rejected
+
+                - Syntax:
+                    async function handlePromise() {
+                        try {
+                        const resolvedResult = await promise1
+                        console.log(resolvedResult) 
+                        } catch (rejectedResult) {
+                        console.log(rejectedResult) 
+                        }
+                    }
+
+                - Different type of asychronous functions
+                    - async function abc() {}
+                    - const abc = async function() {}
+                    - const abc = async () => {}
+        */
+
+      //   const promise1 = new Promise((resolve, reject) => {
+      //     setTimeout(() => {
+      //       resolve("Hi");
+      //     }, 3000);
+      //   });
+
+      //Way 1
+      //   promise1
+      //     .then((resolvedResult) => {
+      //       console.log("Promise resolved after 5 seconds:", resolvedResult);
+      //     })
+      //     .catch((rejectedResult) => {
+      //       console.log("Promise rejected after 5 seconds:", rejectedResult);
+      //     });
+
+      //Way 2
+      //   async function handlePromise() {
+      //     try {
+      //       const resolvedResult = await promise1;
+      //       console.log("Promise resolved after 5 seconds:", resolvedResult);
+      //     } catch (rejectedResult) {
+      //       console.log("Promise rejected after 5 seconds:", rejectedResult);
+      //     }
+      //   }
+      //   handlePromise();
+
+      /* ---------------------- */
+    </script>
+  </body>
+</html>
