@@ -59,6 +59,49 @@
       //   handlePromise();
 
       /* ---------------------- */
+
+      /*
+      Example: Fetch data from the server, then process that data
+        1. Fetching data from the server: 7 seconds
+        2. Processing the data: 5 seconds
+
+        Total time: 7s + 5s = 12s
+    */
+
+      // function fetchData() {
+      //   console.log("FETCHING DATA FROM THE SERVER ...");
+      //   return new Promise((resolve, reject) => {
+      //     setTimeout(() => {
+      //       console.log("FETCHED DATA SUCCESSFULLY ✅");
+      //       resolve();
+      //     }, 7000);
+      //   });
+      // }
+
+      // function processData() {
+      //   console.log("NOW, PROCESSING DATA ...");
+      //   return new Promise((resolve, reject) => {
+      //     setTimeout(() => {
+      //       console.log("PROCESSED DATA SUCCESSFULLY ✅");
+      //       resolve();
+      //     }, 5000);
+      //   });
+      // }
+
+      // fetchData()
+      //   .then(() => processData())
+      //   .then(() => {})
+      //   .catch(() => console.log('Something went wrong'))
+
+      // async function fetchAndProcessData() {
+      //   try {
+      //     await fetchData();
+      //     await processData();
+      //   } catch (error) {
+      //     console.log("Something went wrong");
+      //   }
+      // }
+      // fetchAndProcessData();
     </script>
   </body>
 </html>
