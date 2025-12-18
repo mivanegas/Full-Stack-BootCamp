@@ -1,3 +1,11 @@
+//Load default videos
+function loadDefaultVideos() {
+  const defaultSearch = "Full Stack Development";
+  document.getElementById("search-text").value = defaultSearch;
+  searchYTVideos();
+}
+window.addEventListener("DOMContentLoaded", loadDefaultVideos);
+
 //Please don't expose API Key
 const API_KEY = "";
 
@@ -23,14 +31,18 @@ function displayVideos(data) {
     colDiv.classList.add(
       "col-xl-4",
       "col-lg-6",
-      "col-md-12",
+      "col-md-6",
+      "col-sm-12",
       "text-center",
-      "m-2"
+      "mb-2",
+      "p-6"
     );
 
     const iframe = document.createElement("iframe");
     iframe.width = 400;
     iframe.height = 225;
+    iframe.style.borderRadius = "8px";
+    iframe.classList.add("w-100");
 
     const { videoId } = video.id;
     iframe.src = `https://www.youtube.com/embed/${videoId}`;

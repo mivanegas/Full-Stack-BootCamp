@@ -5,6 +5,7 @@ body {
 
 #search-field-wrapper {
   width: 500px;
+  max-width: 100%;
 }
 
 .badge {
@@ -43,13 +44,22 @@ body {
   padding: 10px;
 }
 
-@media screen and(max-width: 768px) {
-  #search-field-wrapper {
-    width: 100px;
-  }
+.frosted-glass {
+  background-color: rgba(15, 15, 15, 0.7);
+  -webkit-backdrop-filter: blur(24px);
+  backdrop-filter: blur(24px);
+}
 
-  .profile {
-    margin: -10px;
+#button-addon2 {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  #search-field-wrapper {
+    width: 95%;
+    padding: 0 10px;
+    margin: auto;
   }
 }
 
