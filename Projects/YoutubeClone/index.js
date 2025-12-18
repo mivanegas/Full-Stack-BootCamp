@@ -20,7 +20,13 @@ function displayVideos(data) {
 
   data.items.forEach((video) => {
     const colDiv = document.createElement("div");
-    colDiv.classList.add("col-xl-4", "col-lg-6", "col-md-12", "text-center");
+    colDiv.classList.add(
+      "col-xl-4",
+      "col-lg-6",
+      "col-md-12",
+      "text-center",
+      "m-2"
+    );
 
     const iframe = document.createElement("iframe");
     iframe.width = 400;
@@ -47,6 +53,13 @@ Array.from(badges).forEach((badge) => {
     searchYTVideos();
   });
 });
+
+function removeActiveSelection() {
+  Array.from(badges).forEach((badge) => {
+    badge.classList.remove("text-bg-light");
+    badge.classList.add("text-bg-dark");
+  });
+}
 
 /*
   # Fetch via promise handling

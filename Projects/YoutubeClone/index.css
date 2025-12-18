@@ -4,16 +4,52 @@ body {
 }
 
 #search-field-wrapper {
-  min-width: 500px;
+  width: 500px;
 }
 
 .badge {
   cursor: pointer;
 }
 
-@media screen and(max-width: 480px) {
+.create {
+  background-color: #484848;
+  padding: 10px;
+}
+
+.create:hover {
+  background-color: #5f5e5e;
+  padding: 10px;
+}
+
+.fa-microphone {
+  border-radius: 50%;
+  background-color: #484848;
+  padding: 10px;
+}
+
+.fa-microphone:hover {
+  border-radius: 50%;
+  background-color: #5f5e5e;
+  padding: 10px;
+}
+
+.fa-bell {
+  padding: 10px;
+}
+
+.fa-bell:hover {
+  border-radius: 50%;
+  background-color: #5f5e5e;
+  padding: 10px;
+}
+
+@media screen and(max-width: 768px) {
   #search-field-wrapper {
-    min-width: auto;
+    width: 100px;
+  }
+
+  .profile {
+    margin: -10px;
   }
 }
 
