@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modules in JavaScript</title>
+  </head>
+  <body>
+    <script>
+      /*
+            # Modules in JS:
+                - Collection of code related to specific functionality
+                - Benefits:
+                    - Improves readability and maintenance
+                    - Avoids redundancy (using DRY priciple)
+                    - Achieve encapsulation
+
+                - Syntax:
+                    <script src="user.js" type="module">
+                - Import/Export:
+                    - Import: An external entity brought inside
+                    - Export: An internal entity sent outside
+                - Types of exports/imports:
+                    - Default export/import ('default' keyword)
+                        - Can only export a single entity
+                            - Syntax:
+                                - Export: export default func1
+                                - Import: import default func1 from './relative-path.js'
+                            - Rename entity during import
+                                - import test from './relative-path.js'    
+                    - Named export/import
+                        - Can export multiple entities
+                        - Syntax: 
+                            - Export
+                                - Way 1: export { func1, func2}   
+                                - Way 2: Export during declaration
+                                    export function func1() {}
+                                    export function func2() {}
+                            - Import: import { func1, func2} from './relative-path.js'
+                            - Rename enity during import ('as' keyword)
+                                - Syntax: 
+                                   import { 
+                                   func1 as abc, 
+                                   func2 as def
+                                   } from './relative-path.js'
+                    - Relative path:
+                        - ../ Parent folder
+                        - ./ Current folder
+                        - / Child folder    
+      */
+    </script>
+    <script src="./index.js" type="module"></script>
+    <script src="./users.js" type="module"></script>
+    <script src="./product.js" type="module"></script>
+    <script src="./cart.js" type="module"></script>
+    <script src="./order.js" type="module"></script>
+    <script src="./feature/abc.js" type="module"></script>
+  </body>
+</html>
