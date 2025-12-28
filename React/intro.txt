@@ -48,3 +48,30 @@
             - Features:
                 - Can be nested
                 - Can be re-used
+            - Function component syntax: 
+                function Component1() {
+                    return(
+                        <h1>Test</h1>
+                    )
+                }
+                - Component name should be in PascalCase
+                - Components returns jsx
+                    - JSX: JavaScript + XML (JavaScript in disguise)
+                - To use a component in the parent component
+                    - First step: Import it
+                    - Syntax:
+                        - <Component1 />
+                        - <Component1></Component1>
+
+                - Props:
+                    - Makes components dynamic
+                    - Syntax:
+                     - Pass the prop
+                        <Component1 prop1={value1} />
+
+                     - Use the prop
+                        function Component1({ prop1 }){
+                        return(
+                          <h1>Test {prop1}<h1>
+                        )
+                     } 
