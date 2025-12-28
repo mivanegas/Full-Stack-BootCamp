@@ -1,0 +1,50 @@
+# React: A JavaScript library to build user interfaces
+    - Introduced in 2013 by Facebook (Meta)
+    - Declarative library (We need to tell React what to)
+    - Advantages of React.js
+        - Built on top of JavaScript
+    - React is faster than traditional applications
+        - Virtual DOM: Copy of the real DOM
+            - Real DOM (Document Object Model)
+        - Reconciliation: updating the real DOM optimally with only updating the affected nodes
+            - Diffing: compare old virtual DOM with new virtual DOM
+        - SPA: Single page application
+    -  Websites built on React: Facebook, Airbnb, Netflix, Instagram, Asana, Salesforce, Reddit, etc.
+
+
+    - Setup
+        1. Download Node.js: https://nodejs.org/en/download
+            - NPM: Node Package Manager
+            - Run:
+                - node -v: Node version
+                - npm -v: NPM version
+        2. Using Vite (Create a react app locally): 
+            - npm create vite@latest
+            - Give the project a name
+            - Framework: choose React
+            - Variant: choose JavaScript
+            - Use rolldown-vite? No
+            - Install with npm and start now? Yes
+        3. Enter the folder within the terminal
+            - cd (name of folder) react-fundamentals in this case
+        4. Start the application
+            - If you stop running the app and want to start again, use the command: npm run dev
+                - React compiles code and creates a js file understandable by the browser
+
+
+        - Folder Overview:
+            - index.html: Is the only html file in the complete react app
+            - src: Source code of React app
+                - App.jsx: Parent Component
+                - App.css: Styles related to parent component
+                - main.jsx: Logic to compile components and add to html root
+                - index.css: Global Styles
+                - assets: images/assets related to app
+            - package.json: Metadata of application
+
+        - Components:
+            - Building block of React code
+            - Small blocks of code to build parts of UI
+            - Features:
+                - Can be nested
+                - Can be re-used
